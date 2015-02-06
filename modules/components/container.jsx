@@ -1,8 +1,9 @@
 var React = require('react');
 var Radium = require('radium');
+var { StyleResolverMixin } = Radium;
 
 var Container = React.createClass({
-  mixins: [ Radium ],
+  mixins: [ StyleResolverMixin ],
 
   getDefaultProps: function () {
     return {
@@ -16,12 +17,35 @@ var Container = React.createClass({
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: 15,
-        paddingRight: 15
+        paddingRight: 15,
+
+        breakpoints: {
+          sm: {
+            width: 750
+          },
+          md: {
+            width: 970
+          },
+          lg: {
+            width: 1170
+          }
+        }
       },
-      // TODO: Implement container breakpoint styles.
       modifiers: {
         fluid: {
-          width: '100%'
+          width: '100%',
+
+          breakpoints: {
+            sm: {
+              width: '100%'
+            },
+            md: {
+              width: '100%'
+            },
+            lg: {
+              width: '100%'
+            }
+          }
         }
       }
     };

@@ -1,16 +1,14 @@
 var React = require('react');
 var Radium = require('radium');
+var { StyleResolverMixin } = Radium;
 
 var Col = React.createClass({
-  mixins: [ Radium ],
+  mixins: [ StyleResolverMixin ],
 
   getDefaultProps: function () {
     return {
       tagName: 'div',
-      xsColCount: 12,
-      smColCount: 12,
-      mdColCount: 12,
-      lgColCount: 12
+      xsSpan: 12
     }
   },
 
@@ -25,13 +23,27 @@ var Col = React.createClass({
         paddingRight: 15,
         position: 'relative',
         right: this.colCountToPercent(this.props.colPull),
-        width: this.colCountToPercent(this.props.xsColCount)
+        width: this.colCountToPercent(this.props.xsSpan),
+
+        breakpoints: {
+          sm: {
+            width: this.colCountToPercent(this.props.smSpan)
+          },
+          md: {
+            width: this.colCountToPercent(this.props.mdSpan)
+          },
+          lg: {
+            width: this.colCountToPercent(this.props.lgSpan)
+          }
+        }
       }
     };
   },
 
   colCountToPercent: function (colCount) {
-    return colCount ? (colCount / 12) * 100 + '%' : null
+    if (colCount) {
+      return (colCount / 12) * 100 + '%';
+    }
   },
 
   render: function () {
