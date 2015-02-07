@@ -1,0 +1,33 @@
+{
+  "name": "radium-bootstrap",
+  "version": "0.0.0",
+  "description": "# Components with owners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormidableLabs/radium-bootstrap.git"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "author": "Alex Lande",
+  "scripts": {
+    "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FormidableLabs/radium-bootstrap/issues"
+  },
+  "homepage": "https://github.com/FormidableLabs/radium-bootstrap",
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
+  }
+}
