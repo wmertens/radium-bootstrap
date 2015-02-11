@@ -4,7 +4,7 @@
   "description": "# Components with owners",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples/"
   },
   "repository": {
     "type": "git",
@@ -14,9 +14,6 @@
     "example": "examples"
   },
   "author": "Alex Lande",
-  "scripts": {
-    "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples/"
-  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/FormidableLabs/radium-bootstrap/issues"
