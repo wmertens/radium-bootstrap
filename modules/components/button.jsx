@@ -17,15 +17,11 @@ var absoluteDarken = function (colorValue, value) {
 };
 
 var hoverBg = function (styles) {
-  return {
-    backgroundColor: absoluteDarken(styles.backgroundColor, 10)
-  };
+  return absoluteDarken(styles.backgroundColor, 10);
 };
 
 var hoverBorder = function (styles) {
-  return {
-    borderColor: absoluteDarken(styles.borderColor, 12)
-  };
+  return absoluteDarken(styles.borderColor, 12);
 };
 
 var Button = React.createClass({
@@ -39,6 +35,11 @@ var Button = React.createClass({
   },
 
   getStyles: function () {
+    var computedHoverStyles = {
+      backgroundColor: hoverBg,
+      borderColor: hoverBorder
+    };
+
     return {
       standard: {
         backgroundImage: 'none',
@@ -62,8 +63,7 @@ var Button = React.createClass({
           hover: {
             textDecoration: 'none',
 
-            computedBackgroundColor: hoverBg,
-            computedBorderColor: hoverBorder
+            computed: computedHoverStyles
           },
           focus: {
             outline: 'thin dotted',
@@ -71,16 +71,14 @@ var Button = React.createClass({
             outlineOffset: -2,
             textDecoration: 'none',
 
-            computedBackgroundColor: hoverBg,
-            computedBorderColor: hoverBorder
+            computed: computedHoverStyles
           },
           active: {
             backgroundImage: 'none',
             boxShadow: 'inset 0 3px 5px rgba(0, 0, 0, 0.125)',
             outline: 0,
 
-            computedBackgroundColor: hoverBg,
-            computedBorderColor: hoverBorder
+            computed: computedHoverStyles
           }
         }
       },
@@ -116,13 +114,14 @@ var Button = React.createClass({
             borderRadius: 0,
             color: '#337ab7',
 
+            // TODO: Figure out a good, idiomatic way of applying the same
+            // styles to multiple states, because this is a hack.
             states: function () {
               var hoverStyles = {
                 color: '#23527c',
                 textDecoration: 'underline',
 
-                computedBackgroundColor: null,
-                computedBorderColor: null
+                computed: null
               };
 
               return {
@@ -133,8 +132,7 @@ var Button = React.createClass({
                   color: '#23527c',
                   textDecoration: 'underline',
 
-                  computedBackgroundColor: null,
-                  computedBorderColor: null
+                  computed: null
                 }
               };
             }()
