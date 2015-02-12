@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/FormidableLabs/radium-bootstrap",
   "dependencies": {
-    "react": "^0.12.2"
+    "react": "^0.12.2",
+    "lodash": "2.4.1"
   },
   "devDependencies": {
     "jsx-loader": "^0.12.2",

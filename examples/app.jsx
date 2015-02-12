@@ -5,6 +5,10 @@ var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
 var Container = require('../modules/components/container.jsx');
 var Row = require('../modules/components/row.jsx');
 var Col = require('../modules/components/col.jsx');
+var Form = require('../modules/components/form.jsx');
+var FormGroup = require('../modules/components/form-group.jsx');
+var Label = require('../modules/components/label.jsx');
+var Input = require('../modules/components/input.jsx');
 
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
@@ -33,7 +37,6 @@ var App = React.createClass({
 
     return (
       <main>
-
         <Container
           fluid={true}
           breakpoints={this.state.breakpoints}
@@ -204,6 +207,55 @@ var App = React.createClass({
               Standard Column
             </Col>
           </Row>
+        </Container>
+
+        <Container>
+          <Form>
+            <FormGroup>
+              <Label>Email</Label>
+              <Input placeholder="Enter email" />
+            </FormGroup>
+            <FormGroup>
+              <Label>Password</Label>
+              <Input placeholder="Enter password" />
+            </FormGroup>
+          </Form>
+        </Container>
+        <Container>
+          <Form inline={true}>
+            <FormGroup>
+              <Label>Email</Label>
+              <Input placeholder="Enter email" />
+            </FormGroup>
+            <FormGroup>
+              <Label>Password</Label>
+              <Input placeholder="Enter password" />
+            </FormGroup>
+          </Form>
+        </Container>
+        <Container>
+          <Form horizontal={true}>
+            <FormGroup>
+              <Row>
+                <Col xsColCount={2}>
+                  <Label>Email</Label>
+                </Col>
+                <Col xsColCount={10}>
+                  <Input placeholder="Enter email" />
+                </Col>
+              </Row>
+            </FormGroup>
+            <FormGroup>
+              <Row>
+                <Col xsColCount={2}>
+                  <Label>Password</Label>
+                </Col>
+                <Col xsColCount={10}>
+                  <Input placeholder="Enter password" />
+                </Col>
+              </Row>
+            </FormGroup>
+          </Form>
         </Container>
       </main>
     );
