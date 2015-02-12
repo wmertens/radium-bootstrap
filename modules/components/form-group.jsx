@@ -31,7 +31,7 @@ var FormGroup = React.createClass({
   getStyles: function () {
     return {
       standard: {
-        marginBottom: 15
+        margin: '0 0 15px 0'
       },
       modifiers: {
         inline: {

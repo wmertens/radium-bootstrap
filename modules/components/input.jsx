@@ -37,6 +37,7 @@ var Input = React.createClass({
         inline: {
           display: 'inline-block',
           width: 'auto',
+          marginRight: 3,
           verticalAlign: 'middle'
         }
       }

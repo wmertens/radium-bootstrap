@@ -21,6 +21,9 @@ var Label = React.createClass({
         fontWeight: 700
       },
       modifiers: {
+        inline: {
+          marginRight: 3
+        },
         horizontal: {
           width: '100%',
           paddingTop: 7,
