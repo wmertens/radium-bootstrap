@@ -2,6 +2,11 @@ var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin } = Radium;
 
+var Form = require('./form.jsx');
+var FormGroup = require('./form-group.jsx');
+var Label = require('./label.jsx');
+var Input = require('./input.jsx');
+
 var Example = React.createClass({
   mixins: [ StyleResolverMixin ],
 
@@ -59,16 +64,15 @@ var Example = React.createClass({
     var exampleStyles = this.buildStyles(this.getExampleStyles());
     var exampleTextStyles = this.buildStyles(this.getExampleTextStyles());
     var codeStyles = this.buildStyles(this.getCodeStyles());
-    var component = eval(this.props.markup);
 
     return (
       <div>
         <TagName style={exampleStyles}>
           <div style={exampleTextStyles}>Example</div>
-          {component}
+          {this.props.children}
         </TagName>
         <TagName style={codeStyles}>
-          <pre>this.props.markup</pre>
+          <pre>{this.props.markup}</pre>
         </TagName>
       </div>
     );

@@ -2,6 +2,8 @@ var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
 
+var reactTools = require('react-tools');
+
 var Example = require('../modules/components/example.jsx');
 var Container = require('../modules/components/container.jsx');
 var Row = require('../modules/components/row.jsx');
@@ -13,7 +15,6 @@ var Label = require('../modules/components/label.jsx');
 var Input = require('../modules/components/input.jsx');
 
 var basicForm = require('raw!./../examples/components/basic-form.txt');
-console.log(basicForm);
 
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
@@ -25,6 +26,10 @@ var MEDIA_QUERIES = {
 };
 
 MatchMediaStore.init(MEDIA_QUERIES);
+
+var convertExample = function (component) {
+  return eval(reactTools.transform(component));
+};
 
 var App = React.createClass({
   mixins: [ StyleResolverMixin, MatchMediaMixin ],
@@ -218,47 +223,9 @@ var App = React.createClass({
 
         <Container breakpoints={this.state.breakpoints}>
           <h2>Basic form</h2>
-          <Example markup={basicForm} />
-
-          // <h2>Inline form</h2>
-          // <Example>
-          //   <Form inline={true}>
-          //     <FormGroup>
-          //       <Label>Email</Label>
-          //       <Input type="email" placeholder="Email" />
-          //     </FormGroup>
-          //     <FormGroup>
-          //       <Label>Password</Label>
-          //       <Input type="password" placeholder="Password" />
-          //     </FormGroup>
-          //   </Form>
-          // </Example>
-
-          // <h2>Horizontal form</h2>
-          // <Example>
-          //   <Form horizontal={true}>
-          //     <FormGroup>
-          //       <Row>
-          //         <Col breakpoints={this.state.breakpoints} xsSpan={2}>
-          //           <Label>Email</Label>
-          //         </Col>
-          //         <Col breakpoints={this.state.breakpoints} xsSpan={10}>
-          //           <Input type="email" placeholder="Email" />
-          //         </Col>
-          //       </Row>
-          //     </FormGroup>
-          //     <FormGroup>
-          //       <Row>
-          //         <Col breakpoints={this.state.breakpoints} xsSpan={2}>
-          //           <Label>Password</Label>
-          //         </Col>
-          //         <Col breakpoints={this.state.breakpoints} xsSpan={10}>
-          //           <Input type="password" placeholder="Password" />
-          //         </Col>
-          //       </Row>
-          //     </FormGroup>
-          //   </Form>
-          // </Example>
+          <Example markup={basicForm}>
+            {convertExample(basicForm)}
+          </Example>
         </Container>
       </main>
     );
