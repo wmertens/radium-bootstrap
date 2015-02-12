@@ -1,8 +1,17 @@
 var React = require('react/addons');
 var Radium = require('radium');
+var { StyleResolverMixin } = Radium;
 
 var FormGroup = React.createClass({
-  mixins: [ Radium ],
+  mixins: [ StyleResolverMixin ],
+
+  getDefaultProps: function () {
+    return {
+      tagName: 'div',
+      horizontal: false,
+      inline: false
+    };
+  },
 
   buildChildren: function (elements) {
     return React.Children.map(elements, function (element) {
@@ -17,14 +26,6 @@ var FormGroup = React.createClass({
 
       return React.addons.cloneWithProps(element, newProps);
     }, this);
-  },
-
-  getDefaultProps: function () {
-    return {
-      tagName: 'div',
-      horizontal: false,
-      inline: false
-    };
   },
 
   getStyles: function () {

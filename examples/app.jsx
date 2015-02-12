@@ -5,6 +5,7 @@ var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
 var Container = require('../modules/components/container.jsx');
 var Row = require('../modules/components/row.jsx');
 var Col = require('../modules/components/col.jsx');
+
 var Form = require('../modules/components/form.jsx');
 var FormGroup = require('../modules/components/form-group.jsx');
 var Label = require('../modules/components/label.jsx');
@@ -208,8 +209,11 @@ var App = React.createClass({
             </Col>
           </Row>
         </Container>
+        <br />
 
-        <Container>
+        <Container
+          breakpoints={this.state.breakpoints}
+        >
           <Form>
             <FormGroup>
               <Label>Email</Label>
@@ -221,7 +225,10 @@ var App = React.createClass({
             </FormGroup>
           </Form>
         </Container>
-        <Container>
+
+        <Container
+          breakpoints={this.state.breakpoints}
+        >
           <Form inline={true}>
             <FormGroup>
               <Label>Email</Label>
@@ -233,24 +240,40 @@ var App = React.createClass({
             </FormGroup>
           </Form>
         </Container>
-        <Container>
+        <br />
+
+        <Container
+          breakpoints={this.state.breakpoints}
+        >
           <Form horizontal={true}>
             <FormGroup>
               <Row>
-                <Col xsColCount={2}>
+                <Col
+                  breakpoints={this.state.breakpoints}
+                  xsSpan={2}
+                >
                   <Label>Email</Label>
                 </Col>
-                <Col xsColCount={10}>
+                <Col
+                  breakpoints={this.state.breakpoints}
+                  xsSpan={10}
+                >
                   <Input placeholder="Enter email" />
                 </Col>
               </Row>
             </FormGroup>
             <FormGroup>
               <Row>
-                <Col xsColCount={2}>
+                <Col
+                  breakpoints={this.state.breakpoints}
+                  xsSpan={2}
+                >
                   <Label>Password</Label>
                 </Col>
-                <Col xsColCount={10}>
+                <Col
+                  breakpoints={this.state.breakpoints}
+                  xsSpan={10}
+                >
                   <Input placeholder="Enter password" />
                 </Col>
               </Row>

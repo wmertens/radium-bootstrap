@@ -1,8 +1,9 @@
 var React = require('react');
 var Radium = require('radium');
+var { StyleResolverMixin } = Radium;
 
 var Label = React.createClass({
-  mixins: [ Radium ],
+  mixins: [ StyleResolverMixin ],
 
   getDefaultProps: function () {
     return {
@@ -21,6 +22,7 @@ var Label = React.createClass({
       },
       modifiers: {
         horizontal: {
+          width: '100%',
           paddingTop: 7,
           marginBottom: 0,
           textAlign: 'right'

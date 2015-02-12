@@ -1,8 +1,9 @@
 var React = require('react');
 var Radium = require('radium');
+var { StyleResolverMixin } = Radium;
 
 var Input = React.createClass({
-  mixins: [ Radium ],
+  mixins: [ StyleResolverMixin ],
 
   getDefaultProps: function () {
     return {

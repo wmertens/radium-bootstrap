@@ -6,6 +6,12 @@ var _ = require('lodash');
 var Row = React.createClass({
   mixins: [ StyleResolverMixin ],
 
+  getDefaultProps: function () {
+    return {
+      tagName: 'div'
+    };
+  },
+
   buildChildren: function (elements) {
     return React.Children.map(elements, function (element) {
       if (element.props) {
@@ -15,12 +21,6 @@ var Row = React.createClass({
       }
       return this.props.children;
     }, this);
-  },
-
-  getDefaultProps: function () {
-    return {
-      tagName: 'div'
-    };
   },
 
   getStyles: function () {

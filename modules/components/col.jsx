@@ -6,11 +6,18 @@ var _ = require('lodash');
 var Col = React.createClass({
   mixins: [ StyleResolverMixin ],
 
+  getDefaultProps: function () {
+    return {
+      tagName: 'div',
+      xsSpan: 12
+    };
+  },
+
   buildChildren: function (elements) {
     return React.Children.map(elements, function (element) {
       if (element.props) {
         var defaultProps =
-          ['tagName', 'xsColCount', 'smColCount', 'mdColCount', 'lgColCount', 'children', 'style'];
+          ['tagName', 'xsSpan', 'children', 'style'];
         var inheritedProps = _.omit(this.props, defaultProps);
         return React.addons.cloneWithProps(element, inheritedProps);
       }
@@ -21,13 +28,6 @@ var Col = React.createClass({
   colCountToPercent: function (colCount) {
     if (colCount) {
       return (colCount / 12) * 100 + '%';
-    }
-  },
-
-  getDefaultProps: function () {
-    return {
-      tagName: 'div',
-      xsSpan: 12
     }
   },
 
