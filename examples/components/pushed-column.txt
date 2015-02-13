@@ -1,0 +1,10 @@
+<Container fluid={true} breakpoints={this.state.breakpoints}>
+  <Row>
+    <Col breakpoints={this.state.breakpoints} xsSpan={3} colPush={3} style={colDemoStyles}>
+      Pushed Column
+    </Col>
+    <Col breakpoints={this.state.breakpoints} xsSpan={3} colPull={3} style={colDemoStyles}>
+      Pulled Column
+    </Col>
+  </Row>
+</Container>

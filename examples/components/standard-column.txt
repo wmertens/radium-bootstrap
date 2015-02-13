@@ -1,0 +1,13 @@
+<Container fluid={true} breakpoints={this.state.breakpoints}>
+  <Row>
+    <Col breakpoints={this.state.breakpoints} xsSpan={6} style={colDemoStyles}>
+      Standard Column
+    </Col>
+    <Col breakpoints={this.state.breakpoints} xsSpan={4} style={colDemoStyles}>
+      Standard Column
+    </Col>
+    <Col breakpoints={this.state.breakpoints} xsSpan={2} style={colDemoStyles}>
+      Standard Column
+    </Col>
+  </Row>
+</Container>

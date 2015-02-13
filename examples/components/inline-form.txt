@@ -1,0 +1,10 @@
+<Form inline={true}>
+  <FormGroup>
+    <Label>Email</Label>
+    <Input type="email" placeholder="Email" />
+  </FormGroup>
+  <FormGroup>
+    <Label>Password</Label>
+    <Input type="password" placeholder="Password" />
+  </FormGroup>
+</Form>

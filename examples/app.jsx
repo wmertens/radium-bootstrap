@@ -1,7 +1,6 @@
 var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
-
 var reactTools = require('react-tools');
 
 var Example = require('../modules/components/example.jsx');
@@ -15,6 +14,14 @@ var Label = require('../modules/components/label.jsx');
 var Input = require('../modules/components/input.jsx');
 
 var basicForm = require('raw!./../examples/components/basic-form.txt');
+var inlineForm = require('raw!./../examples/components/inline-form.txt');
+var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
+var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
+var responsiveColumn = require('raw!./../examples/components/responsive-column.txt');
+var standardColumn = require('raw!./../examples/components/standard-column.txt');
+var offsetColumn = require('raw!./../examples/components/offset-column.txt');
+var pushedColumn = require('raw!./../examples/components/pushed-column.txt');
+var nestedColumn = require('raw!./../examples/components/nested-column.txt');
 
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
@@ -27,207 +34,72 @@ var MEDIA_QUERIES = {
 
 MatchMediaStore.init(MEDIA_QUERIES);
 
-var convertExample = function (component) {
-  return eval(reactTools.transform(component));
+var colDemoStyles = {
+  background: 'rgba(117,190,255,0.5)',
+  border: '1px solid #0074D9',
+  color: '#0074D9',
+  textAlign: 'center',
+  paddingTop: '1em',
+  paddingBottom: '1em'
+};
+
+var convertExample = function (component, context) {
+  return function () {
+    return eval(reactTools.transform(component));
+  }.call(context);
 };
 
 var App = React.createClass({
   mixins: [ StyleResolverMixin, MatchMediaMixin ],
 
   render: function () {
-    var colDemoStyles = {
-      background: 'rgba(117,190,255,0.5)',
-      border: '1px solid #0074D9',
-      color: '#0074D9',
-      height: 80,
-      textAlign: 'center',
-      paddingTop: '1em',
-      paddingBottom: '1em'
-    };
-
     return (
-      <main>
-        <Container
-          fluid={true}
-          breakpoints={this.state.breakpoints}
-        >
-          <Row>
-            <Col
-              breakpoints={this.state.breakpoints}
-              style={colDemoStyles}
-            >
-              Fluid Container
-            </Col>
-          </Row>
-        </Container>
+      <Container breakpoints={this.state.breakpoints}>
+        <h2>Fluid container</h2>
+        <Example markup={fluidContainer}>
+          {convertExample(fluidContainer, this)}
+        </Example>
 
-        <Container
-          breakpoints={this.state.breakpoints}
-        >
-          <Row>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={12}
-              smSpan={8}
-              mdSpan={6}
-              lgSpan={4}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
+        <h2>Responsive columns</h2>
+        <Example markup={responsiveColumn}>
+          {convertExample(responsiveColumn, this)}
+        </Example>
 
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={6}
-              smSpan={2}
-              mdSpan={3}
-              lgSpan={4}
-              style={colDemoStyles}
-              >
-              Responsive Column
-            </Col>
+        <h2>Standard columns</h2>
+        <Example markup={standardColumn}>
+          {convertExample(standardColumn, this)}
+        </Example>
 
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={6}
-              smSpan={2}
-              mdSpan={3}
-              lgSpan={4}
-              style={colDemoStyles}
-              >
-              Responsive Column
-            </Col>
-          </Row>
+        <h2>Offset columns</h2>
+        <Example markup={offsetColumn}>
+          {convertExample(offsetColumn, this)}
+        </Example>
 
-          <Row>
-            <Col
-              breakpoints={this.state.breakpoints}
-              mdSpan={6}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={6}
-              mdSpan={3}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={6}
-              mdSpan={3}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-          </Row>
+        <h2>Pushed columns</h2>
+        <Example markup={pushedColumn}>
+          {convertExample(pushedColumn, this)}
+        </Example>
 
-          <Row>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={6}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={2}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
+        <h2>Nested columns</h2>
+        <Example markup={nestedColumn}>
+          {convertExample(nestedColumn, this)}
+        </Example>
 
-          <Row>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={3}
-              colOffset={2}
-              style={colDemoStyles}
-            >
-              Offset Column
-            </Col>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
+        <h2>Basic form</h2>
+        <Example markup={basicForm}>
+          {convertExample(basicForm)}
+        </Example>
 
-          <Row>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={3}
-              colPush={3}
-              style={colDemoStyles}
-            >
-              Pushed Column
-            </Col>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={3}
-              colPull={3}
-              style={colDemoStyles}
-            >
-              Pulled Column
-            </Col>
-          </Row>
+        <h2>Inline form</h2>
+        <Example markup={inlineForm}>
+          {convertExample(inlineForm)}
+        </Example>
 
-          <Row>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={8}
-              style={colDemoStyles}
-            >
-              <Row>
-                <Col
-                  breakpoints={this.state.breakpoints}
-                  xsSpan={6}
-                  style={colDemoStyles}
-                >
-                  Nested Column
-                </Col>
-                <Col
-                  breakpoints={this.state.breakpoints}
-                  xsSpan={6}
-                  style={colDemoStyles}
-                >
-                  Nested Column
-                </Col>
-              </Row>
-            </Col>
-            <Col
-              breakpoints={this.state.breakpoints}
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
-        </Container>
-        <br />
-        <br />
-
-        <Container breakpoints={this.state.breakpoints}>
-          <h2>Basic form</h2>
-          <Example markup={basicForm}>
-            {convertExample(basicForm)}
-          </Example>
-        </Container>
-      </main>
+        <h2>Horizontal form</h2>
+        <Example markup={horizontalForm}>
+          {convertExample(horizontalForm, this)}
+        </Example>
+      </Container>
     );
   }
 });

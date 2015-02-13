@@ -1,0 +1,17 @@
+<Container fluid={true} breakpoints={this.state.breakpoints}>
+  <Row>
+    <Col breakpoints={this.state.breakpoints} xsSpan={8} style={colDemoStyles}>
+      <Row>
+        <Col breakpoints={this.state.breakpoints} xsSpan={6} style={colDemoStyles}>
+          Nested Column
+        </Col>
+        <Col breakpoints={this.state.breakpoints} xsSpan={6} style={colDemoStyles}>
+          Nested Column
+        </Col>
+      </Row>
+    </Col>
+    <Col breakpoints={this.state.breakpoints} xsSpan={4} style={colDemoStyles}>
+      Standard Column
+    </Col>
+  </Row>
+</Container>

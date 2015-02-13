@@ -1,0 +1,24 @@
+<Container fluid={true} breakpoints={this.state.breakpoints}>
+  <Form horizontal={true}>
+    <FormGroup>
+      <Row>
+        <Col breakpoints={this.state.breakpoints} xsSpan={2}>
+          <Label>Email</Label>
+        </Col>
+        <Col breakpoints={this.state.breakpoints} xsSpan={10}>
+          <Input type="email" placeholder="Email" />
+        </Col>
+      </Row>
+    </FormGroup>
+    <FormGroup>
+      <Row>
+        <Col breakpoints={this.state.breakpoints} xsSpan={2}>
+          <Label>Password</Label>
+        </Col>
+        <Col breakpoints={this.state.breakpoints} xsSpan={10}>
+          <Input type="password" placeholder="Password" />
+        </Col>
+      </Row>
+    </FormGroup>
+  </Form>
+</Container>

@@ -38,6 +38,10 @@ var FormGroup = React.createClass({
           display: 'inline-block',
           marginBottom: 0,
           verticalAlign: 'middle'
+        },
+        horizontal: {
+          marginRight: -15,
+          marginLeft: -15
         }
       }
     };
