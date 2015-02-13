@@ -8,7 +8,6 @@ var Container = require('../modules/components/container.jsx');
 var Row = require('../modules/components/row.jsx');
 var Col = require('../modules/components/col.jsx');
 
-<<<<<<< HEAD
 var Form = require('../modules/components/form.jsx');
 var FormGroup = require('../modules/components/form-group.jsx');
 var Label = require('../modules/components/label.jsx');
@@ -30,10 +29,6 @@ var buttonOptions = require('raw!./../examples/components/button-options.txt');
 var buttonSizes = require('raw!./../examples/components/button-sizes.txt');
 var buttonStates = require('raw!./../examples/components/button-states.txt');
 
-=======
-var Button = require('../modules/components/button.jsx');
-
->>>>>>> master
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
   md: '(min-width: 992px)',
