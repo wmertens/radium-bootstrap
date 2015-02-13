@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/FormidableLabs/radium-bootstrap",
   "dependencies": {
+    "color": "^0.7.3",
     "react": "^0.12.2"
   },
   "devDependencies": {
+    "json-loader": "^0.5.1",
     "jsx-loader": "^0.12.2",
     "webpack": "^1.5.3",
     "webpack-dev-server": "^1.7.0"

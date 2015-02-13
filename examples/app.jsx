@@ -6,6 +6,8 @@ var Container = require('../modules/components/container.jsx');
 var Row = require('../modules/components/row.jsx');
 var Col = require('../modules/components/col.jsx');
 
+var Button = require('../modules/components/button.jsx');
+
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
   md: '(min-width: 992px)',
@@ -25,7 +27,7 @@ var App = React.createClass({
       background: 'rgba(117,190,255,0.5)',
       border: '1px solid #0074D9',
       color: '#0074D9',
-      height: 80,
+      minHeight: 80,
       textAlign: 'center',
       paddingTop: '1em',
       paddingBottom: '1em'
@@ -204,6 +206,106 @@ var App = React.createClass({
               Standard Column
             </Col>
           </Row>
+        </Container>
+
+        <Container
+          fluid={true}
+          breakpoints={this.state.breakpoints}
+        >
+          <p>
+            <Button>
+              Default
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+              kind='primary'
+            >
+              Primary
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+              kind='success'
+            >
+              Success
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+              kind='info'
+            >
+              Info
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+              kind='warning'
+            >
+              Warning
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+              kind='danger'
+            >
+              Danger
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+              kind='link'
+            >
+              Link
+            </Button>
+          </p>
+
+          <p>
+            <Button
+              size='large'
+              >
+              Large
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+            >
+              Normal
+            </Button>
+
+            <Button
+              size='small'
+              style={{marginLeft: '0.5em'}}
+              >
+              Small
+            </Button>
+
+            <Button
+              size='extraSmall'
+              style={{marginLeft: '0.5em'}}
+              >
+              Extra Small
+            </Button>
+          </p>
+
+          <p>
+            <Button
+              kind='primary'
+              size='large'
+              block={true}
+            >
+              Block Level
+            </Button>
+          </p>
+
+          <p>
+            <Button
+              kind='primary'
+              disabled={true}
+              >
+              Disabled
+            </Button>
+          </p>
         </Container>
       </main>
     );
