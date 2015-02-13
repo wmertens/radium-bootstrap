@@ -40,6 +40,23 @@ var Button = React.createClass({
       borderColor: hoverBorder
     };
 
+    var activeStyles = {
+      backgroundImage: 'none',
+      boxShadow: 'inset 0 3px 5px rgba(0, 0, 0, 0.125)',
+      outline: 0,
+
+      computed: computedHoverStyles,
+      states: null
+    };
+
+    var activeLinkStyles = {
+      boxShadow: 'none',
+      color: '#23527c',
+      textDecoration: 'underline',
+
+      computed: null
+    };
+
     return {
       standard: {
         backgroundImage: 'none',
@@ -73,13 +90,7 @@ var Button = React.createClass({
 
             computed: computedHoverStyles
           },
-          active: {
-            backgroundImage: 'none',
-            boxShadow: 'inset 0 3px 5px rgba(0, 0, 0, 0.125)',
-            outline: 0,
-
-            computed: computedHoverStyles
-          }
+          active: activeStyles
         }
       },
       modifiers: {
@@ -127,13 +138,7 @@ var Button = React.createClass({
               return {
                 hover: hoverStyles,
                 focus: hoverStyles,
-                active: {
-                  boxShadow: 'none',
-                  color: '#23527c',
-                  textDecoration: 'underline',
-
-                  computed: null
-                }
+                active: activeLinkStyles
               };
             }()
           }
@@ -170,14 +175,21 @@ var Button = React.createClass({
           pointerEvents: 'none',
 
           states: null
-        }
+        },
+        active: activeStyles,
+        activeLink: activeLinkStyles
       }
     };
   },
 
   render: function () {
-    var styles = this.buildStyles(this.getStyles());
     var TagName = this.props.tagName;
+
+    var additionalModifiers = {
+      activeLink: this.props.active && this.props.kind === 'link'
+    };
+
+    var styles = this.buildStyles(this.getStyles(), additionalModifiers);
 
     return (
       <TagName

@@ -302,8 +302,25 @@ var App = React.createClass({
             <Button
               kind='primary'
               disabled={true}
-              >
+            >
               Disabled
+            </Button>
+          </p>
+
+          <p>
+            <Button
+              kind='primary'
+              active={true}
+              >
+              Active
+            </Button>
+
+            <Button
+              kind='link'
+              active={true}
+              style={{marginLeft: '0.5em'}}
+              >
+              Active
             </Button>
           </p>
         </Container>
