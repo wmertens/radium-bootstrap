@@ -1,6 +1,12 @@
-<Container fluid={true} breakpoints={this.state.breakpoints}>
+<Container
+  fluid={true}
+  breakpoints={this.state.breakpoints}
+>
   <Row>
-    <Col breakpoints={this.state.breakpoints} style={colDemoStyles}>
+    <Col
+      style={colDemoStyles}
+      breakpoints={this.state.breakpoints}
+    >
       Fluid Container
     </Col>
   </Row>

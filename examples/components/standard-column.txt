@@ -1,12 +1,27 @@
-<Container fluid={true} breakpoints={this.state.breakpoints}>
+<Container
+  fluid={true}
+  breakpoints={this.state.breakpoints}
+>
   <Row>
-    <Col breakpoints={this.state.breakpoints} xsSpan={6} style={colDemoStyles}>
+    <Col
+      xsSpan={6}
+      style={colDemoStyles}
+      breakpoints={this.state.breakpoints}
+    >
       Standard Column
     </Col>
-    <Col breakpoints={this.state.breakpoints} xsSpan={4} style={colDemoStyles}>
+    <Col
+      xsSpan={4}
+      style={colDemoStyles}
+      breakpoints={this.state.breakpoints}
+    >
       Standard Column
     </Col>
-    <Col breakpoints={this.state.breakpoints} xsSpan={2} style={colDemoStyles}>
+    <Col
+      xsSpan={2}
+      style={colDemoStyles}
+      breakpoints={this.state.breakpoints}
+    >
       Standard Column
     </Col>
   </Row>

@@ -1,0 +1,47 @@
+<span>
+  <Button>
+    Default
+  </Button>
+
+  <Button
+    kind='primary'
+    style={{marginLeft: '0.5em'}}
+  >
+    Primary
+  </Button>
+
+  <Button
+    kind='success'
+    style={{marginLeft: '0.5em'}}
+  >
+    Success
+  </Button>
+
+  <Button
+    kind='info'
+    style={{marginLeft: '0.5em'}}
+  >
+    Info
+  </Button>
+
+  <Button
+    kind='warning'
+    style={{marginLeft: '0.5em'}}
+  >
+    Warning
+  </Button>
+
+  <Button
+    kind='danger'
+    style={{marginLeft: '0.5em'}}
+  >
+    Danger
+  </Button>
+
+  <Button
+    kind='link'
+    style={{marginLeft: '0.5em'}}
+  >
+    Link
+  </Button>
+</span>

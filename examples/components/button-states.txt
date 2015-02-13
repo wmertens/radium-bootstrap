@@ -1,0 +1,24 @@
+<span>
+  <Button
+    kind='primary'
+    disabled={true}
+  >
+    Disabled
+  </Button>
+
+  <Button
+    kind='primary'
+    active={true}
+    style={{marginLeft: '0.5em'}}
+  >
+    Active
+  </Button>
+
+  <Button
+    kind='link'
+    active={true}
+    style={{marginLeft: '0.5em'}}
+  >
+    Active
+  </Button>
+</span>

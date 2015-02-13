@@ -1,0 +1,33 @@
+<span>
+  <Button
+    size='large'
+  >
+    Large
+  </Button>
+  <Button
+    style={{marginLeft: '0.5em'}}
+  >
+    Normal
+  </Button>
+  <Button
+    size='small'
+    style={{marginLeft: '0.5em'}}
+  >
+    Small
+  </Button>
+  <Button
+    size='extraSmall'
+    style={{marginLeft: '0.5em'}}
+  >
+    Extra Small
+  </Button>
+  <p>
+    <Button
+      kind='primary'
+      size='large'
+      block={true}
+    >
+      Block Level
+    </Button>
+  </p>
+</span>
