@@ -37,10 +37,7 @@ var Row = React.createClass({
     var TagName = this.props.tagName;
 
     // TODO: Make global Clearfix variable/mixin/something.
-    var clearFixStyles = {
-      display: 'table'
-    };
-
+    
     return (
       <TagName style={styles}>
         <i style={{display: 'table'}}>{'\u0020'}</i>

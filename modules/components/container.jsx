@@ -35,17 +35,7 @@ var Container = React.createClass({
         fluid: {
           width: '100%',
 
-          breakpoints: {
-            sm: {
-              width: '100%'
-            },
-            md: {
-              width: '100%'
-            },
-            lg: {
-              width: '100%'
-            }
-          }
+          breakpoints: null
         }
       }
     };
