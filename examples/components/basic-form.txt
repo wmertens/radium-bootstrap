@@ -13,4 +13,12 @@
       placeholder='Password'
     />
   </FormGroup>
+  <FormGroup>
+    <Label>File input</Label>
+    <Input
+      type='file'
+    />
+    <HelpText>Example block-level help text here.</HelpText>
+  </FormGroup>
+  <Button type="submit">Submit</Button>
 </Form>

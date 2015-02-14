@@ -1,13 +1,14 @@
+// React
 var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
 var reactTools = require('react-tools');
 
+// Radium components
 var Example = require('../modules/components/example.jsx');
 var Container = require('../modules/components/container.jsx');
 var Row = require('../modules/components/row.jsx');
 var Col = require('../modules/components/col.jsx');
-
 var Form = require('../modules/components/form.jsx');
 var FormGroup = require('../modules/components/form-group.jsx');
 var Label = require('../modules/components/label.jsx');
@@ -15,21 +16,21 @@ var Input = require('../modules/components/input.jsx');
 var Textarea = require('../modules/components/textarea.jsx');
 var StaticControl = require('../modules/components/static-control.jsx');
 var Button = require('../modules/components/button.jsx');
+var HelpText = require('../modules/components/help-text.jsx');
 
+// Examples
 var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
 var responsiveColumn = require('raw!./../examples/components/responsive-column.txt');
 var standardColumn = require('raw!./../examples/components/standard-column.txt');
 var offsetColumn = require('raw!./../examples/components/offset-column.txt');
 var pushedColumn = require('raw!./../examples/components/pushed-column.txt');
 var nestedColumn = require('raw!./../examples/components/nested-column.txt');
-
 var basicForm = require('raw!./../examples/components/basic-form.txt');
 var inlineForm = require('raw!./../examples/components/inline-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
 var textarea = require('raw!./../examples/components/textarea.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
 var staticControlInline = require('raw!./../examples/components/static-control-inline.txt');
-
 var buttonOptions = require('raw!./../examples/components/button-options.txt');
 var buttonSizes = require('raw!./../examples/components/button-sizes.txt');
 var buttonStates = require('raw!./../examples/components/button-states.txt');

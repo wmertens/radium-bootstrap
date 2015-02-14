@@ -47,6 +47,19 @@ var Input = React.createClass({
           date: {
             lineHeight: 34
           },
+          file: {
+            backgroundColor: 'transparent',
+            border: 'none',
+            borderRadius: 0,
+            boxShadow: 'none',
+            color: 'inherit',
+            display: 'block',
+            height: 'inherit',
+            lineHeight: 'inherit',
+            padding: 0,
+            transition: 'none',
+            width: 'inherit'
+          },
           month: {
             lineHeight: 34
           },
