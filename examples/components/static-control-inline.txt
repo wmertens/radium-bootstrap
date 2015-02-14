@@ -2,9 +2,9 @@
   <FormGroup
     inline={true}
   >
-    <StaticInput>
+    <StaticControl>
       email@example.com
-    </StaticInput>
+    </StaticControl>
     <Input
       type='password'
       placeholder='Password'

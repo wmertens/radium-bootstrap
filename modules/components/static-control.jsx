@@ -2,7 +2,7 @@ var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin } = Radium;
 
-var StaticInput = React.createClass({
+var StaticControl = React.createClass({
   mixins: [ StyleResolverMixin ],
 
   getDefaultProps: function () {
@@ -38,4 +38,4 @@ var StaticInput = React.createClass({
   }
 });
 
-module.exports = StaticInput;
+module.exports = StaticControl;

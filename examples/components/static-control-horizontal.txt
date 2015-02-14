@@ -17,9 +17,9 @@
           xsSpan={10}
           breakpoints={this.state.breakpoints}
         >
-          <StaticInput>
+          <StaticControl>
             email@example.com
-          </StaticInput>
+          </StaticControl>
         </Col>
       </Row>
     </FormGroup>
