@@ -40,8 +40,8 @@ var FormGroup = React.createClass({
           verticalAlign: 'middle'
         },
         horizontal: {
-          marginRight: -15,
-          marginLeft: -15
+          marginLeft: -15,
+          marginRight: -15
         }
       }
     };

@@ -48,9 +48,9 @@ var colDemoStyles = {
   border: '1px solid #0074D9',
   color: '#0074D9',
   minHeight: 80,
-  textAlign: 'center',
+  paddingBottom: '1em',
   paddingTop: '1em',
-  paddingBottom: '1em'
+  textAlign: 'center'
 };
 
 var convertExample = function (component, context) {
@@ -63,9 +63,11 @@ var App = React.createClass({
   mixins: [ StyleResolverMixin, MatchMediaMixin ],
 
   render: function () {
+    var headingStyle = { borderBottom: '1px solid #eee' };
+
     return (
       <Container breakpoints={this.state.breakpoints}>
-        <h1 style={{borderBottom: '1px solid #eee'}}>Grid system</h1>
+        <h1 style={headingStyle}>Grid system</h1>
         <h2>Fluid container</h2>
         <Example markup={fluidContainer}>
           {convertExample(fluidContainer, this)}
@@ -96,7 +98,7 @@ var App = React.createClass({
           {convertExample(nestedColumn, this)}
         </Example>
 
-        <h1 style={{borderBottom: '1px solid #eee'}}>Forms</h1>
+        <h1 style={headingStyle}>Forms</h1>
         <h2>Basic form</h2>
         <Example markup={basicForm}>
           {convertExample(basicForm)}
@@ -120,7 +122,7 @@ var App = React.createClass({
           {convertExample(staticInputInline, this)}
         </Example>
 
-        <h1 style={{borderBottom: '1px solid #eee'}}>Buttons</h1>
+        <h1 style={headingStyle}>Buttons</h1>
         <h2>Button options</h2>
         <Example markup={buttonOptions}>
           {convertExample(buttonOptions)}

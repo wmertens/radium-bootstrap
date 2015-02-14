@@ -15,30 +15,29 @@ var Input = React.createClass({
   getStyles: function () {
     return {
       standard: {
-        display: 'block',
-        width: '100%',
-        height: 34,
-        padding: '6px 12px',
-        margin: 0,
-        font: 'inherit',
-        fontFamily: 'inherit',
-        fontSize: 14,
-        lineHeight: '1.42857143',
-        color: '#555',
         backgroundColor: '#fff',
         backgroundImage: 'none',
         border: '1px solid #ccc',
         borderRadius: 4,
         boxShadow: 'inset 0 1px 1px rgba(0,0,0,.075)',
         boxSizing: 'border-box',
-        transition: 'border-color ease-in-out .15s,box-shadow ease-in-out .15s'
+        color: '#555',
+        display: 'block',
+        font: 'inherit',
+        fontSize: 14,
+        height: 34,
+        lineHeight: '1.42857143',
+        margin: 0,
+        padding: '6px 12px',
+        transition: 'border-color ease-in-out .15s,box-shadow ease-in-out .15s',
+        width: '100%'
       },
       modifiers: {
         inline: {
           display: 'inline-block',
-          width: 'auto',
           marginRight: 3,
-          verticalAlign: 'middle'
+          verticalAlign: 'middle',
+          width: 'auto'
         }
       }
     };

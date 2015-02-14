@@ -19,15 +19,15 @@ var Example = React.createClass({
   getExampleStyles: function () {
     return {
       standard: {
-        position: 'relative',
-        margin: '0 0 15px 0',
-        padding: '45px 15px 15px',
         backgroundColor: '#fff',
-        borderWidth: 1,
-        borderStyle: 'solid',
         borderColor: '#ddd',
         borderRadius: '4px 4px 0 0',
-        boxShadow: 'none'
+        borderStyle: 'solid',
+        borderWidth: 1,
+        boxShadow: 'none',
+        margin: '0 0 15px 0',
+        padding: '45px 15px 15px',
+        position: 'relative'
       }
     };
   },
@@ -35,14 +35,14 @@ var Example = React.createClass({
   getExampleTextStyles: function () {
     return {
       standard: {
-        position: 'absolute',
-        top: 15,
-        left: 15,
+        color: '#959595',
         fontSize: 12,
         fontWeight: 700,
-        color: '#959595',
+        left: 15,
+        letterSpacing: 1,
+        position: 'absolute',
         textTransform: 'uppercase',
-        letterSpacing: 1
+        top: 15
       }
     };
   },
@@ -50,11 +50,11 @@ var Example = React.createClass({
   getCodeStyles: function () {
     return {
       standard: {
-        margin: '-16px 0 15px 0',
-        padding: '9px 14px',
+        backgroundColor: '#f7f7f9',
         border: '1px solid #e1e1e8',
         borderRadius: '0 0 4px 4px',
-        backgroundColor: '#f7f7f9'
+        margin: '-16px 0 15px 0',
+        padding: '9px 14px'
       }
     };
   },

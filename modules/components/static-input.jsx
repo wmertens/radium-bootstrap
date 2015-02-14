@@ -16,8 +16,8 @@ var StaticInput = React.createClass({
     return {
       standard: {
         margin: 0,
-        paddingTop: 7,
-        paddingBottom: 7
+        paddingBottom: 7,
+        paddingTop: 7
       },
       modifiers: {
         inline: {

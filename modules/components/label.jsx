@@ -16,19 +16,19 @@ var Label = React.createClass({
     return {
       standard: {
         display: 'inline-block',
-        maxWidth: '100%',
+        fontWeight: 700,
         marginBottom: 5,
-        fontWeight: 700
+        maxWidth: '100%'
       },
       modifiers: {
         inline: {
           marginRight: 3
         },
         horizontal: {
-          width: '100%',
-          paddingTop: 7,
           marginBottom: 0,
-          textAlign: 'right'
+          paddingTop: 7,
+          textAlign: 'right',
+          width: '100%'
         }
       }
     };
