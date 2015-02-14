@@ -8,7 +8,8 @@ var Input = React.createClass({
   getDefaultProps: function () {
     return {
       tagName: 'input',
-      inline: false
+      inline: false,
+      type: 'text'
     };
   },
 
@@ -38,7 +39,21 @@ var Input = React.createClass({
           marginRight: 3,
           verticalAlign: 'middle',
           width: 'auto'
-        }
+        },
+        type: {
+          datetimeLocal: {
+            lineHeight: 34
+          },
+          date: {
+            lineHeight: 34
+          },
+          month: {
+            lineHeight: 34
+          },
+          time: {
+            lineHeight: 34
+          }
+        },
       }
     };
   },
