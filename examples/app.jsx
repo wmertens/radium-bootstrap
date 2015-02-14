@@ -69,59 +69,59 @@ var App = React.createClass({
 
     return (
       <Container breakpoints={this.state.breakpoints}>
-        <h1 style={headingStyle}>Grid system</h1>
-        <h2>Fluid container</h2>
+        <h1 id="grid" style={headingStyle}>Grid system</h1>
+        <h2 id="fluid-container">Fluid container</h2>
         <Example markup={fluidContainer}>
           {convertExample(fluidContainer, this)}
         </Example>
 
-        <h2>Responsive columns</h2>
+        <h2 id="responsive-columns">Responsive columns</h2>
         <Example markup={responsiveColumn}>
           {convertExample(responsiveColumn, this)}
         </Example>
 
-        <h2>Standard columns</h2>
+        <h2 id="standard-columns">Standard columns</h2>
         <Example markup={standardColumn}>
           {convertExample(standardColumn, this)}
         </Example>
 
-        <h2>Offset columns</h2>
+        <h2 id="offset-columns">Offset columns</h2>
         <Example markup={offsetColumn}>
           {convertExample(offsetColumn, this)}
         </Example>
 
-        <h2>Pushed columns</h2>
+        <h2 id="responsive-columns">Pushed columns</h2>
         <Example markup={pushedColumn}>
           {convertExample(pushedColumn, this)}
         </Example>
 
-        <h2>Nested columns</h2>
+        <h2 id="nested-columns">Nested columns</h2>
         <Example markup={nestedColumn}>
           {convertExample(nestedColumn, this)}
         </Example>
 
-        <h1 style={headingStyle}>Forms</h1>
-        <h2>Basic form</h2>
+        <h1 id="forms" style={headingStyle}>Forms</h1>
+        <h2 id="basic-form">Basic form</h2>
         <Example markup={basicForm}>
           {convertExample(basicForm)}
         </Example>
 
-        <h2>Inline form</h2>
+        <h2 id="inline-form">Inline form</h2>
         <Example markup={inlineForm}>
           {convertExample(inlineForm)}
         </Example>
 
-        <h2>Horizontal form</h2>
+        <h2 id="horizontal-form">Horizontal form</h2>
         <Example markup={horizontalForm}>
           {convertExample(horizontalForm, this)}
         </Example>
 
-        <h2>Textarea</h2>
+        <h2 id="textarea">Textarea</h2>
         <Example markup={textarea}>
           {convertExample(textarea)}
         </Example>
 
-        <h2>Static control</h2>
+        <h2 id="static-control">Static control</h2>
         <Example markup={staticControlHorizontal}>
           {convertExample(staticControlHorizontal, this)}
         </Example>
@@ -129,18 +129,18 @@ var App = React.createClass({
           {convertExample(staticControlInline)}
         </Example>
 
-        <h1 style={headingStyle}>Buttons</h1>
-        <h2>Button options</h2>
+        <h1 id="buttons" style={headingStyle}>Buttons</h1>
+        <h2 id="button-options">Button options</h2>
         <Example markup={buttonOptions}>
           {convertExample(buttonOptions)}
         </Example>
 
-        <h2>Button sizes</h2>
+        <h2 id="button-sizes">Button sizes</h2>
         <Example markup={buttonSizes}>
           {convertExample(buttonSizes)}
         </Example>
 
-        <h2>Button states</h2>
+        <h2 id="button-states">Button states</h2>
         <Example markup={buttonStates}>
           {convertExample(buttonStates)}
         </Example>
