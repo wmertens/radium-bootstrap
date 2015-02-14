@@ -2,17 +2,24 @@
   inline={true}
 >
   <FormGroup>
-    <Label>Email</Label>
+    <Label>Name</Label>
     <Input
-      type="email"
-      placeholder="Email"
+      type="text"
+      formControl={true}
+      placeholder="Jane Doe"
     />
   </FormGroup>
   <FormGroup>
-    <Label>Password</Label>
+    <Label>Email</Label>
     <Input
-      type="password"
-      placeholder="Password"
+      type="email"
+      formControl={true}
+      placeholder="jane.doe@example.com"
     />
   </FormGroup>
+  <Button
+    type="submit"
+  >
+    Send invitation
+  </Button>
 </Form>

@@ -1,0 +1,34 @@
+<Form
+  inline={true}
+>
+  <FormGroup>
+    <Label
+      hidden={true}
+    >
+      Email
+    </Label>
+    <Input
+      type="email"
+      formControl={true}
+      placeholder="Enter email"
+    />
+  </FormGroup>
+  <FormGroup>
+    <Label
+      hidden={true}
+    >
+      Password
+    </Label>
+    <Input
+      type="password"
+      formControl={true}
+      placeholder="Password"
+    />
+  </FormGroup>
+  <Checkbox>Remember me</Checkbox>
+  <Button
+    type="submit"
+  >
+    Sign in
+  </Button>
+</Form>

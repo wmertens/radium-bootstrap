@@ -19,6 +19,7 @@
         >
           <Input
             type="email"
+            formControl={true}
             placeholder="Email"
           />
         </Col>
@@ -38,10 +39,37 @@
         >
           <Input
             type="password"
+            formControl={true}
             placeholder="Password"
           />
         </Col>
       </Row>
     </FormGroup>
+    <FormGroup>
+      <Row>
+        <Col
+          xsSpan={10}
+          colPush={2}
+          breakpoints={this.state.breakpoints}
+        >
+          <Checkbox>Remember me</Checkbox>
+        </Col>
+      </Row>
+    </FormGroup>
+    <FormGroup>
+      <Row>
+        <Col
+          xsSpan={10}
+          colPush={2}
+          breakpoints={this.state.breakpoints}
+        >
+          <Button
+            type="submit"
+          >
+            Sign in
+          </Button>
+        </Col>
+      </Row>
+     </FormGroup>
   </Form>
 </Container>

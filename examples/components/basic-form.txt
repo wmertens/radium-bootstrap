@@ -3,6 +3,7 @@
     <Label>Email</Label>
     <Input
       type='email'
+      formControl={true}
       placeholder='Email'
     />
   </FormGroup>
@@ -10,6 +11,7 @@
     <Label>Password</Label>
     <Input
       type='password'
+      formControl={true}
       placeholder='Password'
     />
   </FormGroup>
@@ -20,5 +22,10 @@
     />
     <HelpText>Example block-level help text here.</HelpText>
   </FormGroup>
-  <Button type="submit">Submit</Button>
+  <Checkbox>Check me out</Checkbox>
+  <Button
+    type="submit"
+  >
+    Submit
+  </Button>
 </Form>

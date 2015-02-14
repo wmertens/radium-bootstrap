@@ -21,6 +21,7 @@
     </Label>
     <Input
       type='password'
+      formControl={true}
       placeholder='Password'
     />
     <Button>

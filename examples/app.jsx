@@ -17,6 +17,7 @@ var Textarea = require('../modules/components/textarea.jsx');
 var StaticControl = require('../modules/components/static-control.jsx');
 var Button = require('../modules/components/button.jsx');
 var HelpText = require('../modules/components/help-text.jsx');
+var Checkbox = require('../modules/components/checkbox.jsx');
 
 // Examples
 var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
@@ -27,6 +28,7 @@ var pushedColumn = require('raw!./../examples/components/pushed-column.txt');
 var nestedColumn = require('raw!./../examples/components/nested-column.txt');
 var basicForm = require('raw!./../examples/components/basic-form.txt');
 var inlineForm = require('raw!./../examples/components/inline-form.txt');
+var inlineCheckboxForm = require('raw!./../examples/components/inline-checkbox-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
 var textarea = require('raw!./../examples/components/textarea.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
@@ -110,6 +112,9 @@ var App = React.createClass({
         <h2 id="inline-form">Inline form</h2>
         <Example markup={inlineForm}>
           {convertExample(inlineForm)}
+        </Example>
+        <Example markup={inlineCheckboxForm}>
+          {convertExample(inlineCheckboxForm)}
         </Example>
 
         <h2 id="horizontal-form">Horizontal form</h2>
