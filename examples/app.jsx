@@ -12,6 +12,7 @@ var Form = require('../modules/components/form.jsx');
 var FormGroup = require('../modules/components/form-group.jsx');
 var Label = require('../modules/components/label.jsx');
 var Input = require('../modules/components/input.jsx');
+var Textarea = require('../modules/components/textarea.jsx');
 var StaticControl = require('../modules/components/static-control.jsx');
 var Button = require('../modules/components/button.jsx');
 
@@ -25,6 +26,7 @@ var nestedColumn = require('raw!./../examples/components/nested-column.txt');
 var basicForm = require('raw!./../examples/components/basic-form.txt');
 var inlineForm = require('raw!./../examples/components/inline-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
+var textarea = require('raw!./../examples/components/textarea.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
 var staticControlInline = require('raw!./../examples/components/static-control-inline.txt');
 
@@ -112,6 +114,11 @@ var App = React.createClass({
         <h2>Horizontal form</h2>
         <Example markup={horizontalForm}>
           {convertExample(horizontalForm, this)}
+        </Example>
+
+        <h2>Textarea</h2>
+        <Example markup={textarea}>
+          {convertExample(textarea)}
         </Example>
 
         <h2>Static control</h2>
