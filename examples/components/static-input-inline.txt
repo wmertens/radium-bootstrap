@@ -1,0 +1,16 @@
+<Form>
+  <FormGroup
+    inline={true}
+  >
+    <StaticInput>
+      email@example.com
+    </StaticInput>
+    <Input
+      type='password'
+      placeholder='Password'
+    />
+    <Button>
+      Confirm identity
+    </Button>
+  </FormGroup>
+</Form>

@@ -12,6 +12,7 @@ var Form = require('../modules/components/form.jsx');
 var FormGroup = require('../modules/components/form-group.jsx');
 var Label = require('../modules/components/label.jsx');
 var Input = require('../modules/components/input.jsx');
+var StaticInput = require('../modules/components/static-input.jsx');
 var Button = require('../modules/components/button.jsx');
 
 var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
@@ -24,6 +25,8 @@ var nestedColumn = require('raw!./../examples/components/nested-column.txt');
 var basicForm = require('raw!./../examples/components/basic-form.txt');
 var inlineForm = require('raw!./../examples/components/inline-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
+var staticInputHorizontal = require('raw!./../examples/components/static-input-horizontal.txt');
+var staticInputInline = require('raw!./../examples/components/static-input-inline.txt');
 
 var buttonOptions = require('raw!./../examples/components/button-options.txt');
 var buttonSizes = require('raw!./../examples/components/button-sizes.txt');
@@ -107,6 +110,14 @@ var App = React.createClass({
         <h2>Horizontal form</h2>
         <Example markup={horizontalForm}>
           {convertExample(horizontalForm, this)}
+        </Example>
+
+        <h2>Static input</h2>
+        <Example markup={staticInputHorizontal}>
+          {convertExample(staticInputHorizontal, this)}
+        </Example>
+        <Example markup={staticInputInline}>
+          {convertExample(staticInputInline, this)}
         </Example>
 
         <h1 style={{borderBottom: '1px solid #eee'}}>Buttons</h1>
