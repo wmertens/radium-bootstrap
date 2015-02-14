@@ -2,9 +2,23 @@
   <FormGroup
     inline={true}
   >
+    <Label
+      hidden={true}
+    >
+      Email
+    </Label>
     <StaticControl>
       email@example.com
     </StaticControl>
+  </FormGroup>
+  <FormGroup
+    inline={true}
+  >
+    <Label
+      hidden={true}
+    >
+      Email
+    </Label>
     <Input
       type='password'
       placeholder='Password'

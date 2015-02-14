@@ -8,6 +8,7 @@ var Label = React.createClass({
   getDefaultProps: function () {
     return {
       tagName: 'label',
+      hidden: false,
       horizontal: false
     };
   },
@@ -23,6 +24,16 @@ var Label = React.createClass({
       modifiers: {
         inline: {
           marginRight: 3
+        },
+        hidden: {
+          border: 0,
+          clip: 'rect(0,0,0,0)',
+          height: 1,
+          margin: -1,
+          overflow: 'hidden',
+          padding: 0,
+          position: 'absolute',
+          width: 1
         },
         horizontal: {
           marginBottom: 0,
