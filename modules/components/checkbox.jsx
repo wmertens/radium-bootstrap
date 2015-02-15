@@ -49,6 +49,9 @@ var Checkbox = React.createClass({
           marginTop: 0,
           minHeight: 27,
           paddingTop: 7
+        },
+        checkboxInline: {
+          marginRight: 10
         }
       }
     };
@@ -75,7 +78,6 @@ var Checkbox = React.createClass({
           display: 'inline-block',
           fontWeight: 400,
           marginBottom: 0,
-          marginLeft: 10,
           marginTop: 0,
           paddingLeft: 20,
           verticalAlign: 'middle'
