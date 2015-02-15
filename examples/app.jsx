@@ -22,20 +22,22 @@ var HelpText = require('../modules/components/help-text.jsx');
 var Checkbox = require('../modules/components/checkbox.jsx');
 var Radio = require('../modules/components/radio.jsx');
 
-// Examples
+// Grid system
 var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
 var responsiveColumn = require('raw!./../examples/components/responsive-column.txt');
 var standardColumn = require('raw!./../examples/components/standard-column.txt');
 var offsetColumn = require('raw!./../examples/components/offset-column.txt');
 var pushedColumn = require('raw!./../examples/components/pushed-column.txt');
 var nestedColumn = require('raw!./../examples/components/nested-column.txt');
+
+// Forms
 var basicForm = require('raw!./../examples/components/basic-form.txt');
 var inlineForm = require('raw!./../examples/components/inline-form.txt');
 var inlineCheckboxForm = require('raw!./../examples/components/inline-checkbox-form.txt');
 var inlineInputGroupForm = require('raw!./../examples/components/inline-input-group-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
 
-// Supported Controls
+// Supported form controls
 var inputs = require('raw!./../examples/components/inputs.txt');
 var textarea = require('raw!./../examples/components/textarea.txt');
 var checkboxesAndRadios = require('raw!./../examples/components/checkboxes-and-radios.txt');
@@ -45,6 +47,8 @@ var checkboxesAndRadiosWithoutLabel =
   require('raw!./../examples/components/checkboxes-and-radios-without-label.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
 var staticControlInline = require('raw!./../examples/components/static-control-inline.txt');
+
+// Buttons
 var buttonOptions = require('raw!./../examples/components/button-options.txt');
 var buttonSizes = require('raw!./../examples/components/button-sizes.txt');
 var buttonStates = require('raw!./../examples/components/button-states.txt');
@@ -80,22 +84,22 @@ var App = React.createClass({
   mixins: [ StyleResolverMixin, MatchMediaMixin ],
 
   render: function () {
-    var headingStyle = { borderBottom: '1px solid #eee' };
-    var linkStyle = {
+    var headingStyles = { borderBottom: '1px solid #eee' };
+    var linkStyles = {
       color: '#000',
-      textDecoration: 'none',
+      textDecoration: 'none'
     };
 
     return (
       <Container breakpoints={this.state.breakpoints}>
-        <h1 id='grid' style={headingStyle}>
-          <a href="#grid" style={linkStyle}>
+        <h1 id='grid' style={headingStyles}>
+          <a href='#grid' style={linkStyles}>
             Grid system
           </a>
         </h1>
 
         <h2 id='fluid-container'>
-          <a href="#fluid-container" style={linkStyle}>
+          <a href='#fluid-container' style={linkStyles}>
             Fluid container
           </a>
         </h2>
@@ -104,7 +108,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='responsive-columns'>
-          <a href="#responsive-columns" style={linkStyle}>
+          <a href='#responsive-columns' style={linkStyles}>
             Responsive columns
           </a>
         </h2>
@@ -113,7 +117,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='standard-columns'>
-          <a href="#standard-columns" style={linkStyle}>
+          <a href='#standard-columns' style={linkStyles}>
             Standard columns
           </a>
         </h2>
@@ -122,7 +126,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='offset-columns'>
-          <a href="#offset-columns" style={linkStyle}>
+          <a href='#offset-columns' style={linkStyles}>
             Offset columns
           </a>
         </h2>
@@ -131,7 +135,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='responsive-columns'>
-          <a href="#responsive-columns" style={linkStyle}>
+          <a href='#responsive-columns' style={linkStyles}>
             Pushed columns
           </a>
         </h2>
@@ -140,7 +144,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='nested-columns'>
-          <a href="#nested-columns" style={linkStyle}>
+          <a href='#nested-columns' style={linkStyles}>
             Nested columns
           </a>
         </h2>
@@ -148,14 +152,14 @@ var App = React.createClass({
           {convertExample(nestedColumn, this)}
         </Example>
 
-        <h1 id='forms' style={headingStyle}>
-          <a href="#forms" style={linkStyle}>
+        <h1 id='forms' style={headingStyles}>
+          <a href='#forms' style={linkStyles}>
             Forms
           </a>
         </h1>
 
         <h2 id='basic-form'>
-          <a href="#basic-form" style={linkStyle}>
+          <a href='#basic-form' style={linkStyles}>
             Basic form
           </a>
         </h2>
@@ -164,7 +168,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='inline-form'>
-          <a href="#inline-form" style={linkStyle}>
+          <a href='#inline-form' style={linkStyles}>
             Inline form
           </a>
         </h2>
@@ -181,7 +185,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='horizontal-form'>
-          <a href="#horizontal-form" style={linkStyle}>
+          <a href='#horizontal-form' style={linkStyles}>
             Horizontal form
           </a>
         </h2>
@@ -190,13 +194,13 @@ var App = React.createClass({
         </Example>
 
         <h2 id='supported-controls'>
-          <a href="#supported-controls" style={linkStyle}>
+          <a href='#supported-controls' style={linkStyles}>
             Supported controls
           </a>
         </h2>
 
         <h3 id='inputs'>
-          <a href="#inputs" style={linkStyle}>
+          <a href='#inputs' style={linkStyles}>
             Inputs
           </a>
         </h3>
@@ -205,7 +209,7 @@ var App = React.createClass({
         </Example>
 
         <h3 id='textarea'>
-          <a href="#textarea" style={linkStyle}>
+          <a href='#textarea' style={linkStyles}>
             Textarea
           </a>
         </h3>
@@ -214,13 +218,13 @@ var App = React.createClass({
         </Example>
 
         <h3 id='checkboxes-and-radios'>
-          <a href="#checkboxes-and-radios" style={linkStyle}>
+          <a href='#checkboxes-and-radios' style={linkStyles}>
             Checkboxes and radios
           </a>
         </h3>
 
         <h4 id='default-checkboxes-and-radios'>
-          <a href="#default-checkboxes-and-radios" style={linkStyle}>
+          <a href='#default-checkboxes-and-radios' style={linkStyles}>
             Default (stacked)
           </a>
         </h4>
@@ -229,7 +233,7 @@ var App = React.createClass({
         </Example>
 
         <h4 id='inline-checkboxes-and-radios'>
-          <a href="#inline-checkboxes-and-radios" style={linkStyle}>
+          <a href='#inline-checkboxes-and-radios' style={linkStyles}>
             Inline checkboxes and radios
           </a>
         </h4>
@@ -238,7 +242,7 @@ var App = React.createClass({
         </Example>
 
         <h4 id='checkboxes-and-radios-without-label'>
-          <a href="#checkboxes-and-radios-without-label" style={linkStyle}>
+          <a href='#checkboxes-and-radios-without-label' style={linkStyles}>
             Checkboxes and radios without label text
           </a>
         </h4>
@@ -247,7 +251,7 @@ var App = React.createClass({
         </Example>
 
         <h3 id='static-control'>
-          <a href="#static-control" style={linkStyle}>
+          <a href='#static-control' style={linkStyles}>
             Static control
           </a>
         </h3>
@@ -259,14 +263,14 @@ var App = React.createClass({
           {convertExample(staticControlInline)}
         </Example>
 
-        <h1 id='buttons' style={headingStyle}>
-          <a href="#buttons" style={linkStyle}>
+        <h1 id='buttons' style={headingStyles}>
+          <a href='#buttons' style={linkStyles}>
             Buttons
           </a>
         </h1>
 
         <h2 id='button-options'>
-          <a href="#button-options" style={linkStyle}>
+          <a href='#button-options' style={linkStyles}>
             Button options
           </a>
         </h2>
@@ -275,7 +279,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='button-sizes'>
-          <a href="#button-sizes" style={linkStyle}>
+          <a href='#button-sizes' style={linkStyles}>
             Button sizes
           </a>
         </h2>
@@ -284,7 +288,7 @@ var App = React.createClass({
         </Example>
 
         <h2 id='button-states'>
-          <a href="#button-states" style={linkStyle}>
+          <a href='#button-states' style={linkStyles}>
             Button states
           </a>
         </h2>

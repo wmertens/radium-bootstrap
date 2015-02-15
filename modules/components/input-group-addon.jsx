@@ -54,7 +54,10 @@ var InputGroupAddon = React.createClass({
     var TagName = this.props.tagName;
 
     return (
-      <TagName style={styles} {...this.props}>
+      <TagName
+        style={styles}
+        {...this.props}
+      >
         {this.props.children}
       </TagName>
     );
