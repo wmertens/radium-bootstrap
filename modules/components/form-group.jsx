@@ -53,7 +53,9 @@ var FormGroup = React.createClass({
 
     return (
       <TagName style={styles} {...this.props}>
+        <i style={{display: 'table'}}>{'\u0020'}</i>
         {this.buildChildren(this.props.children)}
+        <i style={{clear: 'both', display: 'table'}}>{'\u0020'}</i>
       </TagName>
     );
   }
