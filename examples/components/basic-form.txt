@@ -20,7 +20,7 @@
     <Input
       type='file'
     />
-    <HelpText>Example block-level help text here.</HelpText>
+    <HelpText value='Example block-level help text here.' />
   </FormGroup>
   <Checkbox>Check me out</Checkbox>
   <Button

@@ -27,8 +27,8 @@ var HelpText = React.createClass({
     var TagName = this.props.tagName;
 
     return (
-      <TagName style={styles} {...this.props}>
-        {this.props.children}
+      <TagName style={styles}>
+        {this.props.value}
       </TagName>
     );
   }
