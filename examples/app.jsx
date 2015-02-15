@@ -13,6 +13,8 @@ var Form = require('../modules/components/form.jsx');
 var FormGroup = require('../modules/components/form-group.jsx');
 var Label = require('../modules/components/label.jsx');
 var Input = require('../modules/components/input.jsx');
+var InputGroup = require('../modules/components/input-group.jsx');
+var InputGroupAddon = require('../modules/components/input-group-addon.jsx');
 var Textarea = require('../modules/components/textarea.jsx');
 var StaticControl = require('../modules/components/static-control.jsx');
 var Button = require('../modules/components/button.jsx');
@@ -29,6 +31,7 @@ var nestedColumn = require('raw!./../examples/components/nested-column.txt');
 var basicForm = require('raw!./../examples/components/basic-form.txt');
 var inlineForm = require('raw!./../examples/components/inline-form.txt');
 var inlineCheckboxForm = require('raw!./../examples/components/inline-checkbox-form.txt');
+var inlineInputGroupForm = require('raw!./../examples/components/inline-input-group-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
 var textarea = require('raw!./../examples/components/textarea.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
@@ -115,6 +118,9 @@ var App = React.createClass({
         </Example>
         <Example markup={inlineCheckboxForm}>
           {convertExample(inlineCheckboxForm)}
+        </Example>
+        <Example markup={inlineInputGroupForm}>
+          {convertExample(inlineInputGroupForm)}
         </Example>
 
         <h2 id="horizontal-form">Horizontal form</h2>

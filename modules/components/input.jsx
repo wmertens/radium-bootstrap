@@ -71,6 +71,27 @@ var Input = React.createClass({
             lineHeight: 34
           }
         },
+        groupedInput: {
+          display: 'table-cell',
+          float: 'left',
+          marginBottom: 0,
+          position: 'relative',
+          width: '100%',
+          zIndex: 2
+        },
+        inputLocation: {
+          first: {
+            borderTopRightRadius: 0,
+            borderBottomRightRadius: 0
+          },
+          middle: {
+            borderRadius: 0
+          },
+          last: {
+            borderTopLeftRadius: 0,
+            borderBottomLeftRadius: 0
+          }
+        }
       }
     };
   },
