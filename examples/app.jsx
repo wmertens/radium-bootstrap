@@ -21,6 +21,8 @@ var Button = require('../modules/components/button.jsx');
 var HelpText = require('../modules/components/help-text.jsx');
 var Checkbox = require('../modules/components/checkbox.jsx');
 var Radio = require('../modules/components/radio.jsx');
+var Select = require('../modules/components/select.jsx');
+var Option = require('../modules/components/option.jsx');
 
 // Grid system
 var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
@@ -45,6 +47,7 @@ var inlineCheckboxesAndRadios =
   require('raw!./../examples/components/inline-checkboxes-and-radios.txt');
 var checkboxesAndRadiosWithoutLabel =
   require('raw!./../examples/components/checkboxes-and-radios-without-label.txt');
+var selects = require('raw!./../examples/components/selects.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
 var staticControlInline = require('raw!./../examples/components/static-control-inline.txt');
 
@@ -248,6 +251,15 @@ var App = React.createClass({
         </h4>
         <Example markup={checkboxesAndRadiosWithoutLabel}>
           {convertExample(checkboxesAndRadiosWithoutLabel)}
+        </Example>
+
+        <h3 id='selects'>
+          <a href='#selects' style={linkStyles}>
+            Selects
+          </a>
+        </h3>
+        <Example markup={selects}>
+          {convertExample(selects)}
         </Example>
 
         <h3 id='static-control'>
