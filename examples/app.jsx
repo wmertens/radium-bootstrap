@@ -34,6 +34,9 @@ var inlineForm = require('raw!./../examples/components/inline-form.txt');
 var inlineCheckboxForm = require('raw!./../examples/components/inline-checkbox-form.txt');
 var inlineInputGroupForm = require('raw!./../examples/components/inline-input-group-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
+
+// Supported Controls
+var inputs = require('raw!./../examples/components/inputs.txt');
 var textarea = require('raw!./../examples/components/textarea.txt');
 var checkboxesAndRadios = require('raw!./../examples/components/checkboxes-and-radios.txt');
 var inlineCheckboxesAndRadios =
@@ -78,49 +81,93 @@ var App = React.createClass({
 
   render: function () {
     var headingStyle = { borderBottom: '1px solid #eee' };
+    var linkStyle = {
+      color: '#000',
+      textDecoration: 'none',
+    };
 
     return (
       <Container breakpoints={this.state.breakpoints}>
-        <h1 id='grid' style={headingStyle}>Grid system</h1>
+        <h1 id='grid' style={headingStyle}>
+          <a href="#grid" style={linkStyle}>
+            Grid system
+          </a>
+        </h1>
 
-        <h2 id='fluid-container'>Fluid container</h2>
+        <h2 id='fluid-container'>
+          <a href="#fluid-container" style={linkStyle}>
+            Fluid container
+          </a>
+        </h2>
         <Example markup={fluidContainer}>
           {convertExample(fluidContainer, this)}
         </Example>
 
-        <h2 id='responsive-columns'>Responsive columns</h2>
+        <h2 id='responsive-columns'>
+          <a href="#responsive-columns" style={linkStyle}>
+            Responsive columns
+          </a>
+        </h2>
         <Example markup={responsiveColumn}>
           {convertExample(responsiveColumn, this)}
         </Example>
 
-        <h2 id='standard-columns'>Standard columns</h2>
+        <h2 id='standard-columns'>
+          <a href="#standard-columns" style={linkStyle}>
+            Standard columns
+          </a>
+        </h2>
         <Example markup={standardColumn}>
           {convertExample(standardColumn, this)}
         </Example>
 
-        <h2 id='offset-columns'>Offset columns</h2>
+        <h2 id='offset-columns'>
+          <a href="#offset-columns" style={linkStyle}>
+            Offset columns
+          </a>
+        </h2>
         <Example markup={offsetColumn}>
           {convertExample(offsetColumn, this)}
         </Example>
 
-        <h2 id='responsive-columns'>Pushed columns</h2>
+        <h2 id='responsive-columns'>
+          <a href="#responsive-columns" style={linkStyle}>
+            Pushed columns
+          </a>
+        </h2>
         <Example markup={pushedColumn}>
           {convertExample(pushedColumn, this)}
         </Example>
 
-        <h2 id='nested-columns'>Nested columns</h2>
+        <h2 id='nested-columns'>
+          <a href="#nested-columns" style={linkStyle}>
+            Nested columns
+          </a>
+        </h2>
         <Example markup={nestedColumn}>
           {convertExample(nestedColumn, this)}
         </Example>
 
-        <h1 id='forms' style={headingStyle}>Forms</h1>
+        <h1 id='forms' style={headingStyle}>
+          <a href="#forms" style={linkStyle}>
+            Forms
+          </a>
+        </h1>
 
-        <h2 id='basic-form'>Basic form</h2>
+        <h2 id='basic-form'>
+          <a href="#basic-form" style={linkStyle}>
+            Basic form
+          </a>
+        </h2>
         <Example markup={basicForm}>
           {convertExample(basicForm)}
         </Example>
 
-        <h2 id='inline-form'>Inline form</h2>
+        <h2 id='inline-form'>
+          <a href="#inline-form" style={linkStyle}>
+            Inline form
+          </a>
+        </h2>
         <Example markup={inlineForm}>
           {convertExample(inlineForm)}
         </Example>
@@ -133,32 +180,77 @@ var App = React.createClass({
           {convertExample(inlineInputGroupForm)}
         </Example>
 
-        <h2 id='horizontal-form'>Horizontal form</h2>
+        <h2 id='horizontal-form'>
+          <a href="#horizontal-form" style={linkStyle}>
+            Horizontal form
+          </a>
+        </h2>
         <Example markup={horizontalForm}>
           {convertExample(horizontalForm, this)}
         </Example>
 
-        <h2 id='textarea'>Textarea</h2>
+        <h2 id='supported-controls'>
+          <a href="#supported-controls" style={linkStyle}>
+            Supported controls
+          </a>
+        </h2>
+
+        <h3 id='inputs'>
+          <a href="#inputs" style={linkStyle}>
+            Inputs
+          </a>
+        </h3>
+        <Example markup={inputs}>
+          {convertExample(inputs)}
+        </Example>
+
+        <h3 id='textarea'>
+          <a href="#textarea" style={linkStyle}>
+            Textarea
+          </a>
+        </h3>
         <Example markup={textarea}>
           {convertExample(textarea)}
         </Example>
 
-        <h2 id='checkboxes-and-radios'>Checkboxes and radios</h2>
+        <h3 id='checkboxes-and-radios'>
+          <a href="#checkboxes-and-radios" style={linkStyle}>
+            Checkboxes and radios
+          </a>
+        </h3>
+
+        <h4 id='default-checkboxes-and-radios'>
+          <a href="#default-checkboxes-and-radios" style={linkStyle}>
+            Default (stacked)
+          </a>
+        </h4>
         <Example markup={checkboxesAndRadios}>
           {convertExample(checkboxesAndRadios)}
         </Example>
 
-        <h2 id='checkboxes-and-radios'>Inline checkboxes and radios</h2>
+        <h4 id='inline-checkboxes-and-radios'>
+          <a href="#inline-checkboxes-and-radios" style={linkStyle}>
+            Inline checkboxes and radios
+          </a>
+        </h4>
         <Example markup={inlineCheckboxesAndRadios}>
           {convertExample(inlineCheckboxesAndRadios)}
         </Example>
 
-        <h2 id='checkboxes-and-radios-without-label'>Checkboxes and radios without label text</h2>
+        <h4 id='checkboxes-and-radios-without-label'>
+          <a href="#checkboxes-and-radios-without-label" style={linkStyle}>
+            Checkboxes and radios without label text
+          </a>
+        </h4>
         <Example markup={checkboxesAndRadiosWithoutLabel}>
           {convertExample(checkboxesAndRadiosWithoutLabel)}
         </Example>
 
-        <h2 id='static-control'>Static control</h2>
+        <h3 id='static-control'>
+          <a href="#static-control" style={linkStyle}>
+            Static control
+          </a>
+        </h3>
         <Example markup={staticControlHorizontal}>
           {convertExample(staticControlHorizontal, this)}
         </Example>
@@ -167,19 +259,35 @@ var App = React.createClass({
           {convertExample(staticControlInline)}
         </Example>
 
-        <h1 id='buttons' style={headingStyle}>Buttons</h1>
+        <h1 id='buttons' style={headingStyle}>
+          <a href="#buttons" style={linkStyle}>
+            Buttons
+          </a>
+        </h1>
 
-        <h2 id='button-options'>Button options</h2>
+        <h2 id='button-options'>
+          <a href="#button-options" style={linkStyle}>
+            Button options
+          </a>
+        </h2>
         <Example markup={buttonOptions}>
           {convertExample(buttonOptions)}
         </Example>
 
-        <h2 id='button-sizes'>Button sizes</h2>
+        <h2 id='button-sizes'>
+          <a href="#button-sizes" style={linkStyle}>
+            Button sizes
+          </a>
+        </h2>
         <Example markup={buttonSizes}>
           {convertExample(buttonSizes)}
         </Example>
 
-        <h2 id='button-states'>Button states</h2>
+        <h2 id='button-states'>
+          <a href="#button-states" style={linkStyle}>
+            Button states
+          </a>
+        </h2>
         <Example markup={buttonStates}>
           {convertExample(buttonStates)}
         </Example>
