@@ -22,7 +22,6 @@ var HelpText = require('../modules/components/help-text.jsx');
 var Checkbox = require('../modules/components/checkbox.jsx');
 var Radio = require('../modules/components/radio.jsx');
 var Select = require('../modules/components/select.jsx');
-var Option = require('../modules/components/option.jsx');
 
 // Grid system
 var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
