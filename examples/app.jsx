@@ -38,6 +38,8 @@ var textarea = require('raw!./../examples/components/textarea.txt');
 var checkboxesAndRadios = require('raw!./../examples/components/checkboxes-and-radios.txt');
 var inlineCheckboxesAndRadios =
   require('raw!./../examples/components/inline-checkboxes-and-radios.txt');
+var checkboxesAndRadiosWithoutLabel =
+  require('raw!./../examples/components/checkboxes-and-radios-without-label.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
 var staticControlInline = require('raw!./../examples/components/static-control-inline.txt');
 var buttonOptions = require('raw!./../examples/components/button-options.txt');
@@ -149,6 +151,11 @@ var App = React.createClass({
         <h2 id='checkboxes-and-radios'>Inline checkboxes and radios</h2>
         <Example markup={inlineCheckboxesAndRadios}>
           {convertExample(inlineCheckboxesAndRadios)}
+        </Example>
+
+        <h2 id='checkboxes-and-radios-without-label'>Checkboxes and radios without label text</h2>
+        <Example markup={checkboxesAndRadiosWithoutLabel}>
+          {convertExample(checkboxesAndRadiosWithoutLabel)}
         </Example>
 
         <h2 id='static-control'>Static control</h2>

@@ -1,4 +1,6 @@
-<Form inline={true}>
+<Form
+  inline={true}
+>
   <FormGroup>
     <Label>Name</Label>
     <Input
@@ -15,7 +17,9 @@
       placeholder='jane.doe@example.com'
     />
   </FormGroup>
-  <Button type='submit'>
+  <Button
+    type='submit'
+  >
     Send invitation
   </Button>
 </Form>

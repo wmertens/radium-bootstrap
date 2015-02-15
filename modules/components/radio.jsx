@@ -21,7 +21,8 @@ var Radio = React.createClass({
       horizontal: false,
       disabled: false,
       checked: false,
-      radioInline: false
+      radioInline: false,
+      ariaLabel: ''
     };
   },
 
@@ -139,6 +140,7 @@ var Radio = React.createClass({
             value={this.props.value}
             checkedLink={this.linkState('checked')}
             disabled={this.props.disabled}
+            ariaLabel={this.props.ariaLabel}
             style={inputStyleOverrides}
           />
           {this.props.children}

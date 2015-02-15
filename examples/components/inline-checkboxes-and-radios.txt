@@ -1,11 +1,19 @@
-<Form inline={true}>
-  <Checkbox checkboxInline={true}>
+<Form
+  inline={true}
+>
+  <Checkbox
+    checkboxInline={true}
+  >
     1
   </Checkbox>
-  <Checkbox checkboxInline={true}>
+  <Checkbox
+    checkboxInline={true}
+  >
     2
   </Checkbox>
-  <Checkbox checkboxInline={true}>
+  <Checkbox
+    checkboxInline={true}
+  >
     3
   </Checkbox>
   <br />

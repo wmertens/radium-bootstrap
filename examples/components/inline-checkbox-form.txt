@@ -1,6 +1,10 @@
-<Form inline={true}>
+<Form
+  inline={true}
+>
   <FormGroup>
-    <Label hidden={true}>
+    <Label
+      hidden={true}
+    >
       Email
     </Label>
     <Input
@@ -10,7 +14,9 @@
     />
   </FormGroup>
   <FormGroup>
-    <Label hidden={true}>
+    <Label
+      hidden={true}
+    >
       Password
     </Label>
     <Input
@@ -20,7 +26,9 @@
     />
   </FormGroup>
   <Checkbox>Remember me</Checkbox>
-  <Button type='submit'>
+  <Button
+    type='submit'
+  >
     Sign in
   </Button>
 </Form>

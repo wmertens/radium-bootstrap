@@ -21,7 +21,8 @@ var Checkbox = React.createClass({
       horizontal: false,
       disabled: false,
       checked: false,
-      checkboxInline: false
+      checkboxInline: false,
+      ariaLabel: ''
     };
   },
 
@@ -137,6 +138,7 @@ var Checkbox = React.createClass({
             type='checkbox'
             disabled={this.props.disabled}
             checkedLink={this.linkState('checked')}
+            aria-label={this.props.ariaLabel}
             style={inputStyleOverrides}
           />
           {this.props.children}

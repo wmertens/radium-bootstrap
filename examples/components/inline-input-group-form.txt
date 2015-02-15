@@ -1,6 +1,10 @@
-<Form inline={true}>
+<Form
+  inline={true}
+>
   <FormGroup>
-    <Label hidden={true}>
+    <Label
+      hidden={true}
+    >
       Amount (in dollars)
     </Label>
     <InputGroup>

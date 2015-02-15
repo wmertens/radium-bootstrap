@@ -2,7 +2,9 @@
   fluid={true}
   breakpoints={this.state.breakpoints}
 >
-  <Form horizontal={true}>
+  <Form
+    horizontal={true}
+  >
     <FormGroup>
       <Row>
         <Col

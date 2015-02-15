@@ -2,7 +2,9 @@
   <Checkbox>
     Option one — click me!
   </Checkbox>
-  <Checkbox disabled={true}>
+  <Checkbox
+    disabled={true}
+  >
     Option two is disabled.
   </Checkbox>
   <br />
