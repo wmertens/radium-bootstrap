@@ -2,9 +2,7 @@
   fluid={true}
   breakpoints={this.state.breakpoints}
 >
-  <Form
-    horizontal={true}
-  >
+  <Form horizontal={true}>
     <FormGroup>
       <Row>
         <Col
@@ -17,9 +15,7 @@
           xsSpan={10}
           breakpoints={this.state.breakpoints}
         >
-          <StaticControl>
-            email@example.com
-          </StaticControl>
+          <StaticControl>email@example.com</StaticControl>
         </Col>
       </Row>
     </FormGroup>
@@ -36,9 +32,9 @@
           breakpoints={this.state.breakpoints}
         >
           <Input
-            type="password"
+            type='password'
             formControl={true}
-            placeholder="Password"
+            placeholder='Password'
           />
         </Col>
       </Row>

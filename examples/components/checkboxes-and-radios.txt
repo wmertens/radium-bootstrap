@@ -2,28 +2,26 @@
   <Checkbox>
     Option one — click me!
   </Checkbox>
-  <Checkbox
-    disabled={true}
-  >
+  <Checkbox disabled={true}>
     Option two is disabled.
   </Checkbox>
   <br />
   <Radio
-    name="optionsRadios"
-    value="option1"
+    name='optionsRadios'
+    value='option1'
     checked={true}
   >
-    Option one — preselected with the "checked" prop set to true.
+    Option one — preselected with the 'checked' prop set to true.
   </Radio>
   <Radio
-    name="optionsRadios"
-    value="option2"
+    name='optionsRadios'
+    value='option2'
   >
     Option two — selecting it will deselect option one.
   </Radio>
   <Radio
-    name="optionsRadios"
-    value="option3"
+    name='optionsRadios'
+    value='option3'
     disabled={true}
   >
     Option three is disabled.

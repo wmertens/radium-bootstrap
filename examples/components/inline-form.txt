@@ -1,25 +1,21 @@
-<Form
-  inline={true}
->
+<Form inline={true}>
   <FormGroup>
     <Label>Name</Label>
     <Input
-      type="text"
+      type='text'
       formControl={true}
-      placeholder="Jane Doe"
+      placeholder='Jane Doe'
     />
   </FormGroup>
   <FormGroup>
     <Label>Email</Label>
     <Input
-      type="email"
+      type='email'
       formControl={true}
-      placeholder="jane.doe@example.com"
+      placeholder='jane.doe@example.com'
     />
   </FormGroup>
-  <Button
-    type="submit"
-  >
+  <Button type='submit'>
     Send invitation
   </Button>
 </Form>

@@ -20,7 +20,8 @@ var Checkbox = React.createClass({
       inline: false,
       horizontal: false,
       disabled: false,
-      checked: false
+      checked: false,
+      checkboxInline: false
     };
   },
 
@@ -69,6 +70,16 @@ var Checkbox = React.createClass({
         inline: {
           paddingLeft: 0
         },
+        checkboxInline: {
+          cursor: 'pointer',
+          display: 'inline-block',
+          fontWeight: 400,
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0,
+          paddingLeft: 20,
+          verticalAlign: 'middle'
+        },
         disabled: {
           cursor: 'not-allowed'
         }
@@ -94,6 +105,10 @@ var Checkbox = React.createClass({
           marginRight: 3,
           position: 'relative'
         },
+        checkboxInline: {
+          marginLeft: -20,
+          position: 'absolute'
+        },
         disabled: {
           cursor: 'not-allowed'
         }
@@ -117,7 +132,7 @@ var Checkbox = React.createClass({
           style={labelStyleOverrides}
         >
           <Input
-            type="checkbox"
+            type='checkbox'
             disabled={this.props.disabled}
             checkedLink={this.linkState('checked')}
             style={inputStyleOverrides}

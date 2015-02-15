@@ -1,6 +1,4 @@
-<Form
-  horizontal={true}
->
+<Form horizontal={true}>
   <FormGroup>
     <Col
       xsSpan={2}
@@ -13,9 +11,9 @@
       breakpoints={this.state.breakpoints}
     >
       <Input
-        type="email"
+        type='email'
         formControl={true}
-        placeholder="Email"
+        placeholder='Email'
       />
     </Col>
   </FormGroup>
@@ -31,9 +29,9 @@
       breakpoints={this.state.breakpoints}
     >
       <Input
-        type="password"
+        type='password'
         formControl={true}
-        placeholder="Password"
+        placeholder='Password'
       />
     </Col>
   </FormGroup>
@@ -52,9 +50,7 @@
       colPush={2}
       breakpoints={this.state.breakpoints}
     >
-      <Button
-        type="submit"
-      >
+      <Button type='submit'>
         Sign in
       </Button>
     </Col>

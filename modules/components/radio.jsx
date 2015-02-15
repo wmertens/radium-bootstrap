@@ -20,7 +20,8 @@ var Radio = React.createClass({
       inline: false,
       horizontal: false,
       disabled: false,
-      checked: false
+      checked: false,
+      radioInline: false
     };
   },
 
@@ -69,6 +70,16 @@ var Radio = React.createClass({
         inline: {
           paddingLeft: 0
         },
+        radioInline: {
+          cursor: 'pointer',
+          display: 'inline-block',
+          fontWeight: 400,
+          marginBottom: 0,
+          marginLeft: 10,
+          marginTop: 0,
+          paddingLeft: 20,
+          verticalAlign: 'middle'
+        },
         disabled: {
           cursor: 'not-allowed'
         }
@@ -94,6 +105,10 @@ var Radio = React.createClass({
           marginRight: 3,
           position: 'relative'
         },
+        radioInline: {
+          marginLeft: -20,
+          position: 'absolute'
+        },
         disabled: {
           cursor: 'not-allowed'
         }
@@ -117,7 +132,7 @@ var Radio = React.createClass({
           style={labelStyleOverrides}
         >
           <Input
-            type="radio"
+            type='radio'
             name={this.props.name}
             value={this.props.value}
             checkedLink={this.linkState('checked')}

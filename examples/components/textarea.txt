@@ -1,4 +1,4 @@
 <Textarea
-  rows="3"
-  placeholder="Textarea"
+  rows='3'
+  placeholder='Textarea'
 />

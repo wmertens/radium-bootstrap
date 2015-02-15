@@ -1,12 +1,8 @@
 <span>
-  <Button
-    size='large'
-  >
+  <Button size='large'>
     Large
   </Button>
-  <Button
-    style={{marginLeft: '0.5em'}}
-  >
+  <Button style={{marginLeft: '0.5em'}}>
     Normal
   </Button>
   <Button

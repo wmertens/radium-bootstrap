@@ -1,24 +1,20 @@
-<Form
-  inline={true}
->
+<Form inline={true}>
   <FormGroup>
-    <Label
-      hidden={true}
-    >
+    <Label hidden={true}>
       Amount (in dollars)
     </Label>
     <InputGroup>
       <InputGroupAddon>$</InputGroupAddon>
       <Input
-        type="text"
+        type='text'
         formControl={true}
-        placeholder="Amount"
+        placeholder='Amount'
       />
       <InputGroupAddon>.00</InputGroupAddon>
     </InputGroup>
     <Button
-      type="submit"
-      kind="primary"
+      type='submit'
+      kind='primary'
     >
       Transfer cash
     </Button>

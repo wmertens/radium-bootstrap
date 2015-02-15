@@ -17,15 +17,11 @@
   </FormGroup>
   <FormGroup>
     <Label>File input</Label>
-    <Input
-      type='file'
-    />
+    <Input type='file' />
     <HelpText>Example block-level help text here.</HelpText>
   </FormGroup>
   <Checkbox>Check me out</Checkbox>
-  <Button
-    type="submit"
-  >
+  <Button type='submit'>
     Submit
   </Button>
 </Form>
