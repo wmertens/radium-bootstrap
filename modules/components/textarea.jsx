@@ -49,7 +49,7 @@ var Textarea = React.createClass({
     var TagName = this.props.tagName;
 
     return (
-      <TagName style={styles} {...this.props}></TagName>
+      <TagName style={styles} {...this.props}/>
     );
   }
 });

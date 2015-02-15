@@ -101,7 +101,10 @@ var Input = React.createClass({
     var TagName = this.props.tagName;
 
     return (
-      <TagName style={styles} {...this.props}/>
+      <TagName
+        {...this.props}
+        style={styles}
+      />
     );
   }
 });

@@ -20,6 +20,7 @@ var StaticControl = require('../modules/components/static-control.jsx');
 var Button = require('../modules/components/button.jsx');
 var HelpText = require('../modules/components/help-text.jsx');
 var Checkbox = require('../modules/components/checkbox.jsx');
+var Radio = require('../modules/components/radio.jsx');
 
 // Examples
 var fluidContainer = require('raw!./../examples/components/fluid-container.txt');
@@ -34,6 +35,7 @@ var inlineCheckboxForm = require('raw!./../examples/components/inline-checkbox-f
 var inlineInputGroupForm = require('raw!./../examples/components/inline-input-group-form.txt');
 var horizontalForm = require('raw!./../examples/components/horizontal-form.txt');
 var textarea = require('raw!./../examples/components/textarea.txt');
+var checkboxesAndRadios = require('raw!./../examples/components/checkboxes-and-radios.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
 var staticControlInline = require('raw!./../examples/components/static-control-inline.txt');
 var buttonOptions = require('raw!./../examples/components/button-options.txt');
@@ -76,6 +78,7 @@ var App = React.createClass({
     return (
       <Container breakpoints={this.state.breakpoints}>
         <h1 id="grid" style={headingStyle}>Grid system</h1>
+
         <h2 id="fluid-container">Fluid container</h2>
         <Example markup={fluidContainer}>
           {convertExample(fluidContainer, this)}
@@ -107,6 +110,7 @@ var App = React.createClass({
         </Example>
 
         <h1 id="forms" style={headingStyle}>Forms</h1>
+
         <h2 id="basic-form">Basic form</h2>
         <Example markup={basicForm}>
           {convertExample(basicForm)}
@@ -116,9 +120,11 @@ var App = React.createClass({
         <Example markup={inlineForm}>
           {convertExample(inlineForm)}
         </Example>
+
         <Example markup={inlineCheckboxForm}>
           {convertExample(inlineCheckboxForm)}
         </Example>
+
         <Example markup={inlineInputGroupForm}>
           {convertExample(inlineInputGroupForm)}
         </Example>
@@ -133,15 +139,22 @@ var App = React.createClass({
           {convertExample(textarea)}
         </Example>
 
+        <h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
+        <Example markup={checkboxesAndRadios}>
+          {convertExample(checkboxesAndRadios)}
+        </Example>
+
         <h2 id="static-control">Static control</h2>
         <Example markup={staticControlHorizontal}>
           {convertExample(staticControlHorizontal, this)}
         </Example>
+
         <Example markup={staticControlInline}>
           {convertExample(staticControlInline)}
         </Example>
 
         <h1 id="buttons" style={headingStyle}>Buttons</h1>
+
         <h2 id="button-options">Button options</h2>
         <Example markup={buttonOptions}>
           {convertExample(buttonOptions)}

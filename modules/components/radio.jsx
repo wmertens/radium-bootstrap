@@ -5,7 +5,7 @@ var { StyleResolverMixin } = Radium;
 var Label = require('./label.jsx');
 var Input = require('./input.jsx');
 
-var Checkbox = React.createClass({
+var Radio = React.createClass({
   mixins: [ StyleResolverMixin, React.addons.LinkedStateMixin ],
 
   getInitialState: function() {
@@ -117,9 +117,11 @@ var Checkbox = React.createClass({
           style={labelStyleOverrides}
         >
           <Input
-            type="checkbox"
-            disabled={this.props.disabled}
+            type="radio"
+            name={this.props.name}
+            value={this.props.value}
             checkedLink={this.linkState('checked')}
+            disabled={this.props.disabled}
             style={inputStyleOverrides}
           />
           {this.props.children}
@@ -129,4 +131,4 @@ var Checkbox = React.createClass({
   }
 });
 
-module.exports = Checkbox;
+module.exports = Radio;
