@@ -7,14 +7,16 @@ var Select = React.createClass({
   mixins: [ StyleResolverMixin, BrowserStateMixin ],
 
   getInitialState: function () {
-    return {
-      optionsState: this.props.options[0].value
-    };
+    if (this.props.multiple) {
+      return { optionsState: [] };
+    }
+    return { optionsState: this.props.options[0].value };
   },
 
   getDefaultProps: function () {
     return {
-      tagName: 'select'
+      tagName: 'select',
+      multiple: false
     };
   },
 
@@ -37,8 +39,10 @@ var Select = React.createClass({
         formControl: {
           backgroundColor: '#fff',
           backgroundImage: 'none',
-          border: '1px solid #ccc',
+          borderColor: '#ccc',
           borderRadius: 4,
+          borderStyle: 'solid',
+          borderWidth: '1px',
           boxShadow: 'inset 0 1px 1px rgba(0,0,0,.075)',
           boxSizing: 'border-box',
           color: '#555',
@@ -56,13 +60,22 @@ var Select = React.createClass({
             focus: stateStyles,
             active: stateStyles
           }
+        },
+        multiple: {
+          height: 'auto'
         }
       }
     };
   },
 
   handleChange: function (ev) {
-    this.setState({ optionsState: ev.target.value });
+    var optionsStateClone = _.clone(this.state.optionsState);
+
+    if (this.props.multiple) {
+      this.setState({ optionsState: optionsStateClone.push(ev.target.value) });
+    } else {
+      this.setState({ optionsState: ev.target.value });
+    }
   },
 
   buildChildren: function (options) {
@@ -91,6 +104,7 @@ var Select = React.createClass({
         {...this.getBrowserStateEvents()}
         style={styles}
         value={this.state.optionsState}
+        multiple={this.props.multiple}
         onChange={this.handleChange}
       >
         {this.buildChildren(this.props.options)}

@@ -47,6 +47,7 @@ var inlineCheckboxesAndRadios =
 var checkboxesAndRadiosWithoutLabel =
   require('raw!./../examples/components/checkboxes-and-radios-without-label.txt');
 var selects = require('raw!./../examples/components/selects.txt');
+var multipleSelect = require('raw!./../examples/components/multiple-select.txt');
 var staticControlHorizontal = require('raw!./../examples/components/static-control-horizontal.txt');
 var staticControlInline = require('raw!./../examples/components/static-control-inline.txt');
 
@@ -259,6 +260,10 @@ var App = React.createClass({
         </h3>
         <Example markup={selects}>
           {convertExample(selects)}
+        </Example>
+
+        <Example markup={multipleSelect}>
+          {convertExample(multipleSelect)}
         </Example>
 
         <h3 id='static-control'>
