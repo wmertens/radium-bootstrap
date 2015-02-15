@@ -1,9 +1,9 @@
 var React = require('react');
 var Radium = require('radium');
-var { StyleResolverMixin } = Radium;
+var { StyleResolverMixin, BrowserStateMixin } = Radium;
 
 var Input = React.createClass({
-  mixins: [ StyleResolverMixin ],
+  mixins: [ StyleResolverMixin, BrowserStateMixin ],
 
   getDefaultProps: function () {
     return {
@@ -14,6 +14,13 @@ var Input = React.createClass({
   },
 
   getStyles: function () {
+    var stateStyles = {
+      borderColor: '#66afe9',
+      boxShadow: 'inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)',
+      outline: 0
+    };
+    var typeLineHeight = { lineHeight: 34 };
+
     return {
       standard: {
         color: 'inherit',
@@ -25,7 +32,9 @@ var Input = React.createClass({
         formControl: {
           backgroundColor: '#fff',
           backgroundImage: 'none',
-          border: '1px solid #ccc',
+          borderWidth: 1,
+          borderStyle: 'solid',
+          borderColor: '#ccc',
           borderRadius: 4,
           boxShadow: 'inset 0 1px 1px rgba(0,0,0,.075)',
           boxSizing: 'border-box',
@@ -38,7 +47,12 @@ var Input = React.createClass({
           margin: 0,
           padding: '6px 12px',
           transition: 'border-color ease-in-out .15s, box-shadow ease-in-out .15s',
-          width: '100%'
+          width: '100%',
+
+          states: {
+            focus: stateStyles,
+            active: stateStyles
+          }
         },
         inline: {
           display: 'inline-block',
@@ -55,21 +69,13 @@ var Input = React.createClass({
             padding: 0,
             position: 'absolute'
           },
-          datetimeLocal: {
-            lineHeight: 34
-          },
-          date: {
-            lineHeight: 34
-          },
+          datetimeLocal: typeLineHeight,
+          date: typeLineHeight,
           file: {
             display: 'block'
           },
-          month: {
-            lineHeight: 34
-          },
-          time: {
-            lineHeight: 34
-          }
+          month: typeLineHeight,
+          time: typeLineHeight
         },
         groupedInput: {
           display: 'table-cell',
@@ -102,6 +108,7 @@ var Input = React.createClass({
 
     return (
       <TagName
+        {...this.getBrowserStateEvents()}
         {...this.props}
         style={styles}
       />
