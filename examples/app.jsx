@@ -2,11 +2,13 @@ var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
 
-var Container = require('../modules/components/container.jsx');
-var Row = require('../modules/components/row.jsx');
-var Col = require('../modules/components/col.jsx');
+var RadiumBootstrap = require('../modules/index.js');
 
-var Button = require('../modules/components/button.jsx');
+var Container = RadiumBootstrap.Container;
+var Row = RadiumBootstrap.Row;
+var Col = RadiumBootstrap.Col;
+
+var Button = RadiumBootstrap.Button;
 
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',

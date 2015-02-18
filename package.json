@@ -2,7 +2,7 @@
   "name": "radium-bootstrap",
   "version": "0.0.0",
   "description": "# Components with owners",
-  "main": "index.js",
+  "main": "modules/index.js",
   "scripts": {
     "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples/"
   },
@@ -21,7 +21,8 @@
   "homepage": "https://github.com/FormidableLabs/radium-bootstrap",
   "dependencies": {
     "color": "^0.7.3",
-    "react": "^0.12.2"
+    "react": "^0.12.2",
+    "radium": "git://github.com/FormidableLabs/radium#5413069ba9679f8ed6bff6bc7ea309e4f4ad4e81"
   },
   "devDependencies": {
     "json-loader": "^0.5.1",
