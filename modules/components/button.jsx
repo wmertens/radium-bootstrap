@@ -1,20 +1,7 @@
 var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin, BrowserStateMixin } = Radium;
-var color = require('color');
-
-// The darken method exposed by `color` darkens by relatively adjusting
-// the lightness by a percentage. For example, if a color `foo` has a
-// lightness of `50%`, `color(foo).darken(0.5)` converts the lightness to
-// `25%`. This function darkens by adjusting absolute darkness, like LESS
-// and Sass. Given the same color `foo`, `absoluteDarken(foo, 10)` will
-// convert the lightness to `40%`.
-var absoluteDarken = function (colorValue, value) {
-  var colorObj = color(colorValue);
-  var darkenedColor = colorObj.lightness(colorObj.hsl().l - value);
-
-  return darkenedColor.hexString();
-};
+var { absoluteDarken } = require('../util/color.js');
 
 var hoverBg = function (styles) {
   return absoluteDarken(styles.backgroundColor, 10);
