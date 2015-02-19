@@ -40,11 +40,11 @@ var App = React.createClass({
 
         <Container
           fluid={true}
-          breakpoints={this.state.breakpoints}
+          mediaQueries={this.state.mediaQueries}
         >
           <Row>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               style={colDemoStyles}
             >
               Fluid Container
@@ -53,11 +53,11 @@ var App = React.createClass({
         </Container>
 
         <Container
-          breakpoints={this.state.breakpoints}
+          mediaQueries={this.state.mediaQueries}
         >
           <Row>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={12}
               smSpan={8}
               mdSpan={6}
@@ -68,7 +68,7 @@ var App = React.createClass({
             </Col>
 
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               smSpan={2}
               mdSpan={3}
@@ -79,7 +79,7 @@ var App = React.createClass({
             </Col>
 
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               smSpan={2}
               mdSpan={3}
@@ -92,14 +92,14 @@ var App = React.createClass({
 
           <Row>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               mdSpan={6}
               style={colDemoStyles}
             >
               Responsive Column
             </Col>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               mdSpan={3}
               style={colDemoStyles}
@@ -107,7 +107,7 @@ var App = React.createClass({
               Responsive Column
             </Col>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               mdSpan={3}
               style={colDemoStyles}
@@ -118,21 +118,21 @@ var App = React.createClass({
 
           <Row>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               style={colDemoStyles}
             >
               Standard Column
             </Col>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={4}
               style={colDemoStyles}
             >
               Standard Column
             </Col>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={2}
               style={colDemoStyles}
             >
@@ -142,7 +142,7 @@ var App = React.createClass({
 
           <Row>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={3}
               colOffset={2}
               style={colDemoStyles}
@@ -150,7 +150,7 @@ var App = React.createClass({
               Offset Column
             </Col>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={4}
               style={colDemoStyles}
             >
@@ -160,7 +160,7 @@ var App = React.createClass({
 
           <Row>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={3}
               colPush={3}
               style={colDemoStyles}
@@ -168,7 +168,7 @@ var App = React.createClass({
               Pushed Column
             </Col>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={3}
               colPull={3}
               style={colDemoStyles}
@@ -179,20 +179,20 @@ var App = React.createClass({
 
           <Row>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={8}
               style={colDemoStyles}
             >
               <Row>
                 <Col
-                  breakpoints={this.state.breakpoints}
+                  mediaQueries={this.state.mediaQueries}
                   xsSpan={6}
                   style={colDemoStyles}
                 >
                   Nested Column
                 </Col>
                 <Col
-                  breakpoints={this.state.breakpoints}
+                  mediaQueries={this.state.mediaQueries}
                   xsSpan={6}
                   style={colDemoStyles}
                 >
@@ -201,7 +201,7 @@ var App = React.createClass({
               </Row>
             </Col>
             <Col
-              breakpoints={this.state.breakpoints}
+              mediaQueries={this.state.mediaQueries}
               xsSpan={4}
               style={colDemoStyles}
             >
@@ -212,7 +212,7 @@ var App = React.createClass({
 
         <Container
           fluid={true}
-          breakpoints={this.state.breakpoints}
+          mediaQueries={this.state.mediaQueries}
         >
           <p>
             <Button>

@@ -19,7 +19,7 @@ var Container = React.createClass({
         paddingLeft: 15,
         paddingRight: 15,
 
-        breakpoints: {
+        mediaQueries: {
           sm: {
             width: 750
           },
@@ -35,7 +35,7 @@ var Container = React.createClass({
         fluid: {
           width: '100%',
 
-          breakpoints: null
+          mediaQueries: null
         }
       }
     };
