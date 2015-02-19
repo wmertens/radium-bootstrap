@@ -13,10 +13,8 @@ var Row = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        marginLeft: -15,
-        marginRight: -15
-      }
+      marginLeft: -15,
+      marginRight: -15
     };
   },
 
@@ -25,7 +23,7 @@ var Row = React.createClass({
     var TagName = this.props.tagName;
 
     // TODO: Make global Clearfix variable/mixin/something.
-    
+
     return (
       <TagName style={styles}>
         <i style={{display: 'table'}}>{'\u0020'}</i>
