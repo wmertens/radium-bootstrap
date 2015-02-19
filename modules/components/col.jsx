@@ -25,7 +25,7 @@ var Col = React.createClass({
         right: this.colCountToPercent(this.props.colPull),
         width: this.colCountToPercent(this.props.xsSpan),
 
-        breakpoints: {
+        mediaQueries: {
           sm: {
             width: this.colCountToPercent(this.props.smSpan)
           },
