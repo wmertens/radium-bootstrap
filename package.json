@@ -22,7 +22,8 @@
   "dependencies": {
     "color": "^0.7.3",
     "react": "^0.12.2",
-    "radium": "git://github.com/FormidableLabs/radium#5413069ba9679f8ed6bff6bc7ea309e4f4ad4e81"
+    "radium": "git://github.com/FormidableLabs/radium#5413069ba9679f8ed6bff6bc7ea309e4f4ad4e81",
+    "lodash": "^3.2.0"
   },
   "devDependencies": {
     "json-loader": "^0.5.1",
