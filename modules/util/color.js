@@ -2,22 +2,6 @@ var color = require('color');
 
 module.exports = {};
 
-// Wraps color lighten method to take a hex value and return a hex value
-module.exports.lighten = function (colorValue, amount) {
-  var colorObj = color(colorValue);
-  var lightenedColor = colorObj.lighten(amount);
-
-  return lightenedColor.hexString();
-};
-
-// Wraps color darken method to take a hex value and return a hex value
-module.exports.lighten = function (colorValue, amount) {
-  var colorObj = color(colorValue);
-  var darkenedColor = colorObj.darken(amount);
-
-  return darkenedColor.hexString();
-};
-
 // The darken method exposed by `color` darkens by relatively adjusting
 // the lightness by a percentage. For example, if a color `foo` has a
 // lightness of `50%`, `color(foo).darken(0.5)` converts the lightness to
