@@ -45,41 +45,40 @@ var Button = React.createClass({
     };
 
     return {
-      standard: {
-        backgroundImage: 'none',
-        border: '1px solid transparent',
-        borderRadius: 4,
-        color: '#fff',
-        cursor: 'pointer',
-        display: 'inline-block',
-        fontSize: 14,
-        fontWeight: '400',
-        lineHeight: 1.42857143,
-        marginBottom: 0,
-        padding: '6px 12px',
-        textAlign: 'center',
-        touchAction: 'manipulation',
-        userSelect: 'none',
-        verticalAlign: 'middle',
-        whiteSpace: 'nowrap',
+      backgroundImage: 'none',
+      border: '1px solid transparent',
+      borderRadius: 4,
+      color: '#fff',
+      cursor: 'pointer',
+      display: 'inline-block',
+      fontSize: 14,
+      fontWeight: '400',
+      lineHeight: 1.42857143,
+      marginBottom: 0,
+      padding: '6px 12px',
+      textAlign: 'center',
+      touchAction: 'manipulation',
+      userSelect: 'none',
+      verticalAlign: 'middle',
+      whiteSpace: 'nowrap',
 
-        states: {
-          hover: {
-            textDecoration: 'none',
+      states: {
+        hover: {
+          textDecoration: 'none',
 
-            computed: computedHoverStyles
-          },
-          focus: {
-            outline: 'thin dotted',
-            outline: '5px auto -webkit-focus-ring-color',
-            outlineOffset: -2,
-            textDecoration: 'none',
+          computed: computedHoverStyles
+        },
+        focus: {
+          outline: 'thin dotted',
+          outline: '5px auto -webkit-focus-ring-color',
+          outlineOffset: -2,
+          textDecoration: 'none',
 
-            computed: computedHoverStyles
-          },
-          active: activeStyles
-        }
+          computed: computedHoverStyles
+        },
+        active: activeStyles
       },
+
       modifiers: {
         kind: {
           standard: {

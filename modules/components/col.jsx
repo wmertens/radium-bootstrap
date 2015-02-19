@@ -14,27 +14,25 @@ var Col = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        float: 'left',
-        left: this.colCountToPercent(this.props.colPush),
-        marginLeft: this.colCountToPercent(this.props.colOffset),
-        minHeight: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
-        position: 'relative',
-        right: this.colCountToPercent(this.props.colPull),
-        width: this.colCountToPercent(this.props.xsSpan),
+      float: 'left',
+      left: this.colCountToPercent(this.props.colPush),
+      marginLeft: this.colCountToPercent(this.props.colOffset),
+      minHeight: 1,
+      paddingLeft: 15,
+      paddingRight: 15,
+      position: 'relative',
+      right: this.colCountToPercent(this.props.colPull),
+      width: this.colCountToPercent(this.props.xsSpan),
 
-        mediaQueries: {
-          sm: {
-            width: this.colCountToPercent(this.props.smSpan)
-          },
-          md: {
-            width: this.colCountToPercent(this.props.mdSpan)
-          },
-          lg: {
-            width: this.colCountToPercent(this.props.lgSpan)
-          }
+      mediaQueries: {
+        sm: {
+          width: this.colCountToPercent(this.props.smSpan)
+        },
+        md: {
+          width: this.colCountToPercent(this.props.mdSpan)
+        },
+        lg: {
+          width: this.colCountToPercent(this.props.lgSpan)
         }
       }
     };

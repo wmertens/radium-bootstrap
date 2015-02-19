@@ -13,24 +13,23 @@ var Container = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        paddingLeft: 15,
-        paddingRight: 15,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      paddingLeft: 15,
+      paddingRight: 15,
 
-        mediaQueries: {
-          sm: {
-            width: 750
-          },
-          md: {
-            width: 970
-          },
-          lg: {
-            width: 1170
-          }
+      mediaQueries: {
+        sm: {
+          width: 750
+        },
+        md: {
+          width: 970
+        },
+        lg: {
+          width: 1170
         }
       },
+
       modifiers: {
         fluid: {
           width: '100%',
