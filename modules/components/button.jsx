@@ -1,5 +1,6 @@
 var React = require('react');
 var Radium = require('radium');
+var RadiumSettings = require('../variables.js');
 var { StyleResolverMixin, BrowserStateMixin } = Radium;
 var { absoluteDarken } = require('../util/color.js');
 
@@ -83,29 +84,34 @@ var Button = React.createClass({
       modifiers: {
         kind: {
           standard: {
-            backgroundColor: '#fff',
-            borderColor: '#ccc',
-            color: '#333'
+            backgroundColor: RadiumSettings.btnDefaultBg,
+            borderColor: RadiumSettings.btnDefaultBorder,
+            color: RadiumSettings.btnDefaultColor
           },
           primary: {
-            backgroundColor: '#337ab7',
-            borderColor: '#2e6da4'
+            backgroundColor: RadiumSettings.btnPrimaryBg,
+            borderColor: RadiumSettings.btnPrimaryBorder,
+            color: RadiumSettings.btnPrimaryColor
           },
           success: {
-            backgroundColor: '#5cb85c',
-            borderColor: '#4cae4c'
+            backgroundColor: RadiumSettings.btnSuccessBg,
+            borderColor: RadiumSettings.btnSuccessBorder,
+            color: RadiumSettings.btnSuccessColor
           },
           info: {
-            backgroundColor: '#5bc0de',
-            borderColor: '#46b8da'
+            backgroundColor: RadiumSettings.btnInfoBg,
+            borderColor: RadiumSettings.btnInfoBorder,
+            color: RadiumSettings.btnInfoColor
           },
           warning: {
-            backgroundColor: '#f0ad4e',
-            borderColor: '#eea236'
+            backgroundColor: RadiumSettings.btnWarningBg,
+            borderColor: RadiumSettings.btnWarningBorder,
+            color: RadiumSettings.btnWarningColor
           },
           danger: {
-            backgroundColor: '#d9534f',
-            borderColor: '#d43f3a'
+            backgroundColor: RadiumSettings.btnDangerBg,
+            borderColor: RadiumSettings.btnDangerBorder,
+            color: RadiumSettings.btnDangerColor
           },
           link: {
             backgroundColor: 'transparent',
