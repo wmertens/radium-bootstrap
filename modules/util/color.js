@@ -27,3 +27,17 @@ module.exports.absoluteLighten = function (colorValue, amount) {
 
   return lightenedColor.hexString();
 };
+
+module.exports.spin = function (colorValue, amount) {
+  var colorObj = color(colorValue);
+  var spunColor = colorObj.rotate(amount);
+
+  return spunColor.hexString();
+};
+
+module.exports.fade = function (colorValue, amount) {
+  var colorObj = color(colorValue);
+  var fadedColor = colorObj.opaquer(colorObj.hsl().l + amount);
+
+  return fadedColor.hexString();
+};

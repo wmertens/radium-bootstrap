@@ -1,5 +1,6 @@
 var React = require('react');
 var Radium = require('radium');
+var settings = require('../settings.js');
 var { StyleResolverMixin, BrowserStateMixin } = Radium;
 var { absoluteDarken } = require('../util/color.js');
 
@@ -82,29 +83,34 @@ var Button = React.createClass({
       modifiers: {
         kind: {
           standard: {
-            backgroundColor: '#fff',
-            borderColor: '#ccc',
-            color: '#333'
+            backgroundColor: settings.btnDefaultBg,
+            borderColor: settings.btnDefaultBorder,
+            color: settings.btnDefaultColor
           },
           primary: {
-            backgroundColor: '#337ab7',
-            borderColor: '#2e6da4'
+            backgroundColor: settings.btnPrimaryBg,
+            borderColor: settings.btnPrimaryBorder,
+            color: settings.btnPrimaryColor
           },
           success: {
-            backgroundColor: '#5cb85c',
-            borderColor: '#4cae4c'
+            backgroundColor: settings.btnSuccessBg,
+            borderColor: settings.btnSuccessBorder,
+            color: settings.btnSuccessColor
           },
           info: {
-            backgroundColor: '#5bc0de',
-            borderColor: '#46b8da'
+            backgroundColor: settings.btnInfoBg,
+            borderColor: settings.btnInfoBorder,
+            color: settings.btnInfoColor
           },
           warning: {
-            backgroundColor: '#f0ad4e',
-            borderColor: '#eea236'
+            backgroundColor: settings.btnWarningBg,
+            borderColor: settings.btnWarningBorder,
+            color: settings.btnWarningColor
           },
           danger: {
-            backgroundColor: '#d9534f',
-            borderColor: '#d43f3a'
+            backgroundColor: settings.btnDangerBg,
+            borderColor: settings.btnDangerBorder,
+            color: settings.btnDangerColor
           },
           link: {
             backgroundColor: 'transparent',
