@@ -83,34 +83,34 @@ var Button = React.createClass({
       modifiers: {
         kind: {
           standard: {
-            backgroundColor: RadiumSettings.btnDefaultBg,
-            borderColor: RadiumSettings.btnDefaultBorder,
-            color: RadiumSettings.btnDefaultColor
+            backgroundColor: settings.btnDefaultBg,
+            borderColor: settings.btnDefaultBorder,
+            color: settings.btnDefaultColor
           },
           primary: {
-            backgroundColor: RadiumSettings.btnPrimaryBg,
-            borderColor: RadiumSettings.btnPrimaryBorder,
-            color: RadiumSettings.btnPrimaryColor
+            backgroundColor: settings.btnPrimaryBg,
+            borderColor: settings.btnPrimaryBorder,
+            color: settings.btnPrimaryColor
           },
           success: {
-            backgroundColor: RadiumSettings.btnSuccessBg,
-            borderColor: RadiumSettings.btnSuccessBorder,
-            color: RadiumSettings.btnSuccessColor
+            backgroundColor: settings.btnSuccessBg,
+            borderColor: settings.btnSuccessBorder,
+            color: settings.btnSuccessColor
           },
           info: {
-            backgroundColor: RadiumSettings.btnInfoBg,
-            borderColor: RadiumSettings.btnInfoBorder,
-            color: RadiumSettings.btnInfoColor
+            backgroundColor: settings.btnInfoBg,
+            borderColor: settings.btnInfoBorder,
+            color: settings.btnInfoColor
           },
           warning: {
-            backgroundColor: RadiumSettings.btnWarningBg,
-            borderColor: RadiumSettings.btnWarningBorder,
-            color: RadiumSettings.btnWarningColor
+            backgroundColor: settings.btnWarningBg,
+            borderColor: settings.btnWarningBorder,
+            color: settings.btnWarningColor
           },
           danger: {
-            backgroundColor: RadiumSettings.btnDangerBg,
-            borderColor: RadiumSettings.btnDangerBorder,
-            color: RadiumSettings.btnDangerColor
+            backgroundColor: settings.btnDangerBg,
+            borderColor: settings.btnDangerBorder,
+            color: settings.btnDangerColor
           },
           link: {
             backgroundColor: 'transparent',
