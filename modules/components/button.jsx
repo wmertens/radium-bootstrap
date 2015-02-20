@@ -1,6 +1,6 @@
 var React = require('react');
 var Radium = require('radium');
-var RadiumSettings = require('../settings.js');
+var settings = require('../settings.js');
 var { StyleResolverMixin, BrowserStateMixin } = Radium;
 var { absoluteDarken } = require('../util/color.js');
 
