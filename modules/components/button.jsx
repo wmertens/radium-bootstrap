@@ -63,114 +63,138 @@ var Button = React.createClass({
       verticalAlign: 'middle',
       whiteSpace: 'nowrap',
 
-      states: {
-        hover: {
-          textDecoration: 'none',
+      states: [
+        {
+          hover: {
+            textDecoration: 'none',
 
-          computed: computedHoverStyles
-        },
-        focus: {
-          outline: 'thin dotted',
-          outline: '5px auto -webkit-focus-ring-color',
-          outlineOffset: -2,
-          textDecoration: 'none',
-
-          computed: computedHoverStyles
-        },
-        active: activeStyles
-      },
-
-      modifiers: {
-        kind: {
-          standard: {
-            backgroundColor: settings.btnDefaultBg,
-            borderColor: settings.btnDefaultBorder,
-            color: settings.btnDefaultColor
-          },
-          primary: {
-            backgroundColor: settings.btnPrimaryBg,
-            borderColor: settings.btnPrimaryBorder,
-            color: settings.btnPrimaryColor
-          },
-          success: {
-            backgroundColor: settings.btnSuccessBg,
-            borderColor: settings.btnSuccessBorder,
-            color: settings.btnSuccessColor
-          },
-          info: {
-            backgroundColor: settings.btnInfoBg,
-            borderColor: settings.btnInfoBorder,
-            color: settings.btnInfoColor
-          },
-          warning: {
-            backgroundColor: settings.btnWarningBg,
-            borderColor: settings.btnWarningBorder,
-            color: settings.btnWarningColor
-          },
-          danger: {
-            backgroundColor: settings.btnDangerBg,
-            borderColor: settings.btnDangerBorder,
-            color: settings.btnDangerColor
-          },
-          link: {
-            backgroundColor: 'transparent',
-            borderRadius: 0,
-            color: '#337ab7',
-
-            // TODO: Figure out a good, idiomatic way of applying the same
-            // styles to multiple states, because this is a hack.
-            states: function () {
-              var hoverStyles = {
-                color: '#23527c',
-                textDecoration: 'underline',
-
-                computed: null
-              };
-
-              return {
-                hover: hoverStyles,
-                focus: hoverStyles,
-                active: activeLinkStyles
-              };
-            }()
+            computed: computedHoverStyles
           }
         },
-        size: {
-          large: {
-            borderRadius: 6,
-            fontSize: 18,
-            lineHeight: 1.3333333,
-            padding: '10px 16px'
-          },
-          small: {
-            borderRadius: 3,
-            fontSize: 12,
-            lineHeight: 1.5,
-            padding: '5px 10px'
-          },
-          extraSmall: {
-            borderRadius: 3,
-            fontSize: 12,
-            lineHeight: 1.5,
-            padding: '1px 5px'
+        {
+          focus: {
+            outline: 'thin dotted',
+            outline: '5px auto -webkit-focus-ring-color',
+            outlineOffset: -2,
+            textDecoration: 'none',
+
+            computed: computedHoverStyles
           }
         },
-        block: {
-          display: 'block',
-          width: '100%'
-        },
-        disabled: {
-          boxShadow: 'none',
-          cursor: 'not-allowed',
-          filter: 'alpha(opacity=65)',
-          opacity: 0.65,
-          pointerEvents: 'none',
+        {
+          active: activeStyles
+        }
+      ],
 
-          states: null
+      modifiers: [
+        {
+          kind: {
+            standard: {
+              backgroundColor: settings.btnDefaultBg,
+              borderColor: settings.btnDefaultBorder,
+              color: settings.btnDefaultColor
+            },
+            primary: {
+              backgroundColor: settings.btnPrimaryBg,
+              borderColor: settings.btnPrimaryBorder,
+              color: settings.btnPrimaryColor
+            },
+            success: {
+              backgroundColor: settings.btnSuccessBg,
+              borderColor: settings.btnSuccessBorder,
+              color: settings.btnSuccessColor
+            },
+            info: {
+              backgroundColor: settings.btnInfoBg,
+              borderColor: settings.btnInfoBorder,
+              color: settings.btnInfoColor
+            },
+            warning: {
+              backgroundColor: settings.btnWarningBg,
+              borderColor: settings.btnWarningBorder,
+              color: settings.btnWarningColor
+            },
+            danger: {
+              backgroundColor: settings.btnDangerBg,
+              borderColor: settings.btnDangerBorder,
+              color: settings.btnDangerColor
+            },
+            link: {
+              backgroundColor: 'transparent',
+              borderRadius: 0,
+              color: '#337ab7',
+
+              // TODO: Figure out a good, idiomatic way of applying the same
+              // styles to multiple states, because this is a hack.
+              states: function () {
+                var hoverStyles = {
+                  color: '#23527c',
+                  textDecoration: 'underline',
+
+                  computed: null
+                };
+
+                return [
+                  {
+                    hover: hoverStyles
+                  },
+                  {
+                    focus: hoverStyles
+                  },
+                  {
+                    active: activeLinkStyles
+                  }
+                ]; 
+              }()
+            }
+          }
         },
-        active: activeStyles,
-        activeLink: activeLinkStyles
-      }
+        {
+          size: {
+            large: {
+              borderRadius: 6,
+              fontSize: 18,
+              lineHeight: 1.3333333,
+              padding: '10px 16px'
+            },
+            small: {
+              borderRadius: 3,
+              fontSize: 12,
+              lineHeight: 1.5,
+              padding: '5px 10px'
+            },
+            extraSmall: {
+              borderRadius: 3,
+              fontSize: 12,
+              lineHeight: 1.5,
+              padding: '1px 5px'
+            }
+          }
+        },
+        {
+          block: {
+            display: 'block',
+            width: '100%'
+          }
+        },
+        {
+          disabled: {
+            boxShadow: 'none',
+            cursor: 'not-allowed',
+            filter: 'alpha(opacity=65)',
+            opacity: 0.65,
+            pointerEvents: 'none',
+
+            states: null
+          }
+        },
+        {
+          active: activeStyles,
+        },
+        {
+          activeLink: activeLinkStyles
+        }
+      ]
     };
   },
 
