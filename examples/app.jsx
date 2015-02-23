@@ -2,6 +2,9 @@ var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
 
+var ReactStyleGuide = require('react-style-guide');
+require('react-style-guide/react-style-guide.css');
+
 var RadiumBootstrap = require('../modules/index.js');
 
 var Container = RadiumBootstrap.Container;
@@ -37,7 +40,6 @@ var App = React.createClass({
 
     return (
       <main>
-
         <Container
           fluid={true}
           mediaQueries={this.state.mediaQueries}
@@ -214,7 +216,10 @@ var App = React.createClass({
           fluid={true}
           mediaQueries={this.state.mediaQueries}
         >
-          <p>
+
+          <ReactStyleGuide
+            title="Button"
+          >
             <Button>
               Default
             </Button>
@@ -260,9 +265,11 @@ var App = React.createClass({
             >
               Link
             </Button>
-          </p>
+          </ReactStyleGuide>
 
-          <p>
+          <ReactStyleGuide
+            title="Button Sizes"
+          >
             <Button
               size='large'
               >
@@ -288,9 +295,11 @@ var App = React.createClass({
               >
               Extra Small
             </Button>
-          </p>
+          </ReactStyleGuide>
 
-          <p>
+          <ReactStyleGuide
+            title="Block Level Buttons"
+          >
             <Button
               kind='primary'
               size='large'
@@ -298,18 +307,22 @@ var App = React.createClass({
             >
               Block Level
             </Button>
-          </p>
+          </ReactStyleGuide>
 
-          <p>
+          <ReactStyleGuide
+            title="Disabled Buttons"
+          >
             <Button
               kind='primary'
               disabled={true}
             >
               Disabled
             </Button>
-          </p>
+          </ReactStyleGuide>
 
-          <p>
+          <ReactStyleGuide
+            title="Active Buttons"
+          >
             <Button
               kind='primary'
               active={true}
@@ -324,7 +337,7 @@ var App = React.createClass({
               >
               Active
             </Button>
-          </p>
+          </ReactStyleGuide>
         </Container>
       </main>
     );

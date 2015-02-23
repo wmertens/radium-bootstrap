@@ -22,12 +22,16 @@
   "dependencies": {
     "color": "^0.7.3",
     "lodash": "^3.2.0",
+    "radium": "git://github.com/FormidableLabs/radium#e85c02d8c314ea4dacfd8955e18b5211f5ff302e",
     "react": "^0.12.2",
-    "radium": "git://github.com/FormidableLabs/radium#e85c02d8c314ea4dacfd8955e18b5211f5ff302e"
+    "react-style-guide": "^1.0.2"
   },
   "devDependencies": {
+    "css-loader": "^0.9.1",
     "json-loader": "^0.5.1",
     "jsx-loader": "^0.12.2",
+    "react-style-guide": "^1.0.1",
+    "style-loader": "^0.8.3",
     "webpack": "^1.5.3",
     "webpack-dev-server": "^1.7.0"
   }
