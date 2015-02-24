@@ -22,7 +22,7 @@
   "dependencies": {
     "color": "^0.7.3",
     "lodash": "^3.2.0",
-    "radium": "git://github.com/FormidableLabs/radium#e85c02d8c314ea4dacfd8955e18b5211f5ff302e",
+    "radium": "git://github.com/FormidableLabs/radium#92351f76cdbca1f0b5da1c06b6a2e71fb19758d1",
     "react": "^0.12.2",
     "react-style-guide": "^1.0.2"
   },
