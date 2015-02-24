@@ -1,9 +1,9 @@
 var React = require('react');
 var Radium = require('radium');
-var { StyleResolverMixin } = Radium;
+var { StyleResolverMixin, MatchMediaItem } = Radium;
 
 var Col = React.createClass({
-  mixins: [ StyleResolverMixin ],
+  mixins: [ StyleResolverMixin, MatchMediaItem ],
 
   getDefaultProps: function () {
     return {

@@ -1,6 +1,6 @@
 var React = require('react');
 var Radium = require('radium');
-var { StyleResolverMixin, MatchMediaMixin, MatchMediaStore } = Radium;
+var { StyleResolverMixin, MatchMediaBase } = Radium;
 
 var ReactStyleGuide = require('react-style-guide');
 require('react-style-guide/react-style-guide.css');
@@ -22,10 +22,10 @@ var MEDIA_QUERIES = {
   mdMax: '(max-width: 1200px)'
 };
 
-MatchMediaStore.init(MEDIA_QUERIES);
+MatchMediaBase.init(MEDIA_QUERIES);
 
 var App = React.createClass({
-  mixins: [ StyleResolverMixin, MatchMediaMixin ],
+  mixins: [ StyleResolverMixin, MatchMediaBase ],
 
   render: function () {
     var colDemoStyles = {
@@ -40,26 +40,17 @@ var App = React.createClass({
 
     return (
       <main>
-        <Container
-          fluid={true}
-          mediaQueries={this.state.mediaQueries}
-        >
+        <Container fluid={true}>
           <Row>
-            <Col
-              mediaQueries={this.state.mediaQueries}
-              style={colDemoStyles}
-            >
+            <Col style={colDemoStyles}>
               Fluid Container
             </Col>
           </Row>
         </Container>
 
-        <Container
-          mediaQueries={this.state.mediaQueries}
-        >
+        <Container>
           <Row>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={12}
               smSpan={8}
               mdSpan={6}
@@ -70,7 +61,6 @@ var App = React.createClass({
             </Col>
 
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               smSpan={2}
               mdSpan={3}
@@ -81,7 +71,6 @@ var App = React.createClass({
             </Col>
 
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               smSpan={2}
               mdSpan={3}
@@ -94,14 +83,12 @@ var App = React.createClass({
 
           <Row>
             <Col
-              mediaQueries={this.state.mediaQueries}
               mdSpan={6}
               style={colDemoStyles}
             >
               Responsive Column
             </Col>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               mdSpan={3}
               style={colDemoStyles}
@@ -109,7 +96,6 @@ var App = React.createClass({
               Responsive Column
             </Col>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               mdSpan={3}
               style={colDemoStyles}
@@ -120,21 +106,18 @@ var App = React.createClass({
 
           <Row>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={6}
               style={colDemoStyles}
             >
               Standard Column
             </Col>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={4}
               style={colDemoStyles}
             >
               Standard Column
             </Col>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={2}
               style={colDemoStyles}
             >
@@ -144,7 +127,6 @@ var App = React.createClass({
 
           <Row>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={3}
               colOffset={2}
               style={colDemoStyles}
@@ -152,7 +134,6 @@ var App = React.createClass({
               Offset Column
             </Col>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={4}
               style={colDemoStyles}
             >
@@ -162,7 +143,6 @@ var App = React.createClass({
 
           <Row>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={3}
               colPush={3}
               style={colDemoStyles}
@@ -170,7 +150,6 @@ var App = React.createClass({
               Pushed Column
             </Col>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={3}
               colPull={3}
               style={colDemoStyles}
@@ -181,20 +160,17 @@ var App = React.createClass({
 
           <Row>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={8}
               style={colDemoStyles}
             >
               <Row>
                 <Col
-                  mediaQueries={this.state.mediaQueries}
                   xsSpan={6}
                   style={colDemoStyles}
                 >
                   Nested Column
                 </Col>
                 <Col
-                  mediaQueries={this.state.mediaQueries}
                   xsSpan={6}
                   style={colDemoStyles}
                 >
@@ -203,7 +179,6 @@ var App = React.createClass({
               </Row>
             </Col>
             <Col
-              mediaQueries={this.state.mediaQueries}
               xsSpan={4}
               style={colDemoStyles}
             >
@@ -212,11 +187,7 @@ var App = React.createClass({
           </Row>
         </Container>
 
-        <Container
-          fluid={true}
-          mediaQueries={this.state.mediaQueries}
-        >
-
+        <Container fluid={true}>
           <ReactStyleGuide
             title="Button"
           >
