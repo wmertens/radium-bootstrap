@@ -1,9 +1,7 @@
 // React
 var React = require('react');
 var Radium = require('radium');
-
 var { StyleResolverMixin, MatchMediaBase } = Radium;
-var reactTools = require('react-tools');
 
 var ReactStyleGuide = require('react-style-guide');
 require('react-style-guide/react-style-guide.css');
@@ -322,36 +320,6 @@ var App = React.createClass({
               style={{marginLeft: '0.5em'}}
               >
               Active
-            </Button>
-          </ReactStyleGuide>
-
-          <ReactStyleGuide
-            title="Button Sizes"
-          >
-            <Button
-              size='large'
-              >
-              Large
-            </Button>
-
-            <Button
-              style={{marginLeft: '0.5em'}}
-            >
-              Normal
-            </Button>
-
-            <Button
-              size='small'
-              style={{marginLeft: '0.5em'}}
-              >
-              Small
-            </Button>
-
-            <Button
-              size='extraSmall'
-              style={{marginLeft: '0.5em'}}
-              >
-              Extra Small
             </Button>
           </ReactStyleGuide>
         </Container>

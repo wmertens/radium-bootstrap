@@ -1,6 +1,5 @@
 var React = require('react/addons');
 var Radium = require('radium');
-
 var { StyleResolverMixin, MatchMediaItem } = Radium;
 
 var Col = React.createClass({

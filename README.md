@@ -1,31 +1,10 @@
-# radium-bootstrap
+# Radium Bootstrap
 
-# Components with owners
+A work in progress.
 
-# Components in need of owners
+## Running it
 
-- Grid system
-- Tables
-- Forms
-- Buttons
-- Glyphicons
-- Dropdowns
-- Button groups
-- Button dropdowns
-- Input groups
-- Navs
-- Navbar
-- Breadcrumbs
-- Pagination
-- Labels
-- Badges
-- Jumbotron
-- Page header
-- Thumbnails
-- Alerts
-- Progress bars
-- Media object
-- List group
-- Panels
-- Responsive embed
-- Wells
+1. Clone the repo
+2. `npm install`
+3. `npm run examples`
+4. Open http://localhost:8080/webpack-dev-server
