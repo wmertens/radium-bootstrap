@@ -25,10 +25,8 @@ var Row = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        marginLeft: -15,
-        marginRight: -15
-      }
+      marginLeft: -15,
+      marginRight: -15
     };
   },
 
