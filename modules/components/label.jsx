@@ -31,10 +31,14 @@ var Label = React.createClass({
             padding: 0,
             position: 'absolute',
             width: 1
-          },
+          }
+        },
+        {
           inline: {
             marginRight: 3
-          },
+          }
+        },
+        {
           horizontal: {
             marginBottom: 0,
             paddingTop: 7,

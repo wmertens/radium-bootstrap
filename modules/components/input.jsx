@@ -51,17 +51,23 @@ var Input = React.createClass({
 
             states: [
               {
-                focus: stateStyles,
+                focus: stateStyles
+              },
+              {
                 active: stateStyles
               }
             ]
-          },
+          }
+        },
+        {
           inline: {
             display: 'inline-block',
             marginRight: 3,
             verticalAlign: 'middle',
             width: 'auto'
-          },
+          }
+        },
+        {
           type: {
             checkbox: {
               boxSizing: 'border-box',
@@ -78,7 +84,9 @@ var Input = React.createClass({
             },
             month: typeLineHeight,
             time: typeLineHeight
-          },
+          }
+        },
+        {
           groupedInput: {
             display: 'table-cell',
             float: 'left',
@@ -86,7 +94,9 @@ var Input = React.createClass({
             position: 'relative',
             width: '100%',
             zIndex: 2
-          },
+          }
+        },
+        {
           inputLocation: {
             first: {
               borderTopRightRadius: 0,

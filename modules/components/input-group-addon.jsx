@@ -25,7 +25,7 @@ var InputGroupAddon = React.createClass({
       padding: '6px 12px',
       textAlign: 'center',
       whiteSpace: 'nowrap',
-      width: '1%',
+      width: '100%',
       verticalAlign: 'middle',
 
       modifiers: [
@@ -41,7 +41,9 @@ var InputGroupAddon = React.createClass({
               borderLeft: 0,
               borderTopLeftRadius: 0
             }
-          },
+          }
+        },
+        {
           inline: {
             width: 'auto'
           }

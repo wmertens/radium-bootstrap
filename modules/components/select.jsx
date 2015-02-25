@@ -54,7 +54,9 @@ var Select = React.createClass({
 
             states: [
               {
-                focus: stateStyles,
+                focus: stateStyles
+              },
+              {
                 active: stateStyles
               }
             ]

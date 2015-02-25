@@ -44,13 +44,17 @@ var Checkbox = React.createClass({
             marginBottom: 0,
             marginTop: 0,
             verticalAlign: 'middle'
-          },
+          }
+        },
+        {
           horizontal: {
             marginBottom: 0,
             marginTop: 0,
             minHeight: 27,
             paddingTop: 7
-          },
+          }
+        },
+        {
           checkboxInline: {
             marginRight: 10
           }
@@ -74,7 +78,9 @@ var Checkbox = React.createClass({
         {
           inline: {
             paddingLeft: 0
-          },
+          }
+        },
+        {
           checkboxInline: {
             cursor: 'pointer',
             display: 'inline-block',
@@ -83,7 +89,9 @@ var Checkbox = React.createClass({
             marginTop: 0,
             paddingLeft: 20,
             verticalAlign: 'middle'
-          },
+          }
+        },
+        {
           disabled: {
             cursor: 'not-allowed'
           }
@@ -109,11 +117,15 @@ var Checkbox = React.createClass({
             marginLeft: 0,
             marginRight: 3,
             position: 'relative'
-          },
+          }
+        },
+        {
           checkboxInline: {
             marginLeft: -20,
             position: 'absolute'
-          },
+          }
+        },
+        {
           disabled: {
             cursor: 'not-allowed'
           }
