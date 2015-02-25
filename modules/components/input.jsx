@@ -23,13 +23,13 @@ var Input = React.createClass({
     var typeLineHeight = { lineHeight: 34 };
 
     return {
-      standard: {
-        color: 'inherit',
-        font: 'inherit',
-        lineHeight: 'inherit',
-        margin: 0
-      },
-      modifiers: {
+      color: 'inherit',
+      font: 'inherit',
+      lineHeight: 'inherit',
+      margin: 0,
+
+      modifiers: [
+        {
         formControl: {
           backgroundColor: '#fff',
           backgroundImage: 'none',
@@ -50,10 +50,10 @@ var Input = React.createClass({
           transition: 'border-color ease-in-out .15s, box-shadow ease-in-out .15s',
           width: '100%',
 
-          states: {
-            focus: stateStyles,
-            active: stateStyles
-          }
+          states: [
+            { focus: stateStyles },
+            { active: stateStyles }
+          ]
         },
         inline: {
           display: 'inline-block',
@@ -99,42 +99,43 @@ var Input = React.createClass({
             borderBottomLeftRadius: 0
           }
         }
-      }
+        }
+      ]
     };
   },
 
   getLabelStyles: function () {
     return {
-      standard: {
-        display: 'inline-block',
-        fontWeight: 700,
-        marginBottom: 5,
-        maxWidth: '100%'
-      },
-      modifiers: {
-        inline: {
-          marginRight: 3
-        },
-        hidden: {
-          border: 0,
-          clip: 'rect(0,0,0,0)',
-          height: 1,
-          margin: -1,
-          overflow: 'hidden',
-          padding: 0,
-          position: 'absolute',
-          width: 1
-        },
-        horizontal: {
-          marginBottom: 0,
-          paddingTop: 7,
-          textAlign: 'right',
-          width: '100%'
+      display: 'inline-block',
+      fontWeight: 700,
+      marginBottom: 5,
+      maxWidth: '100%',
+
+      modifiers: [
+        {
+          inline: {
+            marginRight: 3
+          },
+          hidden: {
+            border: 0,
+            clip: 'rect(0,0,0,0)',
+            height: 1,
+            margin: -1,
+            overflow: 'hidden',
+            padding: 0,
+            position: 'absolute',
+            width: 1
+          },
+          horizontal: {
+            marginBottom: 0,
+            paddingTop: 7,
+            textAlign: 'right',
+            width: '100%'
+          }
         }
-      }
+      ]
     };
   },
-
 
   propTypes: {
     label: function (props, propName, componentName) {
@@ -171,31 +172,8 @@ var Input = React.createClass({
     return input;
   },
 
-  buildLabel: function (inputEl) {
-    var styles = this.buildStyles(this.getLabelStyles());
-
-    return (
-      <label>
-        <span style={styles}>
-          {this.props.label}
-        </span>
-        {inputEl}
-      </label>
-    );
-  },
-
   render: function () {
-    var styles = this.buildStyles(this.getStyles());
-    var TagName = this.props.tagName;
-
-    return (
-      <TagName
-        {...this.getBrowserStateEvents()}
-        {...this.props}
-        style={styles}
-      />
-    );
-
+    var styles = this.buildStyles(this.getLabelStyles());
 
     var inputEl = this.buildInput();
 
@@ -203,22 +181,20 @@ var Input = React.createClass({
       return inputEl;
     }
 
-    return this.buildLabel(inputEl);
+    console.log(this.props);
+
+    return (
+      <label
+        {...this.getBrowserStateEvents()}
+        {...this.props}
+      >
+        <span style={styles}>
+          {this.props.label}
+        </span>
+        {inputEl}
+      </label>
+    );
   }
-
-
-  // render: function () {
-  //   var styles = this.buildStyles(this.getStyles());
-  //   var TagName = this.props.tagName;
-  //
-  //   return (
-  //     <TagName
-  //       {...this.getBrowserStateEvents()}
-  //       {...this.props}
-  //       style={styles}
-  //     />
-  //   );
-  // }
 });
 
 module.exports = Input;
