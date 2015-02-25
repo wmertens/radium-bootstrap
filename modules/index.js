@@ -3,7 +3,6 @@ exports.Row = require('./components/row.jsx');
 exports.Col = require('./components/col.jsx');
 
 // Radium components
-exports.Example = require('./components/example.jsx');
 exports.Form = require('./components/form.jsx');
 exports.FormGroup = require('./components/form-group.jsx');
 exports.Label = require('./components/label.jsx');

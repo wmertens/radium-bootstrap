@@ -14,17 +14,18 @@ var StaticControl = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        margin: 0,
-        paddingBottom: 7,
-        paddingTop: 7
-      },
-      modifiers: {
-        inline: {
-          display: 'inline-block',
-          marginRight: 3
+      margin: 0,
+      paddingBottom: 7,
+      paddingTop: 7,
+
+      modifiers: [
+        {
+          inline: {
+            display: 'inline-block',
+            marginRight: 3
+          }
         }
-      }
+      ]
     };
   },
 

@@ -15,6 +15,18 @@ var Row = RadiumBootstrap.Row;
 var Col = RadiumBootstrap.Col;
 
 var Button = RadiumBootstrap.Button;
+var Form = RadiumBootstrap.Form;
+var FormGroup = RadiumBootstrap.FormGroup;
+var Label = RadiumBootstrap.Label;
+var Input = RadiumBootstrap.Input;
+var Checkbox = RadiumBootstrap.Checkbox;
+var HelpText = RadiumBootstrap.HelpText;
+var InputGroup = RadiumBootstrap.InputGroup;
+var InputGroupAddon = RadiumBootstrap.InputGroupAddon;
+var Textarea = RadiumBootstrap.Textarea;
+var Radio = RadiumBootstrap.Radio;
+var Select = RadiumBootstrap.Select;
+var StaticControl = RadiumBootstrap.StaticControl;
 
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
@@ -37,243 +49,11 @@ var colDemoStyles = {
   textAlign: 'center'
 };
 
-var convertExample = function (component, context) {
-  return function () {
-    return eval(reactTools.transform(component));
-  }.call(context);
-};
-
 var App = React.createClass({
   mixins: [ StyleResolverMixin, MatchMediaBase ],
 
   render: function () {
-    var headingStyles = { borderBottom: '1px solid #eee' };
-    var linkStyles = {
-      color: '#000',
-      textDecoration: 'none'
-    };
-
     return (
-// <<<<<<< HEAD
-//       <Container breakpoints={this.state.breakpoints}>
-//         <h1 id='grid' style={headingStyles}>
-//           <a href='#grid' style={linkStyles}>
-//             Grid system
-//           </a>
-//         </h1>
-//
-//         <h2 id='fluid-container'>
-//           <a href='#fluid-container' style={linkStyles}>
-//             Fluid container
-//           </a>
-//         </h2>
-//         <Example markup={fluidContainer}>
-//           {convertExample(fluidContainer, this)}
-//         </Example>
-//
-//         <h2 id='responsive-columns'>
-//           <a href='#responsive-columns' style={linkStyles}>
-//             Responsive columns
-//           </a>
-//         </h2>
-//         <Example markup={responsiveColumn}>
-//           {convertExample(responsiveColumn, this)}
-//         </Example>
-//
-//         <h2 id='standard-columns'>
-//           <a href='#standard-columns' style={linkStyles}>
-//             Standard columns
-//           </a>
-//         </h2>
-//         <Example markup={standardColumn}>
-//           {convertExample(standardColumn, this)}
-//         </Example>
-//
-//         <h2 id='offset-columns'>
-//           <a href='#offset-columns' style={linkStyles}>
-//             Offset columns
-//           </a>
-//         </h2>
-//         <Example markup={offsetColumn}>
-//           {convertExample(offsetColumn, this)}
-//         </Example>
-//
-//         <h2 id='responsive-columns'>
-//           <a href='#responsive-columns' style={linkStyles}>
-//             Pushed columns
-//           </a>
-//         </h2>
-//         <Example markup={pushedColumn}>
-//           {convertExample(pushedColumn, this)}
-//         </Example>
-//
-//         <h2 id='nested-columns'>
-//           <a href='#nested-columns' style={linkStyles}>
-//             Nested columns
-//           </a>
-//         </h2>
-//         <Example markup={nestedColumn}>
-//           {convertExample(nestedColumn, this)}
-//         </Example>
-//
-//         <h1 id='forms' style={headingStyles}>
-//           <a href='#forms' style={linkStyles}>
-//             Forms
-//           </a>
-//         </h1>
-//
-//         <h2 id='basic-form'>
-//           <a href='#basic-form' style={linkStyles}>
-//             Basic form
-//           </a>
-//         </h2>
-//         <Example markup={basicForm}>
-//           {convertExample(basicForm)}
-//         </Example>
-//
-//         <h2 id='inline-form'>
-//           <a href='#inline-form' style={linkStyles}>
-//             Inline form
-//           </a>
-//         </h2>
-//         <Example markup={inlineForm}>
-//           {convertExample(inlineForm)}
-//         </Example>
-//
-//         <Example markup={inlineCheckboxForm}>
-//           {convertExample(inlineCheckboxForm)}
-//         </Example>
-//
-//         <Example markup={inlineInputGroupForm}>
-//           {convertExample(inlineInputGroupForm)}
-//         </Example>
-//
-//         <h2 id='horizontal-form'>
-//           <a href='#horizontal-form' style={linkStyles}>
-//             Horizontal form
-//           </a>
-//         </h2>
-//         <Example markup={horizontalForm}>
-//           {convertExample(horizontalForm, this)}
-//         </Example>
-//
-//         <h2 id='supported-controls'>
-//           <a href='#supported-controls' style={linkStyles}>
-//             Supported controls
-//           </a>
-//         </h2>
-//
-//         <h3 id='inputs'>
-//           <a href='#inputs' style={linkStyles}>
-//             Inputs
-//           </a>
-//         </h3>
-//         <Example markup={inputs}>
-//           {convertExample(inputs)}
-//         </Example>
-//
-//         <h3 id='textarea'>
-//           <a href='#textarea' style={linkStyles}>
-//             Textarea
-//           </a>
-//         </h3>
-//         <Example markup={textarea}>
-//           {convertExample(textarea)}
-//         </Example>
-//
-//         <h3 id='checkboxes-and-radios'>
-//           <a href='#checkboxes-and-radios' style={linkStyles}>
-//             Checkboxes and radios
-//           </a>
-//         </h3>
-//
-//         <h4 id='default-checkboxes-and-radios'>
-//           <a href='#default-checkboxes-and-radios' style={linkStyles}>
-//             Default (stacked)
-//           </a>
-//         </h4>
-//         <Example markup={checkboxesAndRadios}>
-//           {convertExample(checkboxesAndRadios)}
-//         </Example>
-//
-//         <h4 id='inline-checkboxes-and-radios'>
-//           <a href='#inline-checkboxes-and-radios' style={linkStyles}>
-//             Inline checkboxes and radios
-//           </a>
-//         </h4>
-//         <Example markup={inlineCheckboxesAndRadios}>
-//           {convertExample(inlineCheckboxesAndRadios)}
-//         </Example>
-//
-//         <h4 id='checkboxes-and-radios-without-label'>
-//           <a href='#checkboxes-and-radios-without-label' style={linkStyles}>
-//             Checkboxes and radios without label text
-//           </a>
-//         </h4>
-//         <Example markup={checkboxesAndRadiosWithoutLabel}>
-//           {convertExample(checkboxesAndRadiosWithoutLabel)}
-//         </Example>
-//
-//         <h3 id='selects'>
-//           <a href='#selects' style={linkStyles}>
-//             Selects
-//           </a>
-//         </h3>
-//         <Example markup={selects}>
-//           {convertExample(selects)}
-//         </Example>
-//
-//         <Example markup={multipleSelect}>
-//           {convertExample(multipleSelect)}
-//         </Example>
-//
-//         <h3 id='static-control'>
-//           <a href='#static-control' style={linkStyles}>
-//             Static control
-//           </a>
-//         </h3>
-//         <Example markup={staticControlHorizontal}>
-//           {convertExample(staticControlHorizontal, this)}
-//         </Example>
-//
-//         <Example markup={staticControlInline}>
-//           {convertExample(staticControlInline)}
-//         </Example>
-//
-//         <h1 id='buttons' style={headingStyles}>
-//           <a href='#buttons' style={linkStyles}>
-//             Buttons
-//           </a>
-//         </h1>
-//
-//         <h2 id='button-options'>
-//           <a href='#button-options' style={linkStyles}>
-//             Button options
-//           </a>
-//         </h2>
-//         <Example markup={buttonOptions}>
-//           {convertExample(buttonOptions)}
-//         </Example>
-//
-//         <h2 id='button-sizes'>
-//           <a href='#button-sizes' style={linkStyles}>
-//             Button sizes
-//           </a>
-//         </h2>
-//         <Example markup={buttonSizes}>
-//           {convertExample(buttonSizes)}
-//         </Example>
-//
-//         <h2 id='button-states'>
-//           <a href='#button-states' style={linkStyles}>
-//             Button states
-//           </a>
-//         </h2>
-//         <Example markup={buttonStates}>
-//           {convertExample(buttonStates)}
-//         </Example>
-//       </Container>
-// =======
       <main>
         <Container fluid={true}>
           <Row>
@@ -544,9 +324,438 @@ var App = React.createClass({
               Active
             </Button>
           </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Button Sizes"
+          >
+            <Button
+              size='large'
+              >
+              Large
+            </Button>
+
+            <Button
+              style={{marginLeft: '0.5em'}}
+            >
+              Normal
+            </Button>
+
+            <Button
+              size='small'
+              style={{marginLeft: '0.5em'}}
+              >
+              Small
+            </Button>
+
+            <Button
+              size='extraSmall'
+              style={{marginLeft: '0.5em'}}
+              >
+              Extra Small
+            </Button>
+          </ReactStyleGuide>
+        </Container>
+
+        <Container fluid={true}>
+          <ReactStyleGuide
+            title="Basic form"
+          >
+            <Form>
+              <FormGroup>
+                <Label>Email</Label>
+                <Input
+                  type='email'
+                  formControl={true}
+                  placeholder='Email'
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label>Password</Label>
+                <Input
+                  type='password'
+                  formControl={true}
+                  placeholder='Password'
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label>File input</Label>
+                <Input
+                  type='file'
+                />
+                <HelpText value='Example block-level help text here.' />
+              </FormGroup>
+              <Checkbox>Check me out</Checkbox>
+              <Button
+                type='submit'
+              >
+                Submit
+              </Button>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Inline form"
+          >
+            <Form
+              inline={true}
+            >
+              <FormGroup>
+                <Label>Name</Label>
+                <Input
+                  type='text'
+                  formControl={true}
+                  placeholder='Jane Doe'
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label>Email</Label>
+                <Input
+                  type='email'
+                  formControl={true}
+                  placeholder='jane.doe@example.com'
+                />
+              </FormGroup>
+              <Button
+                type='submit'
+              >
+                Send invitation
+              </Button>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide>
+            <Form
+              inline={true}
+            >
+              <FormGroup>
+                <Label
+                  hidden={true}
+                >
+                  Email
+                </Label>
+                <Input
+                  type='email'
+                  formControl={true}
+                  placeholder='Enter email'
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label
+                  hidden={true}
+                >
+                  Password
+                </Label>
+                <Input
+                  type='password'
+                  formControl={true}
+                  placeholder='Password'
+                />
+              </FormGroup>
+              <Checkbox>Remember me</Checkbox>
+              <Button
+                type='submit'
+              >
+                Sign in
+              </Button>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide>
+            <Form
+              inline={true}
+            >
+              <FormGroup>
+                <Label
+                  hidden={true}
+                >
+                  Amount (in dollars)
+                </Label>
+                <InputGroup>
+                  <InputGroupAddon>$</InputGroupAddon>
+                  <Input
+                    type='text'
+                    formControl={true}
+                    placeholder='Amount'
+                  />
+                  <InputGroupAddon>.00</InputGroupAddon>
+                </InputGroup>
+                <Button
+                  type='submit'
+                  kind='primary'
+                >
+                  Transfer cash
+                </Button>
+              </FormGroup>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Horizontal form"
+          >
+            <Form
+              horizontal={true}
+            >
+              <FormGroup>
+                <Col
+                  xsSpan={2}
+                >
+                  <Label>Email</Label>
+                </Col>
+                <Col
+                  xsSpan={10}
+                >
+                  <Input
+                    type='email'
+                    formControl={true}
+                    placeholder='Email'
+                  />
+                </Col>
+              </FormGroup>
+              <FormGroup>
+                <Col
+                  xsSpan={2}
+                >
+                  <Label>Password</Label>
+                </Col>
+                <Col
+                  xsSpan={10}
+                >
+                  <Input
+                    type='password'
+                    formControl={true}
+                    placeholder='Password'
+                  />
+                </Col>
+              </FormGroup>
+              <FormGroup>
+                <Col
+                  xsSpan={10}
+                  colPush={2}
+                >
+                  <Checkbox>Remember me</Checkbox>
+                </Col>
+              </FormGroup>
+              <FormGroup>
+                <Col
+                  xsSpan={10}
+                  colPush={2}
+                >
+                  <Button
+                    type='submit'
+                  >
+                    Sign in
+                  </Button>
+                </Col>
+              </FormGroup>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Inputs"
+          >
+            <Input
+              type='text'
+              formControl={true}
+              placeholder='Text input'
+            />
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Textarea">
+            <Textarea
+              rows='3'
+              placeholder='Textarea'
+            />
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Checkboxes and radios - Default (stacked)"
+          >
+            <Form>
+              <Checkbox>
+                Option one — click me!
+              </Checkbox>
+              <Checkbox
+                disabled={true}
+              >
+                Option two is disabled.
+              </Checkbox>
+              <br />
+              <Radio
+                name='optionsRadios'
+                value='option1'
+                checked={true}
+              >
+                Option one — preselected with the 'checked' prop set to true.
+              </Radio>
+              <Radio
+                name='optionsRadios'
+                value='option2'
+              >
+                Option two — selecting it will deselect option one.
+              </Radio>
+              <Radio
+                name='optionsRadios'
+                value='option3'
+                disabled={true}
+              >
+                Option three is disabled.
+              </Radio>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Inline checkboxes and radios"
+          >
+            <Form
+              inline={true}
+            >
+              <Checkbox
+                checkboxInline={true}
+              >
+                1
+              </Checkbox>
+              <Checkbox
+                checkboxInline={true}
+              >
+                2
+              </Checkbox>
+              <Checkbox
+                checkboxInline={true}
+              >
+                3
+              </Checkbox>
+              <br />
+              <Radio
+                name='optionsRadios'
+                value='option1'
+                radioInline={true}
+              >
+                1
+              </Radio>
+              <Radio
+                name='optionsRadios'
+                value='option2'
+                radioInline={true}
+              >
+                2
+              </Radio>
+              <Radio
+                name='optionsRadios'
+                value='option3'
+                radioInline={true}
+              >
+                3
+              </Radio>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Checkboxes and radios without label text"
+          >
+            <Form>
+              <Checkbox
+                ariaLabel='...'
+              >
+              </Checkbox>
+              <Radio
+                name='optionsRadios'
+                value='option1'
+                ariaLabel='...'
+              >
+              </Radio>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Selects">
+            <Select
+              formControl={true}
+              options={[
+                { value: '1', label: 1 },
+                { value: '2', label: 2 },
+                { value: '3', label: 3 },
+                { value: '4', label: 4 },
+                { value: '5', label: 5 }
+              ]}
+            />
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Static controls"
+          >
+            <Container
+              fluid={true}
+            >
+              <Form
+                horizontal={true}
+              >
+                <FormGroup>
+                  <Row>
+                    <Col
+                      xsSpan={2}
+                    >
+                      <Label>Email</Label>
+                    </Col>
+                    <Col
+                      xsSpan={10}
+                    >
+                      <StaticControl>email@example.com</StaticControl>
+                    </Col>
+                  </Row>
+                </FormGroup>
+                <FormGroup>
+                  <Row>
+                    <Col
+                      xsSpan={2}
+                    >
+                      <Label>Password</Label>
+                    </Col>
+                    <Col
+                      xsSpan={10}
+                    >
+                      <Input
+                        type='password'
+                        formControl={true}
+                        placeholder='Password'
+                      />
+                    </Col>
+                  </Row>
+                </FormGroup>
+              </Form>
+            </Container>
+          </ReactStyleGuide>
+          <ReactStyleGuide>
+            <Form>
+              <FormGroup
+                inline={true}
+              >
+                <Label
+                  hidden={true}
+                >
+                  Email
+                </Label>
+                <StaticControl>email@example.com</StaticControl>
+              </FormGroup>
+              <FormGroup
+                inline={true}
+              >
+                <Label
+                  hidden={true}
+                >
+                  Email
+                </Label>
+                <Input
+                  type='password'
+                  formControl={true}
+                  placeholder='Password'
+                />
+                <Button>Confirm identity</Button>
+              </FormGroup>
+            </Form>
+          </ReactStyleGuide>
         </Container>
       </main>
-// >>>>>>> master
     );
   }
 });

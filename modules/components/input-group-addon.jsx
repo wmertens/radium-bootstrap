@@ -14,38 +14,39 @@ var InputGroupAddon = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        backgroundColor: '#eee',
-        border: '1px solid #ccc',
-        borderRadius: 4,
-        color:' #555',
-        display: 'table-cell',
-        fontSize: 14,
-        fontWeight: 400,
-        lineHeight: 1,
-        padding: '6px 12px',
-        textAlign: 'center',
-        whiteSpace: 'nowrap',
-        width: '1%',
-        verticalAlign: 'middle'
-      },
-      modifiers: {
-        inline: {
-          width: 'auto'
-        },
-        addonLocation: {
-          first: {
-            borderBottomRightRadius: 0,
-            borderRight: 0,
-            borderTopRightRadius: 0
+      backgroundColor: '#eee',
+      border: '1px solid #ccc',
+      borderRadius: 4,
+      color:' #555',
+      display: 'table-cell',
+      fontSize: 14,
+      fontWeight: 400,
+      lineHeight: 1,
+      padding: '6px 12px',
+      textAlign: 'center',
+      whiteSpace: 'nowrap',
+      width: '1%',
+      verticalAlign: 'middle',
+
+      modifiers: [
+        {
+          addonLocation: {
+            first: {
+              borderBottomRightRadius: 0,
+              borderRight: 0,
+              borderTopRightRadius: 0
+            },
+            last: {
+              borderBottomLeftRadius: 0,
+              borderLeft: 0,
+              borderTopLeftRadius: 0
+            }
           },
-          last: {
-            borderBottomLeftRadius: 0,
-            borderLeft: 0,
-            borderTopLeftRadius: 0
+          inline: {
+            width: 'auto'
           }
         }
-      }
+      ]
     };
   },
 

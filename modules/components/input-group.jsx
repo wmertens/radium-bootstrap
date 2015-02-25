@@ -52,18 +52,19 @@ var InputGroup = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        position: 'relative',
-        display: 'table',
-        borderCollapse: 'separate'
-      },
-      modifiers: {
-        inline: {
-          display: 'inline-table',
-          marginRight: 3,
-          verticalAlign: 'middle'
+      position: 'relative',
+      display: 'table',
+      borderCollapse: 'separate',
+
+      modifiers: [
+        {
+          inline: {
+            display: 'inline-table',
+            marginRight: 3,
+            verticalAlign: 'middle'
+          }
         }
-      }
+      ]
     };
   },
 
@@ -72,7 +73,7 @@ var InputGroup = React.createClass({
     var TagName = this.props.tagName;
 
     return (
-      <TagName style={styles} ref="InputGroup" {...this.props}>
+      <TagName style={styles} {...this.props}>
         {this.buildChildren(this.props.children)}
       </TagName>
     );

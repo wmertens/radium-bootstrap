@@ -32,90 +32,93 @@ var Checkbox = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        display: 'block',
-        marginBottom: 10,
-        marginTop: 10,
-        position: 'relative'
-      },
-      modifiers: {
-        inline: {
-          display: 'inline-block',
-          marginBottom: 0,
-          marginTop: 0,
-          verticalAlign: 'middle'
-        },
-        horizontal: {
-          marginBottom: 0,
-          marginTop: 0,
-          minHeight: 27,
-          paddingTop: 7
-        },
-        checkboxInline: {
-          marginRight: 10
+      display: 'block',
+      marginBottom: 10,
+      marginTop: 10,
+      position: 'relative',
+
+      modifiers: [
+        {
+          inline: {
+            display: 'inline-block',
+            marginBottom: 0,
+            marginTop: 0,
+            verticalAlign: 'middle'
+          },
+          horizontal: {
+            marginBottom: 0,
+            marginTop: 0,
+            minHeight: 27,
+            paddingTop: 7
+          },
+          checkboxInline: {
+            marginRight: 10
+          }
         }
-      }
+      ]
     };
   },
 
   getLabelStyles: function () {
     return {
-      standard: {
-        cursor: 'pointer',
-        display: 'inline-block',
-        fontWeight: 400,
-        marginRight: 3,
-        marginBottom: 0,
-        maxWidth: '100%',
-        minHeight: 20,
-        paddingLeft: 20
-      },
-      modifiers: {
-        inline: {
-          paddingLeft: 0
-        },
-        checkboxInline: {
-          cursor: 'pointer',
-          display: 'inline-block',
-          fontWeight: 400,
-          marginBottom: 0,
-          marginTop: 0,
-          paddingLeft: 20,
-          verticalAlign: 'middle'
-        },
-        disabled: {
-          cursor: 'not-allowed'
+      cursor: 'pointer',
+      display: 'inline-block',
+      fontWeight: 400,
+      marginRight: 3,
+      marginBottom: 0,
+      maxWidth: '100%',
+      minHeight: 20,
+      paddingLeft: 20,
+
+      modifiers: [
+        {
+          inline: {
+            paddingLeft: 0
+          },
+          checkboxInline: {
+            cursor: 'pointer',
+            display: 'inline-block',
+            fontWeight: 400,
+            marginBottom: 0,
+            marginTop: 0,
+            paddingLeft: 20,
+            verticalAlign: 'middle'
+          },
+          disabled: {
+            cursor: 'not-allowed'
+          }
         }
-      }
+      ]
     };
   },
 
   getInputStyles: function () {
     return {
-      standard: {
-        boxSizing: 'border-box',
-        color: 'inherit',
-        font: 'inherit',
-        lineHeight: 'normal',
-        margin: '4px 0 0',
-        marginLeft: -20,
-        padding: 0,
-        position: 'absolute'
-      },
-      modifiers: {
-        inline: {
-          marginLeft: 0,
-          marginRight: 3,
-          position: 'relative'
-        },
-        checkboxInline: {
-          marginLeft: -20,
-          position: 'absolute'
-        },
-        disabled: {
-          cursor: 'not-allowed'
+      boxSizing: 'border-box',
+      color: 'inherit',
+      font: 'inherit',
+      lineHeight: 'normal',
+      margin: '4px 0 0',
+      marginLeft: -20,
+      padding: 0,
+      position: 'absolute',
+
+      modifiers: [
+        {
+          inline: {
+            marginLeft: 0,
+            marginRight: 3,
+            position: 'relative'
+          },
+          checkboxInline: {
+            marginLeft: -20,
+            position: 'absolute'
+          },
+          disabled: {
+            cursor: 'not-allowed'
+          }
         }
-      }
+      ]
     };
   },
 

@@ -13,12 +13,10 @@ var HelpText = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        color: '#737373',
-        display: 'block',
-        marginBottom: 10,
-        marginTop: 5
-      }
+      color: '#737373',
+      display: 'block',
+      marginBottom: 10,
+      marginTop: 5
     };
   },
 

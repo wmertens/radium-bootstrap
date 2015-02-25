@@ -30,20 +30,21 @@ var FormGroup = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        margin: '0 0 15px 0'
-      },
-      modifiers: {
-        inline: {
-          display: 'inline-block',
-          marginBottom: 0,
-          verticalAlign: 'middle'
-        },
-        horizontal: {
-          marginLeft: -15,
-          marginRight: -15
+      margin: '0 0 15px 0',
+
+      modifiers: [
+        {
+          inline: {
+            display: 'inline-block',
+            marginBottom: 0,
+            verticalAlign: 'middle'
+          },
+          horizontal: {
+            marginLeft: -15,
+            marginRight: -15
+          }
         }
-      }
+      ]
     };
   },
 

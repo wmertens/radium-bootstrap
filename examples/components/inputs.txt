@@ -1,5 +1,0 @@
-<Input
-  type='text'
-  formControl={true}
-  placeholder='Text input'
-/>

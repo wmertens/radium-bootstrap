@@ -144,7 +144,7 @@ var Button = React.createClass({
                   {
                     active: activeLinkStyles
                   }
-                ]; 
+                ];
               }()
             }
           }

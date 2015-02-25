@@ -15,33 +15,34 @@ var Label = React.createClass({
 
   getStyles: function () {
     return {
-      standard: {
-        display: 'inline-block',
-        fontWeight: 700,
-        marginBottom: 5,
-        maxWidth: '100%'
-      },
-      modifiers: {
-        inline: {
-          marginRight: 3
-        },
-        hidden: {
-          border: 0,
-          clip: 'rect(0,0,0,0)',
-          height: 1,
-          margin: -1,
-          overflow: 'hidden',
-          padding: 0,
-          position: 'absolute',
-          width: 1
-        },
-        horizontal: {
-          marginBottom: 0,
-          paddingTop: 7,
-          textAlign: 'right',
-          width: '100%'
+      display: 'inline-block',
+      fontWeight: 700,
+      marginBottom: 5,
+      maxWidth: '100%',
+
+      modifiers: [
+        {
+          hidden: {
+            border: 0,
+            clip: 'rect(0,0,0,0)',
+            height: 1,
+            margin: -1,
+            overflow: 'hidden',
+            padding: 0,
+            position: 'absolute',
+            width: 1
+          },
+          inline: {
+            marginRight: 3
+          },
+          horizontal: {
+            marginBottom: 0,
+            paddingTop: 7,
+            textAlign: 'right',
+            width: '100%'
+          }
         }
-      }
+      ]
     };
   },
 
