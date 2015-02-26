@@ -4,13 +4,11 @@ var webpack = require('webpack');
 module.exports = {
   cache: true,
   entry: {
-    app: "./examples/app.jsx"
+    app: "./js/app.jsx"
   },
   output: {
-    path: path.join(__dirname),
-    publicPath: '/',
-    filename: '[name].js',
-    chunkFilename: '[chunkhash].js'
+    path: path.join(__dirname, 'js'),
+    filename: 'app.min.js'
   },
   module: {
     loaders: [
@@ -31,5 +29,16 @@ module.exports = {
         loaders: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    // Optimize
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": {
+        // Signal production mode for React JS libs.
+        NODE_ENV: JSON.stringify("production")
+      }
+    })
+  ]
 }
