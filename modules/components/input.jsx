@@ -8,8 +8,9 @@ var Input = React.createClass({
   getDefaultProps: function () {
     return {
       tagName: 'label',
-      inline: false,
       type: 'text',
+      inline: false,
+      labelHidden: false,
       dangerouslyDisableLabel: false
     };
   },
@@ -120,6 +121,18 @@ var Input = React.createClass({
         {
           inline: {
             marginRight: 3
+          }
+        },
+        {
+          labelHidden: {
+            border: 0,
+            clip: 'rect(0,0,0,0)',
+            height: 1,
+            margin: -1,
+            overflow: 'hidden',
+            padding: 0,
+            position: 'absolute',
+            width: 1
           }
         }
       ]

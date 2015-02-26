@@ -376,24 +376,24 @@ var App = React.createClass({
           </ReactStyleGuide>
 
           <ReactStyleGuide
-            title="Disabled labels"
+            title="Hidden labels"
           >
             <Form
               inline={true}
             >
               <Input
-                ariaLabel='Email'
+                label='Email'
                 type='email'
                 formControl={true}
                 placeholder='Enter email'
-                dangerouslyDisableLabel={true}
+                labelHidden={true}
               />
               <Input
-                ariaLabel='Password'
+                label='Password'
                 type='password'
                 formControl={true}
                 placeholder='Password'
-                dangerouslyDisableLabel={true}
+                labelHidden={true}
               />
               <Button
                 type='submit'
@@ -412,11 +412,11 @@ var App = React.createClass({
               <InputGroup>
                 <InputGroupAddon>$</InputGroupAddon>
                 <Input
-                  ariaLabel='Amount (in dollars)'
+                  label='Amount (in dollars)'
                   type='text'
                   formControl={true}
                   placeholder='Amount'
-                  dangerouslyDisableLabel={true}
+                  labelHidden={true}
                 />
                 <InputGroupAddon>.00</InputGroupAddon>
               </InputGroup>
@@ -446,11 +446,11 @@ var App = React.createClass({
             >
               <StaticControl>email@example.com</StaticControl>
               <Input
-                ariaLabel='Password'
+                label='Password'
                 type='password'
                 formControl={true}
                 placeholder='Password'
-                dangerouslyDisableLabel={true}
+                labelHidden={true}
               />
               <Button>Confirm identity</Button>
             </Form>
