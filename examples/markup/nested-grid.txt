@@ -1,0 +1,29 @@
+<Container fluid="true">
+  <Row>
+    <Col
+      xsSpan={8}
+      style={colDemoStyles}
+    >
+      <Row>
+        <Col
+          xsSpan={6}
+          style={colDemoStyles}
+        >
+          Nested Column
+        </Col>
+        <Col
+          xsSpan={6}
+          style={colDemoStyles}
+        >
+          Nested Column
+        </Col>
+      </Row>
+    </Col>
+    <Col
+      xsSpan={4}
+      style={colDemoStyles}
+    >
+      Standard Column
+    </Col>
+  </Row>
+</Container>

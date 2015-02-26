@@ -1,0 +1,33 @@
+<Container fluid={true}>
+  <Row>
+    <Col
+      xsSpan={12}
+      smSpan={8}
+      mdSpan={6}
+      lgSpan={4}
+      style={colDemoStyles}
+    >
+      Responsive Column
+    </Col>
+
+    <Col
+      xsSpan={6}
+      smSpan={2}
+      mdSpan={3}
+      lgSpan={4}
+      style={colDemoStyles}
+      >
+      Responsive Column
+    </Col>
+
+    <Col
+      xsSpan={6}
+      smSpan={2}
+      mdSpan={3}
+      lgSpan={4}
+      style={colDemoStyles}
+      >
+      Responsive Column
+    </Col>
+  </Row>
+</Container>
