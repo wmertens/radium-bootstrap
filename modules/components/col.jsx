@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require('react/addons');
 var Radium = require('radium');
 var { StyleResolverMixin, MatchMediaItem } = Radium;
 
@@ -9,6 +9,24 @@ var Col = React.createClass({
     return {
       tagName: 'div',
       xsSpan: 12
+    };
+  },
+
+  buildChildren: function (elements) {
+    return React.Children.map(elements, function (element) {
+      if (element.props) {
+        var defaultProps =
+          ['tagName', 'xsSpan', 'children', 'style'];
+        var inheritedProps = _.omit(this.props, defaultProps);
+        return React.addons.cloneWithProps(element, inheritedProps);
+      }
+      return this.props.children;
+    }, this);
+  },
+
+  colCountToPercent: function (colCount) {
+    if (colCount) {
+      return (colCount / 12) * 100 + '%';
     }
   },
 
@@ -44,19 +62,13 @@ var Col = React.createClass({
     };
   },
 
-  colCountToPercent: function (colCount) {
-    if (colCount) {
-      return (colCount / 12) * 100 + '%';
-    }
-  },
-
   render: function () {
     var styles = this.buildStyles(this.getStyles());
     var TagName = this.props.tagName;
 
     return (
       <TagName style={styles}>
-        {this.props.children}
+        {this.buildChildren(this.props.children)}
       </TagName>
     );
   }

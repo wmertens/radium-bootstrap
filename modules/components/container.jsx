@@ -8,7 +8,7 @@ var Container = React.createClass({
   getDefaultProps: function () {
     return {
       tagName: 'div'
-    }
+    };
   },
 
   getStyles: function () {

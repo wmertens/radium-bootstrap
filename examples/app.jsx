@@ -1,3 +1,4 @@
+// React
 var React = require('react');
 var Radium = require('radium');
 var { StyleResolverMixin, MatchMediaBase } = Radium;
@@ -12,6 +13,13 @@ var Row = RadiumBootstrap.Row;
 var Col = RadiumBootstrap.Col;
 
 var Button = RadiumBootstrap.Button;
+var Form = RadiumBootstrap.Form;
+var Input = RadiumBootstrap.Input;
+var HelpText = RadiumBootstrap.HelpText;
+var InputGroup = RadiumBootstrap.InputGroup;
+var InputGroupAddon = RadiumBootstrap.InputGroupAddon;
+var Textarea = RadiumBootstrap.Textarea;
+var StaticControl = RadiumBootstrap.StaticControl;
 
 // Temporary Style Guide hack
 var reactTools = require('react-tools');
@@ -202,6 +210,144 @@ var App = React.createClass({
             staticMarkup={nestedGridMarkup}
           >
             {convertExample(nestedGridMarkup)}
+          </ReactStyleGuide>
+        </Container>
+
+        <Container fluid={true}>
+          <ReactStyleGuide
+            title="Basic form"
+          >
+            <Form>
+              <Input
+                label='Email'
+                type='text'
+                formControl={true}
+                placeholder='Email'
+              />
+              <Input
+                label='Password'
+                type='password'
+                formControl={true}
+                placeholder='Password'
+              />
+              <Input
+                label='File input'
+                type='file'
+              />
+              <HelpText value='Example block-level help text here.' />
+              <Button
+                type='submit'
+              >
+                Submit
+              </Button>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Inline form"
+          >
+            <Form
+              inline={true}
+            >
+              <Input
+                label='Name'
+                type='text'
+                formControl={true}
+                placeholder='Jane Doe'
+              />
+              <Input
+                label='Email'
+                type='email'
+                formControl={true}
+                placeholder='jane.doe@example.com'
+              />
+              <Button
+                type='submit'
+              >
+                Send invitation
+              </Button>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Hidden labels"
+          >
+            <Form
+              inline={true}
+            >
+              <Input
+                label='Email'
+                type='email'
+                formControl={true}
+                placeholder='Enter email'
+                labelHidden={true}
+              />
+              <Input
+                label='Password'
+                type='password'
+                formControl={true}
+                placeholder='Password'
+                labelHidden={true}
+              />
+              <Button
+                type='submit'
+              >
+                Sign in
+              </Button>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Input groups"
+          >
+            <Form
+              inline={true}
+            >
+              <InputGroup>
+                <InputGroupAddon>$</InputGroupAddon>
+                <Input
+                  label='Amount (in dollars)'
+                  type='text'
+                  formControl={true}
+                  placeholder='Amount'
+                  labelHidden={true}
+                />
+                <InputGroupAddon>.00</InputGroupAddon>
+              </InputGroup>
+              <Button
+                type='submit'
+                kind='primary'
+              >
+                Transfer cash
+              </Button>
+            </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Textarea"
+          >
+            <Textarea
+              rows='3'
+              placeholder='Textarea'
+            />
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Static controls"
+          >
+            <Form
+              inline={true}
+            >
+              <StaticControl>email@example.com</StaticControl>
+              <Input
+                label='Password'
+                type='password'
+                formControl={true}
+                placeholder='Password'
+                labelHidden={true}
+              />
+              <Button>Confirm identity</Button>
+            </Form>
           </ReactStyleGuide>
         </Container>
       </main>
