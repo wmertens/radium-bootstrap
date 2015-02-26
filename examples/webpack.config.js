@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   cache: true,
   entry: {
-    app: "./examples/app.jsx"
+    app: "./examples/index.jsx"
   },
   output: {
     path: path.join(__dirname),

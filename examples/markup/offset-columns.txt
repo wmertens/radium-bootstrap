@@ -1,0 +1,17 @@
+<Container fluid={true}>
+  <Row>
+    <Col
+      xsSpan={3}
+      colOffset={2}
+      style={colDemoStyles}
+    >
+      Offset Column
+    </Col>
+    <Col
+      xsSpan={4}
+      style={colDemoStyles}
+    >
+      Standard Column
+    </Col>
+  </Row>
+</Container>

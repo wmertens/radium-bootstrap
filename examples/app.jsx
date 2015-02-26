@@ -21,6 +21,18 @@ var InputGroupAddon = RadiumBootstrap.InputGroupAddon;
 var Textarea = RadiumBootstrap.Textarea;
 var StaticControl = RadiumBootstrap.StaticControl;
 
+// Temporary Style Guide hack
+var reactTools = require('react-tools');
+
+var convertExample = function (component) {
+  return eval(reactTools.transform(component));
+};
+
+var gridMarkup = require('raw!./markup/grid.txt');
+var offsetColumnsMarkup = require('raw!./markup/offset-columns.txt');
+var pulledColumnsMarkup = require('raw!./markup/pulled-columns.txt');
+var nestedGridMarkup = require('raw!./markup/nested-grid.txt');
+
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
   md: '(min-width: 992px)',
@@ -32,169 +44,23 @@ var MEDIA_QUERIES = {
 
 MatchMediaBase.init(MEDIA_QUERIES);
 
+var colDemoStyles = {
+  background: 'rgba(117,190,255,0.5)',
+  border: '1px solid #0074D9',
+  color: '#0074D9',
+  minHeight: 80,
+  textAlign: 'center',
+  paddingTop: '1em',
+  paddingBottom: '1em'
+};
+
 var App = React.createClass({
   mixins: [ StyleResolverMixin, MatchMediaBase ],
 
   render: function () {
-    var colDemoStyles = {
-      background: 'rgba(117,190,255,0.5)',
-      border: '1px solid #0074D9',
-      color: '#0074D9',
-      minHeight: 80,
-      paddingBottom: '1em',
-      paddingTop: '1em',
-      textAlign: 'center'
-    };
 
     return (
       <main>
-        <Container fluid={true}>
-          <Row>
-            <Col style={colDemoStyles}>
-              Fluid Container
-            </Col>
-          </Row>
-        </Container>
-
-        <Container>
-          <Row>
-            <Col
-              xsSpan={12}
-              smSpan={8}
-              mdSpan={6}
-              lgSpan={4}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-
-            <Col
-              xsSpan={6}
-              smSpan={2}
-              mdSpan={3}
-              lgSpan={4}
-              style={colDemoStyles}
-              >
-              Responsive Column
-            </Col>
-
-            <Col
-              xsSpan={6}
-              smSpan={2}
-              mdSpan={3}
-              lgSpan={4}
-              style={colDemoStyles}
-              >
-              Responsive Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              mdSpan={6}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-            <Col
-              xsSpan={6}
-              mdSpan={3}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-            <Col
-              xsSpan={6}
-              mdSpan={3}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={6}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-            <Col
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-            <Col
-              xsSpan={2}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={3}
-              colOffset={2}
-              style={colDemoStyles}
-            >
-              Offset Column
-            </Col>
-            <Col
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={3}
-              colPush={3}
-              style={colDemoStyles}
-            >
-              Pushed Column
-            </Col>
-            <Col
-              xsSpan={3}
-              colPull={3}
-              style={colDemoStyles}
-            >
-              Pulled Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={8}
-              style={colDemoStyles}
-            >
-              <Row>
-                <Col
-                  xsSpan={6}
-                  style={colDemoStyles}
-                >
-                  Nested Column
-                </Col>
-                <Col
-                  xsSpan={6}
-                  style={colDemoStyles}
-                >
-                  Nested Column
-                </Col>
-              </Row>
-            </Col>
-            <Col
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
-        </Container>
-
         <Container fluid={true}>
           <ReactStyleGuide
             title="Button"
@@ -316,6 +182,34 @@ var App = React.createClass({
               >
               Active
             </Button>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Grid"
+            staticMarkup={gridMarkup}
+          >
+            {convertExample(gridMarkup)}
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Offset Columns"
+            staticMarkup={offsetColumnsMarkup}
+          >
+            {convertExample(offsetColumnsMarkup)}
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Pushed and Pulled Columns"
+            staticMarkup={pulledColumnsMarkup}
+          >
+            {convertExample(pulledColumnsMarkup)}
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Nested Grids"
+            staticMarkup={nestedGridMarkup}
+          >
+            {convertExample(nestedGridMarkup)}
           </ReactStyleGuide>
         </Container>
 
@@ -461,4 +355,4 @@ var App = React.createClass({
   }
 });
 
-React.render(<App />, document.getElementById('app'));
+module.exports = App;
