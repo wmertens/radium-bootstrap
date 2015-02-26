@@ -41,153 +41,149 @@ var App = React.createClass({
     return (
       <main>
         <Container fluid={true}>
-          <Row>
-            <Col style={colDemoStyles}>
-              Fluid Container
-            </Col>
-          </Row>
-        </Container>
+          <ReactStyleGuide
+            title="Grid"
+          >
+            <Container fluid={true}>
+              <Row>
+                <Col
+                  xsSpan={12}
+                  smSpan={8}
+                  mdSpan={6}
+                  lgSpan={4}
+                  style={colDemoStyles}
+                >
+                  Responsive Column
+                </Col>
 
-        <Container>
-          <Row>
-            <Col
-              xsSpan={12}
-              smSpan={8}
-              mdSpan={6}
-              lgSpan={4}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
+                <Col
+                  xsSpan={6}
+                  smSpan={2}
+                  mdSpan={3}
+                  lgSpan={4}
+                  style={colDemoStyles}
+                  >
+                  Responsive Column
+                </Col>
 
-            <Col
-              xsSpan={6}
-              smSpan={2}
-              mdSpan={3}
-              lgSpan={4}
-              style={colDemoStyles}
-              >
-              Responsive Column
-            </Col>
+                <Col
+                  xsSpan={6}
+                  smSpan={2}
+                  mdSpan={3}
+                  lgSpan={4}
+                  style={colDemoStyles}
+                  >
+                  Responsive Column
+                </Col>
+              </Row>
 
-            <Col
-              xsSpan={6}
-              smSpan={2}
-              mdSpan={3}
-              lgSpan={4}
-              style={colDemoStyles}
-              >
-              Responsive Column
-            </Col>
-          </Row>
+              <Row>
+                <Col
+                  mdSpan={6}
+                  style={colDemoStyles}
+                >
+                  Responsive Column
+                </Col>
+                <Col
+                  xsSpan={6}
+                  mdSpan={3}
+                  style={colDemoStyles}
+                >
+                  Responsive Column
+                </Col>
+                <Col
+                  xsSpan={6}
+                  mdSpan={3}
+                  style={colDemoStyles}
+                >
+                  Responsive Column
+                </Col>
+              </Row>
 
-          <Row>
-            <Col
-              mdSpan={6}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-            <Col
-              xsSpan={6}
-              mdSpan={3}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-            <Col
-              xsSpan={6}
-              mdSpan={3}
-              style={colDemoStyles}
-            >
-              Responsive Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={6}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-            <Col
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-            <Col
-              xsSpan={2}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={3}
-              colOffset={2}
-              style={colDemoStyles}
-            >
-              Offset Column
-            </Col>
-            <Col
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={3}
-              colPush={3}
-              style={colDemoStyles}
-            >
-              Pushed Column
-            </Col>
-            <Col
-              xsSpan={3}
-              colPull={3}
-              style={colDemoStyles}
-            >
-              Pulled Column
-            </Col>
-          </Row>
-
-          <Row>
-            <Col
-              xsSpan={8}
-              style={colDemoStyles}
-            >
               <Row>
                 <Col
                   xsSpan={6}
                   style={colDemoStyles}
                 >
-                  Nested Column
+                  Standard Column
                 </Col>
                 <Col
-                  xsSpan={6}
+                  xsSpan={4}
                   style={colDemoStyles}
                 >
-                  Nested Column
+                  Standard Column
+                </Col>
+                <Col
+                  xsSpan={2}
+                  style={colDemoStyles}
+                >
+                  Standard Column
                 </Col>
               </Row>
-            </Col>
-            <Col
-              xsSpan={4}
-              style={colDemoStyles}
-            >
-              Standard Column
-            </Col>
-          </Row>
-        </Container>
 
-        <Container fluid={true}>
+              <Row>
+                <Col
+                  xsSpan={3}
+                  colOffset={2}
+                  style={colDemoStyles}
+                >
+                  Offset Column
+                </Col>
+                <Col
+                  xsSpan={4}
+                  style={colDemoStyles}
+                >
+                  Standard Column
+                </Col>
+              </Row>
+
+              <Row>
+                <Col
+                  xsSpan={3}
+                  colPush={3}
+                  style={colDemoStyles}
+                >
+                  Pushed Column
+                </Col>
+                <Col
+                  xsSpan={3}
+                  colPull={3}
+                  style={colDemoStyles}
+                >
+                  Pulled Column
+                </Col>
+              </Row>
+
+              <Row>
+                <Col
+                  xsSpan={8}
+                  style={colDemoStyles}
+                >
+                  <Row>
+                    <Col
+                      xsSpan={6}
+                      style={colDemoStyles}
+                    >
+                      Nested Column
+                    </Col>
+                    <Col
+                      xsSpan={6}
+                      style={colDemoStyles}
+                    >
+                      Nested Column
+                    </Col>
+                  </Row>
+                </Col>
+                <Col
+                  xsSpan={4}
+                  style={colDemoStyles}
+                >
+                  Standard Column
+                </Col>
+              </Row>
+            </Container>
+          </ReactStyleGuide>
+
           <ReactStyleGuide
             title="Button"
           >
@@ -315,4 +311,4 @@ var App = React.createClass({
   }
 });
 
-React.render(<App />, document.getElementById('app'));
+module.exports = App;
