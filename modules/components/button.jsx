@@ -144,7 +144,7 @@ var Button = React.createClass({
                   {
                     active: activeLinkStyles
                   }
-                ]; 
+                ];
               }()
             }
           }
@@ -210,8 +210,8 @@ var Button = React.createClass({
     return (
       <TagName
         {...this.getBrowserStateEvents()}
-        style={styles}
         disabled={this.props.disabled}
+        style={styles}
       >
         {this.props.children}
       </TagName>
