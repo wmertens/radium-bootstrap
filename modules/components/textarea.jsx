@@ -1,9 +1,9 @@
 var React = require('react');
 var Radium = require('radium');
-var { StyleResolverMixin } = Radium;
+var { StyleResolverMixin, BrowserStateMixin } = Radium;
 
 var Textarea = React.createClass({
-  mixins: [ StyleResolverMixin ],
+  mixins: [ StyleResolverMixin, BrowserStateMixin ],
 
   getDefaultProps: function () {
     return {
@@ -13,10 +13,18 @@ var Textarea = React.createClass({
   },
 
   getStyles: function () {
+    var stateStyles = {
+      borderColor: '#66afe9',
+      boxShadow: 'inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)',
+      outline: 0
+    };
+
     return {
       backgroundColor: '#fff',
       backgroundImage: 'none',
-      border: '1px solid #ccc',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderColor: '#ccc',
       borderRadius: 4,
       boxShadow: 'inset 0 1px 1px rgba(0,0,0,.075)',
       boxSizing: 'border-box',
@@ -41,6 +49,15 @@ var Textarea = React.createClass({
             width: 'auto'
           }
         }
+      ],
+
+      states: [
+        {
+          focus: stateStyles
+        },
+        {
+          active: stateStyles
+        }
       ]
     };
   },
@@ -50,7 +67,11 @@ var Textarea = React.createClass({
     var TagName = this.props.tagName;
 
     return (
-      <TagName style={styles} {...this.props}/>
+      <TagName
+        style={styles}
+        {...this.props}
+        {...this.getBrowserStateEvents()}
+      />
     );
   }
 });

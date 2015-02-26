@@ -7,13 +7,14 @@ var Input = React.createClass({
 
   getDefaultProps: function () {
     return {
-      tagName: 'input',
+      tagName: 'label',
       inline: false,
-      type: 'text'
+      type: 'text',
+      dangerouslyDisableLabel: false
     };
   },
 
-  getStyles: function () {
+  getInputStyles: function () {
     var stateStyles = {
       borderColor: '#66afe9',
       boxShadow: 'inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)',
@@ -44,7 +45,7 @@ var Input = React.createClass({
             fontSize: 14,
             height: 34,
             lineHeight: '1.42857143',
-            margin: 0,
+            margin: '0 0 15px 0',
             padding: '6px 12px',
             transition: 'border-color ease-in-out .15s, box-shadow ease-in-out .15s',
             width: '100%',
@@ -63,20 +64,13 @@ var Input = React.createClass({
           inline: {
             display: 'inline-block',
             marginRight: 3,
+            marginBottom: 0,
             verticalAlign: 'middle',
             width: 'auto'
           }
         },
         {
           type: {
-            checkbox: {
-              boxSizing: 'border-box',
-              lineHeight: 'normal',
-              margin: '4px 0 0',
-              marginLeft: -20,
-              padding: 0,
-              position: 'absolute'
-            },
             datetimeLocal: typeLineHeight,
             date: typeLineHeight,
             file: {
@@ -115,16 +109,74 @@ var Input = React.createClass({
     };
   },
 
+  getLabelStyles: function () {
+    return {
+      display: 'inline-block',
+      fontWeight: 700,
+      marginBottom: 5,
+      maxWidth: '100%',
+
+      modifiers: [
+        {
+          inline: {
+            marginRight: 3
+          }
+        }
+      ]
+    };
+  },
+
+  propTypes: {
+    label: function (props, propName, componentName) {
+      if (!props.dangerouslyDisableLabel && typeof props.label !== "string") {
+        return new Error(
+          "Required prop `" + propName + "` was not specified in `" +
+          componentName + "`. Set `" + propName +
+          "` to a string describing the input. If you are implementing your " +
+          "own label, set `dangerouslyDisableLabel` to `true`. For more " +
+          "information on labels, see " +
+          "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label."
+        );
+      }
+    }
+  },
+
+  buildInput: function () {
+    var styles = this.buildStyles(
+      this.getInputStyles()
+    );
+
+    var input = (
+      <input
+        ref="input"
+        style={styles}
+        {...this.props}
+        {...this.getBrowserStateEvents()}
+      />
+    );
+
+    return input;
+  },
+
   render: function () {
-    var styles = this.buildStyles(this.getStyles());
     var TagName = this.props.tagName;
+    var styles = this.buildStyles(this.getLabelStyles());
+
+    var inputEl = this.buildInput();
+
+    if (this.props.dangerouslyDisableLabel) {
+      return inputEl;
+    }
 
     return (
       <TagName
-        {...this.getBrowserStateEvents()}
         {...this.props}
-        style={styles}
-      />
+      >
+        <span style={styles}>
+          {this.props.label}
+        </span>
+        {inputEl}
+      </TagName>
     );
   }
 });
