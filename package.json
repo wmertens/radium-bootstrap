@@ -1,7 +1,7 @@
 {
   "name": "radium-bootstrap",
-  "version": "0.0.0",
-  "description": "# Components with owners",
+  "version": "0.0.1",
+  "description": "Bootstrap implemented with React and Radium",
   "main": "modules/index.js",
   "scripts": {
     "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples/"
@@ -36,5 +36,10 @@
     "style-loader": "^0.8.3",
     "webpack": "^1.5.3",
     "webpack-dev-server": "^1.7.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "radium",
+    "bootstrap"
+  ]
 }
