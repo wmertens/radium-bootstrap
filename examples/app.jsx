@@ -32,20 +32,20 @@ var MEDIA_QUERIES = {
 
 MatchMediaBase.init(MEDIA_QUERIES);
 
-var colDemoStyles = {
-  background: 'rgba(117,190,255,0.5)',
-  border: '1px solid #0074D9',
-  color: '#0074D9',
-  minHeight: 80,
-  paddingBottom: '1em',
-  paddingTop: '1em',
-  textAlign: 'center'
-};
-
 var App = React.createClass({
   mixins: [ StyleResolverMixin, MatchMediaBase ],
 
   render: function () {
+    var colDemoStyles = {
+      background: 'rgba(117,190,255,0.5)',
+      border: '1px solid #0074D9',
+      color: '#0074D9',
+      minHeight: 80,
+      paddingBottom: '1em',
+      paddingTop: '1em',
+      textAlign: 'center'
+    };
+
     return (
       <main>
         <Container fluid={true}>
