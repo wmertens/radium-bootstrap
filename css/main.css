@@ -365,6 +365,14 @@ html, body {
 
 /* Components */
 
+.Guide-expanderSection {
+  height: 22px !important;
+}
+
+.Guide-expander {
+  font-size: 11px !important;
+}
+
 .Installer {
   display: inline-block;
   background: #2b303b;
