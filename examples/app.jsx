@@ -64,6 +64,9 @@ var App = React.createClass({
         <Container fluid={true}>
           <ReactStyleGuide
             title="Button"
+            markupExpandedByDefault={true}
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Button>
               Default
@@ -114,6 +117,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Button Sizes"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Button
               size='large'
@@ -144,6 +149,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Block Level Buttons"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Button
               kind='primary'
@@ -156,6 +163,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Disabled Buttons"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Button
               kind='primary'
@@ -167,6 +176,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Active Buttons"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Button
               kind='primary'
@@ -186,6 +197,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Basic form"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Form>
               <Input
@@ -215,6 +228,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Inline form"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Form
               inline={true}
@@ -241,6 +256,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Hidden labels"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Form
               inline={true}
@@ -269,6 +286,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Input groups"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Form
               inline={true}
@@ -295,6 +314,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Textarea"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Textarea
               rows='3'
@@ -304,6 +325,8 @@ var App = React.createClass({
 
           <ReactStyleGuide
             title="Static controls"
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             <Form
               inline={true}
@@ -323,6 +346,8 @@ var App = React.createClass({
           <ReactStyleGuide
             title="Grid"
             staticMarkup={gridMarkup}
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             {convertExample(gridMarkup)}
           </ReactStyleGuide>
@@ -330,6 +355,8 @@ var App = React.createClass({
           <ReactStyleGuide
             title="Offset Columns"
             staticMarkup={offsetColumnsMarkup}
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             {convertExample(offsetColumnsMarkup)}
           </ReactStyleGuide>
@@ -337,6 +364,8 @@ var App = React.createClass({
           <ReactStyleGuide
             title="Pushed and Pulled Columns"
             staticMarkup={pulledColumnsMarkup}
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             {convertExample(pulledColumnsMarkup)}
           </ReactStyleGuide>
@@ -344,6 +373,8 @@ var App = React.createClass({
           <ReactStyleGuide
             title="Nested Grids"
             staticMarkup={nestedGridMarkup}
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
           >
             {convertExample(nestedGridMarkup)}
           </ReactStyleGuide>
