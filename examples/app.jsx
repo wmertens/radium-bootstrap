@@ -185,36 +185,6 @@ var App = React.createClass({
           </ReactStyleGuide>
 
           <ReactStyleGuide
-            title="Grid"
-            staticMarkup={gridMarkup}
-          >
-            {convertExample(gridMarkup)}
-          </ReactStyleGuide>
-
-          <ReactStyleGuide
-            title="Offset Columns"
-            staticMarkup={offsetColumnsMarkup}
-          >
-            {convertExample(offsetColumnsMarkup)}
-          </ReactStyleGuide>
-
-          <ReactStyleGuide
-            title="Pushed and Pulled Columns"
-            staticMarkup={pulledColumnsMarkup}
-          >
-            {convertExample(pulledColumnsMarkup)}
-          </ReactStyleGuide>
-
-          <ReactStyleGuide
-            title="Nested Grids"
-            staticMarkup={nestedGridMarkup}
-          >
-            {convertExample(nestedGridMarkup)}
-          </ReactStyleGuide>
-        </Container>
-
-        <Container fluid={true}>
-          <ReactStyleGuide
             title="Basic form"
           >
             <Form>
@@ -348,6 +318,34 @@ var App = React.createClass({
               />
               <Button>Confirm identity</Button>
             </Form>
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Grid"
+            staticMarkup={gridMarkup}
+          >
+            {convertExample(gridMarkup)}
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Offset Columns"
+            staticMarkup={offsetColumnsMarkup}
+          >
+            {convertExample(offsetColumnsMarkup)}
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Pushed and Pulled Columns"
+            staticMarkup={pulledColumnsMarkup}
+          >
+            {convertExample(pulledColumnsMarkup)}
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Nested Grids"
+            staticMarkup={nestedGridMarkup}
+          >
+            {convertExample(nestedGridMarkup)}
           </ReactStyleGuide>
         </Container>
       </main>
