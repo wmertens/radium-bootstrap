@@ -190,6 +190,17 @@ settings["preBg"] = "#f5f5f5";
 settings["preBorderColor"] = "#ccc";
 settings["preScrollableMaxHeight"] = 340;
 settings["componentOffsetHorizontal"] = 180;
+settings["tabsLinkBackgroundColor"] = "transparent";
+settings["tabsLinkBorderColor"] = "transparent transparent transparent";
+settings["tabsLinkBorderRadius"] = "4px 4px 0px 0px";
+settings["tabsLinkColor"] = "#337ab7";
+settings["tabsLinkActiveBackgroundColor"] = "#fff";
+settings["tabsLinkActiveBorderColor"] = "#ddd #ddd transparent";
+settings["tabsLinkActiveColor"] = "#555";
+settings["tabsLinkHoverBackgroundColor"] = "#eee";
+settings["tabsLinkHoverBorderColor"] = "#eee #eee #ddd";
+settings["tabsLinkHoverColor"] = "#23527c";
+settings["tabsLinkPadding"] = "10px 15px";
 
 settings = computeSettings(settings);
 

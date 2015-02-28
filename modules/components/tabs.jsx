@@ -58,24 +58,24 @@ Tabs.Title = React.createClass({
 
   getStyles: function () {
     return {
-      backgroundColor: "transparent",
+      backgroundColor: settings.tabsLinkBackgroundColor,
       border: "1px solid",
-      borderColor: "transparent transparent transparent",
-      borderRadius: "4px 4px 0px 0px",
-      color: "#337ab7",
+      borderColor: settings.tabsLinkBorderColor,
+      borderRadius: settings.tabsLinkBorderRadius,
+      color: settings.tabsLinkColor,
       display: "inline-block",
       lineHeight: "1.5",
       marginBottom: "-1px",
       marginRight: 2,
-      padding: "10px 15px",
+      padding: settings.tabsLinkPadding,
       textDecoration: "none",
 
       states: [
         {
           hover: {
-            backgroundColor: "#eee",
-            borderColor: "#eee #eee #ddd",
-            color: "#23527c"
+            backgroundColor: settings.tabsLinkHoverBackgroundColor,
+            borderColor: settings.tabsLinkBorderColor,
+            color: settings.tabsLinkHoverColor
           }
         }
       ],
@@ -83,16 +83,16 @@ Tabs.Title = React.createClass({
       modifiers: [
         {
           activeTab: {
-            backgroundColor: "#fff",
-            borderColor: "#ddd #ddd transparent",
-            color: "#555",
+            backgroundColor: settings.tabsLinkActiveBackgroundColor,
+            borderColor: settings.tabsLinkActiveBorderColor,
+            color: settings.tabsLinkActiveColor,
 
             states: [
               {
                 hover: {
-                  backgroundColor: "#fff",
-                  borderColor: "#ddd #ddd transparent",
-                  color: "#555"
+                  backgroundColor: settings.tabsLinkActiveBackgroundColor,
+                  borderColor: settings.tabsLinkActiveBorderColor,
+                  color: settings.tabsLinkActiveColor
                 }
               }
             ]
