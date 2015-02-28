@@ -39,7 +39,7 @@ Tabs.Header = React.createClass({
   render: function () {
     var self = this;
     return (
-      <div>
+      <div role="tablist">
         {this.props.children.map(function (child,index) {
           return cloneWithProps(child, {
             key: index,
@@ -113,8 +113,9 @@ Tabs.Title = React.createClass({
       <a
         {...this.getBrowserStateEvents()}
         href="javascript:void(0)"
-        style={styles}
         onClick={this.props.clickHandler}
+        role="tab"
+        style={styles}
         >
         {this.props.children}
       </a>
