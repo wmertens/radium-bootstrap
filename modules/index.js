@@ -11,6 +11,7 @@ exports.InputGroupAddon = require('./components/input-group-addon.jsx');
 exports.Textarea = require('./components/textarea.jsx');
 exports.StaticControl = require('./components/static-control.jsx');
 exports.HelpText = require('./components/help-text.jsx');
+exports.Tabs = require('./components/Tabs.jsx');
 
 exports.settings = require('./settings.js');
 exports.configureSettings = require('./util/configure-settings');

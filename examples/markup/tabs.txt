@@ -1,0 +1,10 @@
+<Tabs>
+  <Tabs.Header>
+    <Tabs.Title>Home</Tabs.Title>
+    <Tabs.Title>Profile</Tabs.Title>
+  </Tabs.Header>
+  <Tabs.Body>
+    <Tabs.Content><p>Home Content</p></Tabs.Content>
+    <Tabs.Content><p>Profile Content</p></Tabs.Content>
+  </Tabs.Body>
+</Tabs>
