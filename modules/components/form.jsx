@@ -29,11 +29,11 @@ var Form = React.createClass({
   },
 
   render: function () {
-    var TagName = this.props.tagName;
+    var { children, tagName: TagName, ...props } = this.props;
 
     return (
-      <TagName {...this.props}>
-        {this.buildChildren(this.props.children)}
+      <TagName {...props}>
+        {this.buildChildren(children)}
       </TagName>
     );
   }

@@ -49,12 +49,13 @@ var Container = React.createClass({
   },
 
   render: function () {
+    var { children, tagName: TagName, ...props } = this.props;
+
     var styles = this.buildStyles(this.getStyles());
-    var TagName = this.props.tagName;
 
     return (
-      <TagName style={styles}>
-        {this.props.children}
+      <TagName {...props} style={styles}>
+        { children }
       </TagName>
     );
   }

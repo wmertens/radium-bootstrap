@@ -199,21 +199,21 @@ var Button = React.createClass({
   },
 
   render: function () {
-    var TagName = this.props.tagName;
+    var { children, tagName: TagName, ...props } = this.props;
 
     var additionalModifiers = {
-      activeLink: this.props.active && this.props.kind === 'link'
+      activeLink: props.active && props.kind === 'link'
     };
 
     var styles = this.buildStyles(this.getStyles(), additionalModifiers);
 
     return (
       <TagName
+        {...props}
         {...this.getBrowserStateEvents()}
-        disabled={this.props.disabled}
         style={styles}
       >
-        {this.props.children}
+        {children}
       </TagName>
     );
   }

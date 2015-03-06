@@ -31,15 +31,19 @@ var Row = React.createClass({
   },
 
   render: function () {
+    var { children, tagName: TagName, ...props } = this.props
+
     var styles = this.buildStyles(this.getStyles());
-    var TagName = this.props.tagName;
 
     // TODO: Make global Clearfix variable/mixin/something.
 
     return (
-      <TagName style={styles}>
+      <TagName 
+        style={styles} 
+        {...props}
+      >
         <i style={{display: 'table'}}>{'\u0020'}</i>
-        {this.buildChildren(this.props.children)}
+        {this.buildChildren(children)}
         <i style={{clear: 'both', display: 'table'}}>{'\u0020'}</i>
       </TagName>
     );

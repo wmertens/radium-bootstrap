@@ -63,12 +63,13 @@ var Col = React.createClass({
   },
 
   render: function () {
-    var styles = this.buildStyles(this.getStyles());
-    var TagName = this.props.tagName;
+    var { children, tagName: TagName, ...props } = this.props;
 
+    var styles = this.buildStyles(this.getStyles());
+    
     return (
-      <TagName style={styles}>
-        {this.buildChildren(this.props.children)}
+      <TagName {...props} style={styles}>
+        {this.buildChildren(children)}
       </TagName>
     );
   }
