@@ -21,6 +21,8 @@ var InputGroupAddon = RadiumBootstrap.InputGroupAddon;
 var Textarea = RadiumBootstrap.Textarea;
 var StaticControl = RadiumBootstrap.StaticControl;
 
+var Tabs = RadiumBootstrap.Tabs;
+
 // Temporary Style Guide hack
 var reactTools = require('react-tools');
 
@@ -32,6 +34,7 @@ var gridMarkup = require('raw!./markup/grid.txt');
 var offsetColumnsMarkup = require('raw!./markup/offset-columns.txt');
 var pulledColumnsMarkup = require('raw!./markup/pulled-columns.txt');
 var nestedGridMarkup = require('raw!./markup/nested-grid.txt');
+var tabsMarkup = require('raw!./markup/tabs.txt');
 
 var MEDIA_QUERIES = {
   sm: '(min-width: 768px)',
@@ -377,6 +380,15 @@ var App = React.createClass({
             expanderInactiveText="Show Code"
           >
             {convertExample(nestedGridMarkup)}
+          </ReactStyleGuide>
+
+          <ReactStyleGuide
+            title="Tabs"
+            staticMarkup={tabsMarkup}
+            expanderActiveText="Hide Code"
+            expanderInactiveText="Show Code"
+          >
+            {convertExample(tabsMarkup)}
           </ReactStyleGuide>
         </Container>
       </main>
