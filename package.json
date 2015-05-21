@@ -2,9 +2,10 @@
   "name": "radium-bootstrap",
   "version": "0.0.1",
   "description": "Bootstrap implemented with React and Radium",
-  "main": "modules/index.js",
+  "main": "dist/radium-bootstrap.min.js",
   "scripts": {
-    "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples/"
+    "examples": "webpack-dev-server --config examples/webpack.config.js --no-info --content-base examples/",
+    "build": "NODE_ENV=production webpack -p --config modules/webpack.config.js"
   },
   "repository": {
     "type": "git",
